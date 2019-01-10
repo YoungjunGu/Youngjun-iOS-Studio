@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF21A01921E6E6CA00C350A8 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF21A01821E6E6CA00C350A8 /* Line.swift */; };
 		EF81305921E445210064104D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81305821E445210064104D /* AppDelegate.swift */; };
 		EF81305B21E445210064104D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81305A21E445210064104D /* ViewController.swift */; };
 		EF81305E21E445210064104D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF81305C21E445210064104D /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		EF81306321E445220064104D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF81306121E445220064104D /* LaunchScreen.storyboard */; };
 		EF81306E21E445230064104D /* DrawingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81306D21E445230064104D /* DrawingAppTests.swift */; };
 		EF81307921E445230064104D /* DrawingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81307821E445230064104D /* DrawingAppUITests.swift */; };
+		EF81308821E57F7F0064104D /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF81308721E57F7F0064104D /* Canvas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF21A01821E6E6CA00C350A8 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		EF81305521E445210064104D /* DrawingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF81305821E445210064104D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF81305A21E445210064104D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		EF81307421E445230064104D /* DrawingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF81307821E445230064104D /* DrawingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingAppUITests.swift; sourceTree = "<group>"; };
 		EF81307A21E445230064104D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF81308721E57F7F0064104D /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF21A01721E6E6B200C350A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF21A01821E6E6CA00C350A8 /* Line.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		EF81304C21E445210064104D = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +109,10 @@
 		EF81305721E445210064104D /* DrawingApp */ = {
 			isa = PBXGroup;
 			children = (
+				EF21A01721E6E6B200C350A8 /* Models */,
+				EF81308921E5800E0064104D /* Controller */,
+				EF81308621E57F560064104D /* Views */,
 				EF81305821E445210064104D /* AppDelegate.swift */,
-				EF81305A21E445210064104D /* ViewController.swift */,
 				EF81305C21E445210064104D /* Main.storyboard */,
 				EF81305F21E445220064104D /* Assets.xcassets */,
 				EF81306121E445220064104D /* LaunchScreen.storyboard */,
@@ -123,6 +137,22 @@
 				EF81307A21E445230064104D /* Info.plist */,
 			);
 			path = DrawingAppUITests;
+			sourceTree = "<group>";
+		};
+		EF81308621E57F560064104D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF81308721E57F7F0064104D /* Canvas.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EF81308921E5800E0064104D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF81305A21E445210064104D /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +287,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF81305B21E445210064104D /* ViewController.swift in Sources */,
+				EF21A01921E6E6CA00C350A8 /* Line.swift in Sources */,
 				EF81305921E445210064104D /* AppDelegate.swift in Sources */,
+				EF81308821E57F7F0064104D /* Canvas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

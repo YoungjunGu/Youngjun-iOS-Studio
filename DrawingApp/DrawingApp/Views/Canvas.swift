@@ -1,23 +1,34 @@
 //
-//  ViewController.swift
+//  Canvas.swift
 //  DrawingApp
 //
-//  Created by youngjun goo on 08/01/2019.
+//  Created by youngjun goo on 09/01/2019.
 //  Copyright © 2019 youngjun goo. All rights reserved.
 //
 
 import UIKit
 
 //캔버스 클래스 선언
-class Canvass: UIView {
+class Canvas: UIView {
     
+    fileprivate var strokeColor = UIColor.black
+    fileprivate var strokeLineWidth: Float = 1
     
     //var line = [CGPoint]()
+    var popLines = [Line]()
+    var lines = [Line]()
     
-    var lines = [[CGPoint]]()
+    func setStrokeColor(color: UIColor) {
+        self.strokeColor = color
+    }
     
+    func setStrokeLineWidth(width: Float) {
+        self.strokeLineWidth = width
+    }
+    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        lines.append([CGPoint]())
+        lines.append(Line.init(strokeLineWidth: strokeLineWidth, color: strokeColor, points: []))
     }
     
     override func draw(_ rect: CGRect) {
@@ -28,26 +39,48 @@ class Canvass: UIView {
             return
         }
         
-        //색깔
-        context.setStrokeColor(UIColor.blue.cgColor)
-        //굵기
-        context.setLineWidth(10)
-        
         context.setLineCap(.butt)
         
         lines.forEach { (line) in
+            //색깔
+            context.setStrokeColor(line.color.cgColor)
+            //굵기
+            context.setLineWidth(CGFloat(line.strokeLineWidth))
             // for in 구문을 이용하여  i p 표 값을 가져 오고 context에 선을 추가하는 구문
-            for (i, p) in line.enumerated() {
+            for (i, p) in line.points.enumerated() {
                 if i == 0 {
                     context.move(to: p)
                 } else {
                     context.addLine(to: p)
                 }
             }
+            context.strokePath()
         }
-        
-        
-        context.strokePath()
+      
+    }
+    
+    //UNDO
+    //반드시
+    func undo() {
+        let popLine = lines.popLast()
+        popLines.append(popLine!)
+        setNeedsDisplay()
+    }
+    //REDO
+    func redo() {
+        if let popLine = popLines.popLast() {
+            lines.append(popLine)
+            setNeedsDisplay()
+        } else {
+            print("Nothing can redo!!")
+        }
+    }
+    
+    //CLEAR
+    func clear() {
+        lines.removeAll()
+        popLines.removeAll()
+        setNeedsDisplay()
     }
     
     //손가락의 움직임을 tracking
@@ -60,27 +93,10 @@ class Canvass: UIView {
         guard var lastLine = lines.popLast() else {
             return
         }
-        lastLine.append(point)
+        lastLine.points.append(point)
         
         lines.append(lastLine)
         
         setNeedsDisplay()
     }
 }
-
-class ViewController: UIViewController {
-    
-    let canvass = Canvass()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //SubView 추가
-        view.addSubview(canvass)
-        canvass.backgroundColor = .white
-        canvass.frame = view.frame
-    }
-    
-    
-}
-
