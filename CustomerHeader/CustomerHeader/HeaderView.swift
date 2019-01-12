@@ -22,11 +22,7 @@ class HeaderView: UICollectionReusableView {
         backgroundColor = .red
         
         addSubview(imageView)
-        
-        topAnchor
-        leadingAnchor
-        trailingAnchor
-        bottomAnchor
+        imageView.fillSuperView()
         
     }
     

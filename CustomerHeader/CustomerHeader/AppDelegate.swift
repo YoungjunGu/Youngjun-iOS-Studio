@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow()
-        window?.rootViewController = CustomHeaderViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        window?.rootViewController = CustomHeaderViewController(collectionViewLayout: StretchyHeaderLayout())
         
         return true
     }

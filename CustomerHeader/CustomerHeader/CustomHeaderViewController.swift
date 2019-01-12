@@ -32,8 +32,14 @@ class CustomHeaderViewController: UICollectionViewController, UICollectionViewDe
         }
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     fileprivate func setupCollectionView() {
         collectionView.backgroundColor = .white
+        
+        //collectionView.contentInsetAdjustmentBehavior = .always
         
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         

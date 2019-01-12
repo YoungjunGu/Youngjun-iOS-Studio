@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF1AE75421EA237C001AB90A /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AE75321EA237C001AB90A /* ExtensionUIView.swift */; };
+		EF1AE75721EA2ECB001AB90A /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AE75621EA2ECB001AB90A /* StretchyHeaderLayout.swift */; };
 		EF1CC1F321D49631008BF5FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1CC1F221D49631008BF5FA /* AppDelegate.swift */; };
 		EF1CC1F521D49631008BF5FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1CC1F421D49631008BF5FA /* ViewController.swift */; };
 		EF1CC1F821D49631008BF5FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1CC1F621D49631008BF5FA /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF1AE75321EA237C001AB90A /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
+		EF1AE75621EA2ECB001AB90A /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
 		EF1CC1EF21D49631008BF5FA /* CustomerHeader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerHeader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1CC1F221D49631008BF5FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF1CC1F421D49631008BF5FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF1AE75521EA2E8A001AB90A /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				EF1AE75621EA2ECB001AB90A /* StretchyHeaderLayout.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		EF1CC1E621D49631008BF5FA = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +113,12 @@
 		EF1CC1F121D49631008BF5FA /* CustomerHeader */ = {
 			isa = PBXGroup;
 			children = (
+				EF1AE75521EA2E8A001AB90A /* Custom */,
 				EF1CC1F221D49631008BF5FA /* AppDelegate.swift */,
 				EF1CC1F421D49631008BF5FA /* ViewController.swift */,
 				EF1CC22021D496A6008BF5FA /* CustomHeaderViewController.swift */,
 				EF21A01A21E8283A00C350A8 /* HeaderView.swift */,
+				EF1AE75321EA237C001AB90A /* ExtensionUIView.swift */,
 				EF1CC1F621D49631008BF5FA /* Main.storyboard */,
 				EF1CC1F921D49632008BF5FA /* Assets.xcassets */,
 				EF1CC1FB21D49632008BF5FA /* LaunchScreen.storyboard */,
@@ -262,10 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF1AE75721EA2ECB001AB90A /* StretchyHeaderLayout.swift in Sources */,
 				EF1CC22121D496A6008BF5FA /* CustomHeaderViewController.swift in Sources */,
 				EF1CC1F521D49631008BF5FA /* ViewController.swift in Sources */,
 				EF1CC1F321D49631008BF5FA /* AppDelegate.swift in Sources */,
 				EF21A01B21E8283A00C350A8 /* HeaderView.swift in Sources */,
+				EF1AE75421EA237C001AB90A /* ExtensionUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
