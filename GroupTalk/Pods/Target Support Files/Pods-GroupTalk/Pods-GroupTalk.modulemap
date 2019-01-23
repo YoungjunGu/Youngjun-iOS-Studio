@@ -1,0 +1,6 @@
+framework module Pods_GroupTalk {
+  umbrella header "Pods-GroupTalk-umbrella.h"
+
+  export *
+  module * { export * }
+}

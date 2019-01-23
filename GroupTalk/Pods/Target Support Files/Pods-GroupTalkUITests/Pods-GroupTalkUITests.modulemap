@@ -1,0 +1,6 @@
+framework module Pods_GroupTalkUITests {
+  umbrella header "Pods-GroupTalkUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
