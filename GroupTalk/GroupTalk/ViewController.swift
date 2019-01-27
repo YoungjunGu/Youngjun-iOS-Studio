@@ -11,7 +11,7 @@ import SnapKit
 import Firebase
 
 class ViewController: UIViewController {
-
+    
     var imageView = UIImageView()
     var remoteConfig: RemoteConfig!
     
@@ -25,17 +25,53 @@ class ViewController: UIViewController {
         remoteConfig.configSettings = remoteConfigSettings
         remoteConfig.setDefaults(fromPlist: "RemoteConfigDefaults")
         
-        
+        remoteConfig.fetch(withExpirationDuration: TimeInterval(0)) { (status, error) -> Void in
+            if status == .success {
+                print("Config fetched!")
+                self.remoteConfig.activateFetched()
+            } else {
+                print("Config not fetched")
+                print("Error: \(error?.localizedDescription ?? "No error available.")")
+            }
+            self.displayWelcome()
+        }
         
         self.view.addSubview(imageView)
         imageView.snp.makeConstraints { (make) in
             make.center.equalTo(self.view)
         }
         imageView.image = #imageLiteral(resourceName: "iconfinder_weechat_1783353")
-        self.view.backgroundColor = UIColor(hex: "#000000")
+
+    }
+    //앱을 firebase 서버에서 값을 원격으로 변경하고 알림을 띄우고 종료등을 하기 위한 연동
+    func displayWelcome() {
+        //firebase remote config 영역에서 값을 변경 가능
+        let message = remoteConfig["splash_message"].stringValue
+        let color = remoteConfig["splash_background"].stringValue
+        let caps = remoteConfig["splash_message_caps"].boolValue
+        
+        //caps
+        if caps {
+            let alert = UIAlertController(title: "공지사항", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { (action) in
+                exit(0)
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            self.present(loginVC, animated: false, completion: nil)
+        }
+        //color
+        if let splashColor = color {
+            self.view.backgroundColor = UIColor(hex: splashColor)
+        } else {
+            print("splash color is nil")
+        }
+        
     }
     
-
+    
 }
 
 extension UIColor {

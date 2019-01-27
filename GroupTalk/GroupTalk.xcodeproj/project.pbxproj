@@ -10,6 +10,7 @@
 		730FAB4BB6B61CCC5363D0D3 /* Pods_GroupTalkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C2EE925EA19E8470FA9BBF /* Pods_GroupTalkTests.framework */; };
 		D3AA958F15F7B5FD62AFCE48 /* Pods_GroupTalkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C2761B5110F16F3656AB77 /* Pods_GroupTalkUITests.framework */; };
 		D6725BE7F332E06E8A10EB8A /* Pods_GroupTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92AE0F3EB75B11F989F9FDB /* Pods_GroupTalk.framework */; };
+		EF1B1F9421FC8CB900C4F8B3 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF1B1F9321FC8CB900C4F8B3 /* RemoteConfigDefaults.plist */; };
 		EF1DE96621EC13AC00AEF9ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1DE96521EC13AC00AEF9ED /* AppDelegate.swift */; };
 		EF1DE96821EC13AC00AEF9ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1DE96721EC13AC00AEF9ED /* ViewController.swift */; };
 		EF1DE96B21EC13AC00AEF9ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1DE96921EC13AC00AEF9ED /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 		EF1DE97B21EC13AE00AEF9ED /* GroupTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1DE97A21EC13AE00AEF9ED /* GroupTalkTests.swift */; };
 		EF1DE98621EC13AE00AEF9ED /* GroupTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1DE98521EC13AE00AEF9ED /* GroupTalkUITests.swift */; };
 		EF1DE99421EC24CC00AEF9ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF1DE99321EC24CC00AEF9ED /* GoogleService-Info.plist */; };
+		EF2144D321FD34FD00859DB3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2144D221FD34FD00859DB3 /* SignInViewController.swift */; };
+		EF22AEEF21FCC361009160E4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22AEEE21FCC361009160E4 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,7 @@
 		C43696DF5CD90EBB42C79B5C /* Pods-GroupTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroupTalk/Pods-GroupTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		C562D528C0DA933C8C547BAE /* Pods-GroupTalkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupTalkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GroupTalkTests/Pods-GroupTalkTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF21BA2718BEB2038AC2E0BE /* Pods-GroupTalkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupTalkUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroupTalkUITests/Pods-GroupTalkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF1B1F9321FC8CB900C4F8B3 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		EF1DE96221EC13AC00AEF9ED /* GroupTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1DE96521EC13AC00AEF9ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF1DE96721EC13AC00AEF9ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 		EF1DE98521EC13AE00AEF9ED /* GroupTalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTalkUITests.swift; sourceTree = "<group>"; };
 		EF1DE98721EC13AE00AEF9ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1DE99321EC24CC00AEF9ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EF2144D221FD34FD00859DB3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		EF22AEEE21FCC361009160E4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "/Users/youngjungoo/Desktop/iOS-Studio/GroupTalk/GroupTalk/LoginViewController.swift"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,9 @@
 				EF1DE99321EC24CC00AEF9ED /* GoogleService-Info.plist */,
 				EF1DE96521EC13AC00AEF9ED /* AppDelegate.swift */,
 				EF1DE96721EC13AC00AEF9ED /* ViewController.swift */,
+				EF22AEEE21FCC361009160E4 /* LoginViewController.swift */,
+				EF2144D221FD34FD00859DB3 /* SignInViewController.swift */,
+				EF1B1F9321FC8CB900C4F8B3 /* RemoteConfigDefaults.plist */,
 				EF1DE96921EC13AC00AEF9ED /* Main.storyboard */,
 				EF1DE96C21EC13AE00AEF9ED /* Assets.xcassets */,
 				EF1DE96E21EC13AE00AEF9ED /* LaunchScreen.storyboard */,
@@ -277,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF1DE97021EC13AE00AEF9ED /* LaunchScreen.storyboard in Resources */,
+				EF1B1F9421FC8CB900C4F8B3 /* RemoteConfigDefaults.plist in Resources */,
 				EF1DE99421EC24CC00AEF9ED /* GoogleService-Info.plist in Resources */,
 				EF1DE96D21EC13AE00AEF9ED /* Assets.xcassets in Resources */,
 				EF1DE96B21EC13AC00AEF9ED /* Main.storyboard in Resources */,
@@ -361,16 +371,22 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GroupTalk/Pods-GroupTalk-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +401,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF2144D321FD34FD00859DB3 /* SignInViewController.swift in Sources */,
+				EF22AEEF21FCC361009160E4 /* LoginViewController.swift in Sources */,
 				EF1DE96821EC13AC00AEF9ED /* ViewController.swift in Sources */,
 				EF1DE96621EC13AC00AEF9ED /* AppDelegate.swift in Sources */,
 			);
