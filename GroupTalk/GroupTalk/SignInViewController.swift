@@ -19,9 +19,19 @@ class SignInViewController: UIViewController {
     
     let remoteConfig = RemoteConfig.remoteConfig()
     var colorString: String! = nil
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.ref = Database.database().reference()
+        
+        setUpLayout()
+        // Do any additional setup after loading the view.
+        signUpButton.addTarget(self, action: #selector(signUpCheckEvent), for: .touchUpInside)
+        cancelButton.addTarget(self, action: #selector(cancelEvent), for: .touchUpInside)
+    }
+    
+    fileprivate func setUpLayout() {
         let statusBar = UIView()
         self.view.addSubview(statusBar)
         statusBar.snp.makeConstraints{ (m) in
@@ -32,9 +42,6 @@ class SignInViewController: UIViewController {
         statusBar.backgroundColor = UIColor(hex: colorString)
         signUpButton.backgroundColor = UIColor(hex: colorString)
         cancelButton.backgroundColor = UIColor(hex: colorString)
-        // Do any additional setup after loading the view.
-        signUpButton.addTarget(self, action: #selector(signUpCheckEvent), for: .touchUpInside)
-        cancelButton.addTarget(self, action: #selector(cancelEvent), for: .touchUpInside)
     }
     
     @objc func signUpCheckEvent() {
@@ -51,12 +58,16 @@ class SignInViewController: UIViewController {
             print("name text 누락")
             return
         }
-        
-        
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: pwdTextField.text!) { (user, err) in
-            guard let userID = Auth.auth().currentUser?.uid else { return }
-            Database.database().reference().child("users").child(userID).setValue(["name": self.nameTextField.text!])
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: pwdTextField.text!) { (authResult, error) in
+            if error != nil {
+                // Handle error
+                return;
+            }
+           
+            guard let userID = authResult?.user else { return }
+            self.ref.child("users").child(userID.uid).setValue(["name": self.nameTextField.text!])
         }
+        
     }
     
     @objc func cancelEvent() {

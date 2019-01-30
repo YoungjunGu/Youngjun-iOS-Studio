@@ -29,8 +29,8 @@ import Foundation
     typealias LayoutRelation = NSLayoutConstraint.Relation
     typealias LayoutAttribute = NSLayoutConstraint.Attribute
 #else
-    typealias LayoutRelation = NSLayoutRelation
-    typealias LayoutAttribute = NSLayoutAttribute
+    typealias LayoutRelation = NSLayoutConstraint.Relation
+    typealias LayoutAttribute = NSLayoutConstraint.Attribute
 #endif
     typealias LayoutPriority = UILayoutPriority
 #else
