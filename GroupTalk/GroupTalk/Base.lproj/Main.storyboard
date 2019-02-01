@@ -183,6 +183,9 @@
                                     <constraint firstAttribute="height" constant="40" id="6gt-yt-era"/>
                                 </constraints>
                                 <state key="normal" title="회원가입"/>
+                                <connections>
+                                    <action selector="signUpAction:" destination="jc3-JQ-Da7" eventType="touchUpInside" id="6B5-9b-3Zp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpI-LA-Nkl">
                                 <rect key="frame" x="0.0" y="393" width="375" height="40"/>
@@ -190,6 +193,9 @@
                                     <constraint firstAttribute="height" constant="40" id="eBP-Fc-I7M"/>
                                 </constraints>
                                 <state key="normal" title="취소"/>
+                                <connections>
+                                    <action selector="cancelAction:" destination="jc3-JQ-Da7" eventType="touchUpOutside" id="Qfw-aV-ja5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

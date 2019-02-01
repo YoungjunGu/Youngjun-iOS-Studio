@@ -17,6 +17,13 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     
+    @IBAction func signUpAction(_ sender: Any) {
+        doSignUp()
+    }
+    @IBAction func cancelAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     let remoteConfig = RemoteConfig.remoteConfig()
     var colorString: String! = nil
     var ref: DatabaseReference!
@@ -27,8 +34,6 @@ class SignInViewController: UIViewController {
         
         setUpLayout()
         // Do any additional setup after loading the view.
-        signUpButton.addTarget(self, action: #selector(signUpCheckEvent), for: .touchUpInside)
-        cancelButton.addTarget(self, action: #selector(cancelEvent), for: .touchUpInside)
     }
     
     fileprivate func setUpLayout() {
@@ -44,35 +49,60 @@ class SignInViewController: UIViewController {
         cancelButton.backgroundColor = UIColor(hex: colorString)
     }
     
-    @objc func signUpCheckEvent() {
+}
+
+extension SignInViewController {
+    
+    func showAlert(message: String) {
         
-        guard let _ = emailTextField.text else {
-            print("email text 누락")
-            return
-        }
-        guard let _ = pwdTextField.text else {
-            print("pwd text 누락")
-            return
-        }
-        guard let _ = nameTextField.text else {
-            print("name text 누락")
-            return
-        }
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: pwdTextField.text!) { (authResult, error) in
-            if error != nil {
-                // Handle error
-                return;
-            }
-           
-            guard let userID = authResult?.user else { return }
-            self.ref.child("users").child(userID.uid).setValue(["name": self.nameTextField.text!])
-        }
-        
+        let alert = UIAlertController(title: "회원가입 실패", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default))
+        self.present(alert, animated: true, completion: nil)
     }
     
-    @objc func cancelEvent() {
+    func doSignUp() {
         
-        self.dismiss(animated: true, completion: nil)
+        if emailTextField.text! == "" {
+            showAlert(message: "이메일을 입력해주세요.")
+            return
+        }
+        
+        if pwdTextField.text! == "" {
+            showAlert(message: "비밀 번호를 입력해 주세요.")
+        }
+        
+        if nameTextField.text! == "" {
+            showAlert(message: "이름을 입력해 주세요.")
+        }
+        
+        signUp(email: emailTextField.text!, password: pwdTextField.text!, name: nameTextField.text!)
     }
+    
+    func signUp(email: String, password: String, name: String) {
+        
+        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+            if error != nil {
+                
+                if let ErrorCode = AuthErrorCode(rawValue: (error?._code)!) {
+                    
+                    switch ErrorCode {
+                        
+                    case AuthErrorCode.invalidEmail:
+                        self.showAlert(message: "유효하지 않은 이메일 입니다.")
+                    case AuthErrorCode.emailAlreadyInUse:
+                        self.showAlert(message: "이미 가입한 회원 입니다.")
+                    case AuthErrorCode.weakPassword:
+                        self.showAlert(message: "비밀번호는 최소 6자리 이상 입니다.")
+                    default:
+                        print(ErrorCode)
+                    }
+                }
+            } else {
+                print("회원가입 성공")
+                dump(user)
+            }
+        })
+    }
+    
     
 }
