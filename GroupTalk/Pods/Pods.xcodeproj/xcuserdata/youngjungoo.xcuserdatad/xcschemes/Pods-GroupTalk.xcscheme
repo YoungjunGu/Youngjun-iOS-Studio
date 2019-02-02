@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "83F5AECB247B74CBB9D6263063B8F9A4"
+               BlueprintIdentifier = "F0655A4EFF41E64EC282B8CFC84774C5"
                BuildableName = "Pods_GroupTalk.framework"
                BlueprintName = "Pods-GroupTalk"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "83F5AECB247B74CBB9D6263063B8F9A4"
+            BlueprintIdentifier = "F0655A4EFF41E64EC282B8CFC84774C5"
             BuildableName = "Pods_GroupTalk.framework"
             BlueprintName = "Pods-GroupTalk"
             ReferencedContainer = "container:Pods.xcodeproj">

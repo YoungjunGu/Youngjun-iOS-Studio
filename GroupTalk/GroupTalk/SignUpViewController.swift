@@ -9,13 +9,18 @@
 import UIKit
 import Firebase
 
-class SignInViewController: UIViewController {
+class SignUpViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var pwdTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var profileImageView: UIImageView!
+    
+    @IBAction func touchUpProfileAdding(_ sender: UITapGestureRecognizer) {
+        profileImagePicker()
+    }
     
     @IBAction func signUpAction(_ sender: Any) {
         doSignUp()
@@ -51,7 +56,7 @@ class SignInViewController: UIViewController {
     
 }
 
-extension SignInViewController {
+extension SignUpViewController {
     
     func showAlert(message: String) {
         
@@ -69,10 +74,12 @@ extension SignInViewController {
         
         if pwdTextField.text! == "" {
             showAlert(message: "비밀 번호를 입력해 주세요.")
+            return
         }
         
         if nameTextField.text! == "" {
             showAlert(message: "이름을 입력해 주세요.")
+            return
         }
         
         signUp(email: emailTextField.text!, password: pwdTextField.text!, name: nameTextField.text!)
@@ -100,9 +107,36 @@ extension SignInViewController {
             } else {
                 print("회원가입 성공")
                 dump(user)
+                //Firebase 서버에 데이터를 저장 하는 작업
+                let userID = Auth.auth().currentUser?.uid
+                let profileImage = self.profileImageView.image?.jpegData(compressionQuality: 0.1)
+                
+                Database.database().reference().child("users").child(userID!).setValue([name: name])
+                
+                
+                self.dismiss(animated: true, completion: nil)
             }
         })
     }
     
+    func profileImagePicker() {
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        //선택한 사진을 수정 할 수 있는 여부를 정하는 값
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = .photoLibrary
+        
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        //iOS 11 이상 부터 InfoKey 구조체로 originalImage 프로퍼티가 들어가 있다
+        self.profileImageView.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
     
 }

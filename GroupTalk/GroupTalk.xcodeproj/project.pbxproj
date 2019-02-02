@@ -19,7 +19,7 @@
 		EF1DE97B21EC13AE00AEF9ED /* GroupTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1DE97A21EC13AE00AEF9ED /* GroupTalkTests.swift */; };
 		EF1DE98621EC13AE00AEF9ED /* GroupTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1DE98521EC13AE00AEF9ED /* GroupTalkUITests.swift */; };
 		EF1DE99421EC24CC00AEF9ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF1DE99321EC24CC00AEF9ED /* GoogleService-Info.plist */; };
-		EF2144D321FD34FD00859DB3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2144D221FD34FD00859DB3 /* SignInViewController.swift */; };
+		EF2144D321FD34FD00859DB3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2144D221FD34FD00859DB3 /* SignUpViewController.swift */; };
 		EF22AEEF21FCC361009160E4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22AEEE21FCC361009160E4 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +65,7 @@
 		EF1DE98521EC13AE00AEF9ED /* GroupTalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTalkUITests.swift; sourceTree = "<group>"; };
 		EF1DE98721EC13AE00AEF9ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1DE99321EC24CC00AEF9ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		EF2144D221FD34FD00859DB3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		EF2144D221FD34FD00859DB3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EF22AEEE21FCC361009160E4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "/Users/youngjungoo/Desktop/iOS-Studio/GroupTalk/GroupTalk/LoginViewController.swift"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -149,7 +149,7 @@
 				EF1DE96521EC13AC00AEF9ED /* AppDelegate.swift */,
 				EF1DE96721EC13AC00AEF9ED /* ViewController.swift */,
 				EF22AEEE21FCC361009160E4 /* LoginViewController.swift */,
-				EF2144D221FD34FD00859DB3 /* SignInViewController.swift */,
+				EF2144D221FD34FD00859DB3 /* SignUpViewController.swift */,
 				EF1B1F9321FC8CB900C4F8B3 /* RemoteConfigDefaults.plist */,
 				EF1DE96921EC13AC00AEF9ED /* Main.storyboard */,
 				EF1DE96C21EC13AE00AEF9ED /* Assets.xcassets */,
@@ -401,7 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF2144D321FD34FD00859DB3 /* SignInViewController.swift in Sources */,
+				EF2144D321FD34FD00859DB3 /* SignUpViewController.swift in Sources */,
 				EF22AEEF21FCC361009160E4 /* LoginViewController.swift in Sources */,
 				EF1DE96821EC13AC00AEF9ED /* ViewController.swift in Sources */,
 				EF1DE96621EC13AC00AEF9ED /* AppDelegate.swift in Sources */,
