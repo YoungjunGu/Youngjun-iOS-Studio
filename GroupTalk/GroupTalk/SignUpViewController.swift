@@ -37,6 +37,7 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate, UI
         super.viewDidLoad()
         self.ref = Database.database().reference()
         
+        
         setUpLayout()
         // Do any additional setup after loading the view.
     }
@@ -111,7 +112,27 @@ extension SignUpViewController {
                 let userID = Auth.auth().currentUser?.uid
                 let profileImage = self.profileImageView.image?.jpegData(compressionQuality: 0.1)
                 
-                Database.database().reference().child("users").child(userID!).setValue([name: name])
+                Storage.storage().reference().child("userImages").child(userID!).putData(profileImage!, metadata: nil, completion: {
+                    (data, error) in
+                
+                    if let error = error {
+                        print("There was an error")
+                        print(error.localizedDescription)
+                        return
+                    } else {
+                        Storage.storage().reference().downloadURL(completion: { (url, error) in
+                            if error != nil {
+                                print(error!.localizedDescription)
+                                return
+                            }
+                            let downloadUrl = url?.absoluteString
+                            
+                        })
+                    }
+                    
+                    Database.database().reference().child("users").child(userID!).setValue([name: name])
+                })
+                
                 
                 
                 self.dismiss(animated: true, completion: nil)
@@ -130,13 +151,17 @@ extension SignUpViewController {
         self.present(imagePicker, animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        //iOS 11 이상 부터 InfoKey 구조체로 originalImage 프로퍼티가 들어가 있다
-        self.profileImageView.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-        
-        dismiss(animated: true, completion: nil)
-        
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let changedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            self.profileImageView.image = changedImage //편집된 사진을 뷰에 present
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     
 }

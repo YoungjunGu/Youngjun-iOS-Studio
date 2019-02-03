@@ -6,7 +6,6 @@ target 'GroupTalk' do
   use_frameworks!
 
   # Pods for GroupTalk
-pod 'SnapKit', '~> 4.0.0'
 
   target 'GroupTalkTests' do
     inherit! :search_paths
@@ -17,7 +16,7 @@ pod 'SnapKit', '~> 4.0.0'
     inherit! :search_paths
     # Pods for testing
   end
-
+pod 'SnapKit', '~> 4.0.0'
 pod 'Firebase/Core'
 pod 'Firebase/RemoteConfig'
 pod 'TextFieldEffects'

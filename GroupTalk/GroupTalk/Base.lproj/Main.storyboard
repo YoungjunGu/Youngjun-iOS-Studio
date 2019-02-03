@@ -235,6 +235,7 @@
                         <outlet property="cancelButton" destination="mpI-LA-Nkl" id="y02-M0-ifk"/>
                         <outlet property="emailTextField" destination="Jff-jH-kS1" id="vmj-R7-OM8"/>
                         <outlet property="nameTextField" destination="Q8B-dS-xt4" id="j79-S8-dFD"/>
+                        <outlet property="profileImageView" destination="GMM-MD-QSD" id="yA1-ry-lQR"/>
                         <outlet property="pwdTextField" destination="QQ4-Xo-EI7" id="Uey-Wq-OJS"/>
                         <outlet property="signUpButton" destination="y0o-Yo-I6G" id="bfV-uz-EW2"/>
                     </connections>

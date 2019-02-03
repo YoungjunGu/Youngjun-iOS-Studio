@@ -37,8 +37,8 @@ class LoginViewController: UIViewController {
     }
     
     @objc func signUpPresent() {
-        let signInVC = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
-        self.present(signInVC, animated: true, completion: nil)
+        let signUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignUpViewController
+        self.present(signUpVC, animated: true, completion: nil)
     }
     
 }
