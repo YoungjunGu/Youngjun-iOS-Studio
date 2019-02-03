@@ -125,15 +125,11 @@ extension SignUpViewController {
                                 print(error!.localizedDescription)
                                 return
                             }
-                            let downloadUrl = url?.absoluteString
-                            
+                            let imageUrl = url?.absoluteString
+                            Database.database().reference().child("users").child(userID!).setValue(["name": name, "profileImageUrl": imageUrl ])
                         })
                     }
-                    
-                    Database.database().reference().child("users").child(userID!).setValue([name: name])
                 })
-                
-                
                 
                 self.dismiss(animated: true, completion: nil)
             }
