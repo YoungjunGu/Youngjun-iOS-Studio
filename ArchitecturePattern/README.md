@@ -2,6 +2,11 @@
 
 많은 사람들과 협업을 진행할때 Architecture Pattern의 중요성을 매우 강조하고 있습니다. 그렇기 때문에 Architecture Pattern 을 공부하고 앞으로의 프로젝트에 적극 활용하기 위해 정리를 하겠습니다.
 
+이 글은 아래 글과 강의를 바탕으로 정리 한 내용입니다.
+iOS Architecture Patter(https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52)
+Edwith MVC Pattern(https://www.edwith.org/swiftapp/lecture/26620/)
+
+
 <hr>
 
 > 아키텍쳐 패턴이 필요한 이유?
