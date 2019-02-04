@@ -4,7 +4,7 @@
 
 이 글은 아래 글과 강의를 바탕으로 정리 한 내용입니다.
 
-[iOS Architecture Patter](https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52)
+[iOS Architecture Pattern](https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52)
 <br>
 [Edwith MVC Pattern](https://www.edwith.org/swiftapp/lecture/26620/)
 
