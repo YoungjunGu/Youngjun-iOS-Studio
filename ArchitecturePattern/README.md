@@ -82,7 +82,7 @@ Controller 는 Model 과 View 를 연결 시켜주는 역할이기 때문에 서
 UIViewController는 View 를 소유하게 되고 View 들의 Life Cycle과 강하게 연결 된다. 그렇게 되면 View 와 Controller의 분리가 쉽지 않고 결국 종속 되어 버린다. 그렇게 되면 Controller와 View 의 재사용성이 떨어진다. 이렇게 View 와 Controller가 강하게 연결되어 있으면 Testing 이 어려워 진다. 그리고 View 
 위에서의 사용자의 Action 과 이에 따른 Method 뿐만 아니라 UIViewController 에서 일어나는 각종 행위로 (네트워크 통신, Delegagtion 등) Controller는 방대해지는데 이를 Massive View Controller 라고 부르기도 한다.
 
-위의 다이어그램에서 View 와 Controller가 뭉쳐져 방대해진 UIViewController 의 사이즈르 줄이는 행위, [View Controller Offloading](https://www.objc.io/issues/1-view-controllers/lighter-view-controllers/) 가 하나의 이슈이다.
+위의 다이어그램에서 View 와 Controller가 뭉쳐져 방대해진 UIViewController 의 사이즈를 줄이는 행위, [View Controller Offloading](https://www.objc.io/issues/1-view-controllers/lighter-view-controllers/) 가 하나의 이슈이다.
 
 
 
