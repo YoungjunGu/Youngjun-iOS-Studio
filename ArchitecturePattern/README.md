@@ -68,15 +68,24 @@ MVC MVP MVVM 는 3개 카테고리 중 하나는 포함
 
 기존의 MVC 모델의 문제점은 View 의 범위가 정확하지 않다. Model이 변경 되면 Controller 에 의해 Update위해 렌더링 된다. 위의 구조를 보면 알 수 있듯이 각 개체 들은 남은 개체 들에대해 존재를 알고 있고 서로에게영향을 주게 된다. 이것은 재사용성을 줄이게 된다.
 
-> Apple의 MVC 
+> Apple이 제시한 Cocoa MVC 
 
 <img width="748" alt="2019-02-04 2 29 11" src="https://user-images.githubusercontent.com/33486820/52200240-940e6200-28ab-11e9-9c8f-dc201d20e4e9.png">
 
 Controller 는 Model 과 View 를 연결 시켜주는 역할이기 때문에 서로에 대해 자세한 사항을 알 필요 없다. 그 중에서 재사용이 불가능한 것이 Controller 이다. 모든 특이한 로직을 Model 이 아닌 Controller에 넣어야 한다.
-문제점:  뷰 컨트롤러 덩어리 ( Massive View Controller)
-
+위의 Cocoa MVC는 Model 과 View 의 독립성이 보장 된다. 하지만 실제 개발 과정에서느 조금 다르다
 
 > 실제  Appler의 MVC
+
+<img width="743" alt="2019-02-04 2 38 28" src="https://user-images.githubusercontent.com/33486820/52202530-0da94e80-28b2-11e9-9dfd-6748f43b0d13.png">
+
+UIViewController는 View 를 소유하게 되고 View 들의 Life Cycle과 강하게 연결 된다. 그렇게 되면 View 와 Controller의 분리가 쉽지 않고 결국 종속 되어 버린다. 그렇게 되면 Controller와 View 의 재사용성이 떨어진다. 이렇게 View 와 Controller가 강하게 연결되어 있으면 Testing 이 어려워 진다. 
+
+
+
+
+
+
 
 
 
