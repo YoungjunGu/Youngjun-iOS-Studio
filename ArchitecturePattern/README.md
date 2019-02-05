@@ -161,9 +161,9 @@ PlaygroundPage.current.liveView = vc.view
 
 > MVC 아키텍쳐는 3가지 키워드에 부합 하는 아키텍쳐인가?
 
-- Distribution(분리): View 와 Model을 분리( Person Model, GreetingViewController), 하지만 View 와 Controller는 강하게 연결 되어 있다.
-- Testability(테스트가능성): View와 Controller가 강하게 연결 되어 있기 때문에 Model만 테스팅을 진행 할수 있다.
-- Easy of Use(손쉬운 사용): 가장 기본적은 아키텍쳐 패턴이고 다른 아키텍쳐에 비해 코드의 양이 훨씬 적어서 쉽게 유지보수가 가능하다(앞으로 다른 모델들과 비교)
+- **Distribution**(분리): View 와 Model을 분리( Person Model, GreetingViewController), 하지만 View 와 Controller는 강하게 연결 되어 있다.
+- **Testability**(테스트가능성): View와 Controller가 강하게 연결 되어 있기 때문에 Model만 테스팅을 진행 할수 있다.
+- **Easy of Use**(손쉬운 사용): 가장 기본적은 아키텍쳐 패턴이고 다른 아키텍쳐에 비해 코드의 양이 훨씬 적어서 쉽게 유지보수가 가능하다(앞으로 다른 모델들과 비교)
 
 
 
