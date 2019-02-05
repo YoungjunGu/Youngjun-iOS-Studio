@@ -155,6 +155,37 @@ vc.person = model
 PlaygroundPage.current.liveView = vc.view
 ```
 
+예제 코드를 살펴 보며 왜 View와 Controller 가 강하게 연결 되어있는지 알 수 있다. GreetingViewController 안에 View 의 생성과 배치에 관련된 코드들(UILabel, UIButton,ViewFrame 등,,) 이 위치하게 되고 갱신 또한 Controller 안에서 이루어지는 것을 확인 할 수 있다.
+
+앞서 언급한 View 의 테스팅 과정 또한 Controller 안에서 View Life Cycle 과 관련된 메소드 (`viewDidLoad`, `viewWillApear` 등) 의 호출이 없으면 안되기 때문에 역시 강하게 연결 되어있는 것을 확인 가능하다.
+
+> MVC 아키텍쳐는 3가지 키워드에 부합 하는 아키텍쳐인가?
+
+- Distribution(분리): View 와 Model을 분리( Person Model, GreetingViewController), 하지만 View 와 Controller는 강하게 연결 되어 있다.
+- Testability(테스트가능성): View와 Controller가 강하게 연결 되어 있기 때문에 Model만 테스팅을 진행 할수 있다.
+- Easy of Use(손쉬운 사용): 가장 기본적은 아키텍쳐 패턴이고 다른 아키텍쳐에 비해 코드의 양이 훨씬 적어서 쉽게 유지보수가 가능하다(앞으로 다른 모델들과 비교)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
