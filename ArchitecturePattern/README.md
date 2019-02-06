@@ -165,7 +165,93 @@ PlaygroundPage.current.liveView = vc.view
 - **Testability**(테스트가능성): View와 Controller가 강하게 연결 되어 있기 때문에 Model만 테스팅을 진행 할수 있다.
 - **Easy of Use**(손쉬운 사용): 가장 기본적은 아키텍쳐 패턴이고 다른 아키텍쳐에 비해 코드의 양이 훨씬 적어서 쉽게 유지보수가 가능하다(앞으로 다른 모델들과 비교)
 
+MVC는 iOS 개발시 가장 간단한 아키텍쳐 모델 이고 쉬운 패턴입니다. 하지마 앞서 말했듯이 유지보수에 상당히 많은 비용을 투자해야한다는 단점이 있다.
 
+<hr>
+
+## MVP
+
+- **M**odel
+- **V**iew(`UIView` and/or `UIViewController`)
+- **P**resenter
+
+![image](https://user-images.githubusercontent.com/33486820/52329165-550c1800-2a35-11e9-8b49-a8861f3bcaa6.png)
+
+위의 MVP 다이어그램은 구조가 MVC 와 매우 유사하다. 
+`UIView` 와 `UIViewController` 가 모두 View에 해당된다. Cocoa MVC 와의 차이점은  `UIViewController`는 Controller에 해당 했고 View 와 서로 합쳐진 형태로 강하게 의존하고 있느 형태이다. 그러므로 View Life Cycle 에 영양을 미치는 반면 MVP 에서는 중간 역할을 하는 **Presenter** 가 존재하고 이는 아무런
+영향을 끼치지 않는다.
+또한 Presenter는 Layout 코드가 존재 하지 않고 Contoller의 역할에 보다 충실하게 View를 데이터와 상태에 맞추어 갱신하는 역할을 한다.
+**즉 Presenter는 Model로 부터 갱신된 데이터를 받아오 뷰를 갱신하는 역할을 한다**
+
+> UIViewController 가 View인가?
+
+MVP에서는 UIViewController의 자식클래스에 Presenter(Controller)가 아닌 View에 해당한다. 이는 보다 테스팅의 효과를 높일 수 있지만 수작업의 데이터나 이벤트 바인딩을 따로 만들어야 하느 추가적인 비용이 발생한다 예제를 통해 확인해보자.
+
+```swift
+import UIKit
+import PlaygroundSupport
+
+struct Person { // Model
+    let firstName:String
+    let lastName:String
+}
+
+protocol GreetingView:class { // View Protocol
+    func setGreeting(greeting:String)
+}
+
+protocol GreetingViewPresenter { // Presenter Protocol
+    init(view: GreetingView, person: Person)
+    func showGreeting()
+}
+
+class GreetingPresenter : GreetingViewPresenter { // Presenter
+    weak var view: GreetingView?
+    let person: Person
+
+    required init(view: GreetingView, person: Person) {
+        self.view = view
+        self.person = person
+    }
+    // 3.
+    func showGreeting() { // Update View
+        let greeting = "Hello" + " " + self.person.firstName + " " + self.person.lastName
+        self.view?.setGreeting(greeting: greeting)
+    }
+}
+
+class GreetingViewController : UIViewController, GreetingView { // View
+    var presenter: GreetingViewPresenter!
+    ...
+    // Properties
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.frame = CGRect(x: 0, y: 0, width: 320, height: 480)
+        setupLayout()
+        self.showGreetingButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+    }
+    ...
+    // Layout Code
+    // 2. 
+    @objc func didTapButton(button: UIButton) {
+        self.presenter.showGreeting()  // Send Action to Presenter
+    }
+    // 1.
+    func setGreeting(greeting: String) {
+        self.greetingLabel.text = greeting
+    }
+    // layout code goes here
+}
+// Present the view controller in the Live View window
+// Assembling of MVP
+let model = Person(firstName: "Gu", lastName: "Youngjun")
+let view = GreetingViewController()
+let presenter = GreetingPresenter(view: view, person: model)
+view.presenter = presenter
+
+PlaygroundPage.current.liveView = view
+```
 
 
 
