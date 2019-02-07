@@ -253,7 +253,10 @@ view.presenter = presenter
 PlaygroundPage.current.liveView = view
 ```
 
-각각의 View 와 Presenter의 Protocol을 구현 하고 Presenter
+각각의 View 와 Presenter의 Protocol을 구현 하고 View 는 Presenter를 소유하고 있고 Presenter 의 경우 User Action,데이터 갱신, 상태 갱신에 따라 View를 update 해주어야 한다. 이는 위의 코드와 같이 View 는 Presenter 를 강하 참조로 소유하고 있고 Presenter는 약한 참조로 View를 단순히 가리키고 있다.
+그렇기 때문에 View의 Life Cycle의 영향과 레이아웃 코드와 액션 코드 공존하는 등의 의존성을 피할 수 있지만 참조에 의한 1:1 의존성에는 벗어 날 수 없다느 한계가
+존재 한다.
+
 
 
 
