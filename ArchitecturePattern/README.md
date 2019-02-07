@@ -253,7 +253,7 @@ view.presenter = presenter
 PlaygroundPage.current.liveView = view
 ```
 
-
+각각의 View 와 Presenter의 Protocol을 구현 하고 Presenter
 
 
 
