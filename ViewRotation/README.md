@@ -39,4 +39,29 @@ override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
 }
 ```
 
+View 회전과 관련된 함수 두개를 override 해줍니다. 해당 Container View Controller 에게 회전에 관한 정보를 반환 하기 위함입니다.
+
+
+그 후 Navigation Controller에 Push 될 View Controller에 지원하는 디바이스 방향을 정의 해줍니다.
+
+```swift
+override var shouldAutorotate: Bool {
+    return true
+}
+
+override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return [.portrait, .landscape]
+}
+```
+
+이때 각 View Controller에서 지원 되어야 할 모드 portrait or landscape 에 따라 방향을 정의 해 주면 됩니다.
+
+
+
+
+
+
+
+
+
 
