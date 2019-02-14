@@ -40,5 +40,3 @@ override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
 ```
 
 
-
-
