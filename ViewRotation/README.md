@@ -56,6 +56,49 @@ override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
 
 이때 각 View Controller에서 지원 되어야 할 모드 portrait or landscape 에 따라 방향을 정의 해 주면 됩니다.
 
+> viewWillAppear에서 뷰의 회전을 미리 감지하고 대처하는 방법
+
+```swift
+override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    if UIDevice.current.orientation == .landscapeRight {
+        let value = UIDeviceOrientation.portrait.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
+    }
+    let value = UIDeviceOrientation.landscapeRight.rawValue
+    UIDevice.current.setValue(value, forKey: "orientation")
+}
+```
+
+> viewWillTransition 사용법
+
+```swift
+
+override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+
+	super.viewWillTransition(to: size, with: coordinator)	
+    coordinator.animate(alongsideTransition: { extensionContext in
+            self.updateViews()
+        }, completion: { extensionContext in })
+ }
+    
+func updateViews() {
+     let viewSize = self.view.frame.size
+        //뷰의 회전을 감지하고 셀을 재배열
+        if(UIApplication.shared.statusBarOrientation.isPortrait) {
+            let cellLength = (viewSize.width/2.0) - 1
+            self.cellSize = CGSize(width: cellLength, height: cellLength)
+        } else {
+            let cellLength = (viewSize.width/3.0) - 1
+            self.cellSize = CGSize(width: cellLength, height: cellLength)
+        }
+        
+        self.collectionView?.collectionViewLayout.invalidateLayout()
+  }
+```
+
+
+
 
 
 
