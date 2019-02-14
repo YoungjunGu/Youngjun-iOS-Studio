@@ -18,3 +18,11 @@ General에 Deployment Info영역에서 Devie Orientation을 허용하고 싶은 
 
 > AppDelegate에 회전감지 함수를 추가하는 방법
 
+Portrait(세로모드) 인지 Landscape(가로모드)인지 반환 해주는 함수 추가
+
+```swift
+func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+    return [.portrait, .landscape]
+}
+```
+
