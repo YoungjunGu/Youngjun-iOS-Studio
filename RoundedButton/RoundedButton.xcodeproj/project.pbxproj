@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF208AAF22204E30008DD435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF208AAE22204E30008DD435 /* AppDelegate.swift */; };
+		EF208AB122204E30008DD435 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF208AB022204E30008DD435 /* ViewController.swift */; };
+		EF208AB422204E30008DD435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF208AB222204E30008DD435 /* Main.storyboard */; };
+		EF208AB622204E31008DD435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF208AB522204E31008DD435 /* Assets.xcassets */; };
+		EF208AB922204E31008DD435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF208AB722204E31008DD435 /* LaunchScreen.storyboard */; };
+		EF208AC422204E31008DD435 /* RoundedButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF208AC322204E31008DD435 /* RoundedButtonTests.swift */; };
+		EF208ACF22204E31008DD435 /* RoundedButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF208ACE22204E31008DD435 /* RoundedButtonUITests.swift */; };
+		EF208ADD22204E4B008DD435 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF208ADC22204E4B008DD435 /* RoundedButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF208AC022204E31008DD435 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF208AA322204E30008DD435 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF208AAA22204E30008DD435;
+			remoteInfo = RoundedButton;
+		};
+		EF208ACB22204E31008DD435 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF208AA322204E30008DD435 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF208AAA22204E30008DD435;
+			remoteInfo = RoundedButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF208AAB22204E30008DD435 /* RoundedButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundedButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF208AAE22204E30008DD435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF208AB022204E30008DD435 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF208AB322204E30008DD435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF208AB522204E31008DD435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF208AB822204E31008DD435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF208ABA22204E31008DD435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF208ABF22204E31008DD435 /* RoundedButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoundedButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF208AC322204E31008DD435 /* RoundedButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonTests.swift; sourceTree = "<group>"; };
+		EF208AC522204E31008DD435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF208ACA22204E31008DD435 /* RoundedButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoundedButtonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF208ACE22204E31008DD435 /* RoundedButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonUITests.swift; sourceTree = "<group>"; };
+		EF208AD022204E31008DD435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF208ADC22204E4B008DD435 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF208AA822204E30008DD435 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF208ABC22204E31008DD435 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF208AC722204E31008DD435 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF208AA222204E30008DD435 = {
+			isa = PBXGroup;
+			children = (
+				EF208AAD22204E30008DD435 /* RoundedButton */,
+				EF208AC222204E31008DD435 /* RoundedButtonTests */,
+				EF208ACD22204E31008DD435 /* RoundedButtonUITests */,
+				EF208AAC22204E30008DD435 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF208AAC22204E30008DD435 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF208AAB22204E30008DD435 /* RoundedButton.app */,
+				EF208ABF22204E31008DD435 /* RoundedButtonTests.xctest */,
+				EF208ACA22204E31008DD435 /* RoundedButtonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF208AAD22204E30008DD435 /* RoundedButton */ = {
+			isa = PBXGroup;
+			children = (
+				EF208AAE22204E30008DD435 /* AppDelegate.swift */,
+				EF208AB022204E30008DD435 /* ViewController.swift */,
+				EF208ADC22204E4B008DD435 /* RoundedButton.swift */,
+				EF208AB222204E30008DD435 /* Main.storyboard */,
+				EF208AB522204E31008DD435 /* Assets.xcassets */,
+				EF208AB722204E31008DD435 /* LaunchScreen.storyboard */,
+				EF208ABA22204E31008DD435 /* Info.plist */,
+			);
+			path = RoundedButton;
+			sourceTree = "<group>";
+		};
+		EF208AC222204E31008DD435 /* RoundedButtonTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF208AC322204E31008DD435 /* RoundedButtonTests.swift */,
+				EF208AC522204E31008DD435 /* Info.plist */,
+			);
+			path = RoundedButtonTests;
+			sourceTree = "<group>";
+		};
+		EF208ACD22204E31008DD435 /* RoundedButtonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF208ACE22204E31008DD435 /* RoundedButtonUITests.swift */,
+				EF208AD022204E31008DD435 /* Info.plist */,
+			);
+			path = RoundedButtonUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF208AAA22204E30008DD435 /* RoundedButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF208AD322204E32008DD435 /* Build configuration list for PBXNativeTarget "RoundedButton" */;
+			buildPhases = (
+				EF208AA722204E30008DD435 /* Sources */,
+				EF208AA822204E30008DD435 /* Frameworks */,
+				EF208AA922204E30008DD435 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RoundedButton;
+			productName = RoundedButton;
+			productReference = EF208AAB22204E30008DD435 /* RoundedButton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF208ABE22204E31008DD435 /* RoundedButtonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF208AD622204E32008DD435 /* Build configuration list for PBXNativeTarget "RoundedButtonTests" */;
+			buildPhases = (
+				EF208ABB22204E31008DD435 /* Sources */,
+				EF208ABC22204E31008DD435 /* Frameworks */,
+				EF208ABD22204E31008DD435 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF208AC122204E31008DD435 /* PBXTargetDependency */,
+			);
+			name = RoundedButtonTests;
+			productName = RoundedButtonTests;
+			productReference = EF208ABF22204E31008DD435 /* RoundedButtonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF208AC922204E31008DD435 /* RoundedButtonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF208AD922204E32008DD435 /* Build configuration list for PBXNativeTarget "RoundedButtonUITests" */;
+			buildPhases = (
+				EF208AC622204E31008DD435 /* Sources */,
+				EF208AC722204E31008DD435 /* Frameworks */,
+				EF208AC822204E31008DD435 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF208ACC22204E31008DD435 /* PBXTargetDependency */,
+			);
+			name = RoundedButtonUITests;
+			productName = RoundedButtonUITests;
+			productReference = EF208ACA22204E31008DD435 /* RoundedButtonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF208AA322204E30008DD435 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "youngjun goo";
+				TargetAttributes = {
+					EF208AAA22204E30008DD435 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					EF208ABE22204E31008DD435 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = EF208AAA22204E30008DD435;
+					};
+					EF208AC922204E31008DD435 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = EF208AAA22204E30008DD435;
+					};
+				};
+			};
+			buildConfigurationList = EF208AA622204E30008DD435 /* Build configuration list for PBXProject "RoundedButton" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF208AA222204E30008DD435;
+			productRefGroup = EF208AAC22204E30008DD435 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF208AAA22204E30008DD435 /* RoundedButton */,
+				EF208ABE22204E31008DD435 /* RoundedButtonTests */,
+				EF208AC922204E31008DD435 /* RoundedButtonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF208AA922204E30008DD435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF208AB922204E31008DD435 /* LaunchScreen.storyboard in Resources */,
+				EF208AB622204E31008DD435 /* Assets.xcassets in Resources */,
+				EF208AB422204E30008DD435 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF208ABD22204E31008DD435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF208AC822204E31008DD435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF208AA722204E30008DD435 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF208AB122204E30008DD435 /* ViewController.swift in Sources */,
+				EF208ADD22204E4B008DD435 /* RoundedButton.swift in Sources */,
+				EF208AAF22204E30008DD435 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF208ABB22204E31008DD435 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF208AC422204E31008DD435 /* RoundedButtonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF208AC622204E31008DD435 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF208ACF22204E31008DD435 /* RoundedButtonUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF208AC122204E31008DD435 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF208AAA22204E30008DD435 /* RoundedButton */;
+			targetProxy = EF208AC022204E31008DD435 /* PBXContainerItemProxy */;
+		};
+		EF208ACC22204E31008DD435 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF208AAA22204E30008DD435 /* RoundedButton */;
+			targetProxy = EF208ACB22204E31008DD435 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF208AB222204E30008DD435 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF208AB322204E30008DD435 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF208AB722204E31008DD435 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF208AB822204E31008DD435 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF208AD122204E32008DD435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF208AD222204E32008DD435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF208AD422204E32008DD435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = RoundedButton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.RoundedButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF208AD522204E32008DD435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = RoundedButton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.RoundedButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF208AD722204E32008DD435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = RoundedButtonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.RoundedButtonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoundedButton.app/RoundedButton";
+			};
+			name = Debug;
+		};
+		EF208AD822204E32008DD435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = RoundedButtonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.RoundedButtonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoundedButton.app/RoundedButton";
+			};
+			name = Release;
+		};
+		EF208ADA22204E32008DD435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = RoundedButtonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.RoundedButtonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RoundedButton;
+			};
+			name = Debug;
+		};
+		EF208ADB22204E32008DD435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = RoundedButtonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.RoundedButtonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RoundedButton;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF208AA622204E30008DD435 /* Build configuration list for PBXProject "RoundedButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF208AD122204E32008DD435 /* Debug */,
+				EF208AD222204E32008DD435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF208AD322204E32008DD435 /* Build configuration list for PBXNativeTarget "RoundedButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF208AD422204E32008DD435 /* Debug */,
+				EF208AD522204E32008DD435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF208AD622204E32008DD435 /* Build configuration list for PBXNativeTarget "RoundedButtonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF208AD722204E32008DD435 /* Debug */,
+				EF208AD822204E32008DD435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF208AD922204E32008DD435 /* Build configuration list for PBXNativeTarget "RoundedButtonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF208ADA22204E32008DD435 /* Debug */,
+				EF208ADB22204E32008DD435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF208AA322204E30008DD435 /* Project object */;
+}
