@@ -1,5 +1,9 @@
 # Singleton(싱글턴)
 
+프로젝트를 진행하면서 싱글턴 디자인 패턴에 대해 숙지하고자 정리한 글입니다.
+
+## Singleton(싱글턴) 이란?
+
 싱글턴은 'App Life Cycle 주기 동안 특정 클래스의 인스턴스가  오직 하나임을 보장하는 객체' 를 의미한다.
 싱글턴은 애플리케이션이 요청한 횟수와는 관계없이 이미 생성된 같은 인스턴스를 반환한다. 이는 앱 내부의 모든 곳에서 공유될 수 있는 객체 자원이라고 할 수 있다. 애플리케이션 내에서 특정 클래스의 인스턴스가 딱 하나만 있기 때문에 다른 인스턴스 들이 공유해서 사용할 수 있다.
 
@@ -92,7 +96,17 @@ Apple은 iOS 프레임워크 자체에서 싱글턴을 사용한 것을 볼수 �
 ## 의존성 주입
 
 부스트캠프 사전 과제 중 APIRequest 과정을 리팩토링 하면서 작성해보았다.
+<br>
 
+
+<hr>
+참고자료
+
+- https://cocoacasts.com/what-is-a-singleton-and-how-to-create-one-in-swift
+- https://blog.canapio.com/99
+- https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/Singleton.html
+- https://www.edwith.org/boostcourse-ios/lecture/16855/
+- https://github.com/hpique/SwiftSingleton
 
 
 
