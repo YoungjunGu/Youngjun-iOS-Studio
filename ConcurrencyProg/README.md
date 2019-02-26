@@ -271,10 +271,67 @@ print("value: 2")
 */
 ```
 
-> 주의! Serial/ Concurrent 와 Sync/ Async는 별개 이다. Serial 이면서 비동기 일수도 있고 Concurrent 이면서 Sync 일수도 있다. Serial 과 Concurrent 는 한번에 하나만 처리하느냐 동시에 여러개 처리하느냐고 Sync/ Async는 처리가 끝날때까지 기다리느냐 지시후 다른 처리를 하느냐에 초점이 맞추면 된다.
+> 주의! Serial/ Concurrent 와 Sync/ Async는 별개 이다. Serial 이면서 비동기 일수도 있고 Concurrent 이면서 Sync 일수도 있다. Serial 과 Concurrent 는 한번에 하나만 처리하느냐 동시에 여러개 처리하느냐고 Sync/ Async는 처리가 끝날때까지 기다리느냐 지시 후 다른 처리를 하느냐에 초점이 맞추면 된다.
 
 
 
+## DispatchWorkItem
+
+DispatchQueue에 삽입하는 작업을 캡슐화 한 것이다.
+
+<img width="943" alt="image" src="https://user-images.githubusercontent.com/33486820/53412901-0a673580-3a0e-11e9-8be0-0fb675894a2a.png">
+
+위와 같이 프로퍼티에 Closure형태로 DispatchWorkItem 을 이용해서 만든 후 아래 execute를 통해 실행을 제어 한다.
+
+- DispatchWorkItem 예제
+
+```swift
+let serialQueue = DispatchQueue(label: "firstQueue", attributes: .concurrent)
+
+let firstItem = DispatchWorkItem(qos: .userInitiated) {
+
+	    for i in 0..<10 {
+        print("🍏", i)
+    }
+    
+}
+
+let secondItem = DispatchWorkItem(qos: .background) {
+
+		    for i in 100..<110 {
+        print("🍎", i)
+    }
+    
+}
+
+//위의 형식 처럼 작업을 클로져 형태로 캡슐화 한뒤 Dispatch Queue에 삽입한다.
+
+serialQueue.async(execute: secondItem)
+
+serialQueue.async(execute: firstItem)
+
+// secondItem 이 우선순위가 낮아 먼저 execute 되어도 대체적으로 ristItem 이 우선적으로 실행 되는 것을 확인 할 수 있다.
+🍎 100
+🍏 0
+🍎 101
+🍏 1
+🍏 2
+🍎 102
+🍏 3
+🍏 4
+🍎 103
+🍏 5
+🍏 6
+🍎 104
+🍏 7
+🍏 8
+🍎 105
+🍏 9
+🍎 106
+🍎 107
+🍎 108
+🍎 109
+```
 
 
 
