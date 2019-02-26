@@ -13,4 +13,4 @@
 
 ## GCD 응용, Operation Queue
 
-- [GCD vs Operatin Queue](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/ConcurrencyProg)
+- [GCD vs Operation Queue](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/ConcurrencyProg)
