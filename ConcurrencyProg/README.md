@@ -391,11 +391,94 @@ queue.async {
 
 # Operation Queue
 
+cocoa operations는 비동기적으로 수행하려는 작업(task)를 캡슐화 하는 객체지향적인 방법(Object-oriented way)
+
+> Operatin Queue의 특징
+
+- Operatin은 task와 관련된 코드와 데이터를 나타내는 추상 클래스다.
+- Operation Queue는 연산의 실행을 관리한다.
+- Queue에 추가한 동작은 직접 제거할 수 없다.
+- 연산은 작업이 끝날 때까지 대기열에 남아있다.
+- 연산을 대기열에서 제거하는 방법은 연산을 취소하는 방법뿐이다.
+- 취소하는 방법은 연산객체(Operation Object)의 `cnacel()` 메서드를 호출하거나 Operation Queue의 `cancelAllOperations()` 메서드를 호출하여 대기열에 있는 모든연산을 취소하는 방법이 있다.
+- **연산객체(Operation Object)** : 앱에서 수행하려는 연산을 캡슐화 하는데 사용하는 **Foundation 프레임워크** 의 Operation 클래스 인스턴스이다.
+
+> NSOperation 클래스의 인스턴스인 연산객체
+
+- **NSInvocationOperation** : 앱의 객체 및 selector를 기반하여 연산객체를 만드는데 사용하는 클래스이다.
+이미 필요한 작업을 구행하는 기존 메소드가 존재하는 경우 이 클래스를 사용 할 수 있다. 하위클래스가 필요하지 않으므로 이 클래스를 사용하여 보다 동적인 방식으로 연산 객체를 만들 수 있다.
+
+- **NSBlockOperation** : 현재 하나 이상의 블록 객체를 동시에 실행하는데 사용하는 클래스이다. 둘이상의 블록을 실행할 수 있으므로 블록 연산객체는 그룹 semantic을 사용하여 작동한다. 연관된 모든 블럭이 실행을 완료한 경우에만 연산자체가 완료 된 것으로 간주한다.
+
+- **NSOperation**: Custom 연산객체를 정의하기 위한 base class 이다. NSOperatin을 하위 클래스화 하면 연산이 실행되는 기본방식을 변경하고 상태를 보고하는 기능을 포함하여 자체 연산의 구현을 완벽하게 제어 할 수 있다.
+
+> Operation 객체의 주요 지원 기능
+
+- operation객체간의 그래프 기반 종속성 설정 지원. 이러한 종속성은 종속 된 모든 작업이 실행을 완료할 때까지 주어진 operation이 실행되는 것을 방지합니다.
+- operation의 main task가 완료된 후에 실행되는 optional completion블록을 지원합니다.(OS X v10.6이상에만 해당)
+- KVO알림을 사용하여 operation의 실행 상태 변경 모니터링을 지원합니다.
+- operation 우선 순위 지정을 지원하므로, 상대적인 실행 순서에 영향을 줍니다. 
+- 실행 중 조작을 정지 할 수 있는 canceling semantics기능을 지원합니다.
+
+출처: [ZeddiOS](https://zeddios.tistory.com/510 )
+
+
+## OperationQueue의 주요 메서드/프로퍼티
+
+> 특정 Operation Queues 가져오기
+
+```swift
+//current : 현재 작업을 시작한 Operation Queue를 반환합니다.
+class var current: OperationQueue? { get }
+
+//main : 메인 스레드와 연결된 Operation Queue를 반환합니다.
+class var main: OperationQueue { get }
+```
+
+> 대기열(Queue)에서 동작(Operation) 관리
+
+```swift
+//addOperation(_:) : 연산 객체(Operation Object)를 대기열(Queue)에 추가합니다.
+ func addOperation(_ op: Operation)
+ 
+//addOperations(_:waitUntilFinished:) : 연산 객체(Operation Object) 배열을 대기열(Queue)에 추가합니다.
+func addOperations(_ ops: [Operation], waitUntilFinished wait: Bool)
+
+addOperation(_:) : 전달한 클로저를 연산 객체(Operation Object)에 감싸서 대기열(Queue)에 추가합니다.
+func addOperation(_ block: @escaping () -> Void)
+
+//cancelAllOperations() : 대기 중이거나 실행 중인 모든 연산(Operation)을 취소합니다.
+func cancelAllOperations()
+
+//waitUntilAllOperationsAreFinished() : 대기 중인 모든 연산(Operation)과 실행 중인 연산(Operation)이 모두 완료될 때까지 현재 스레드로의 접근을 차단합니다.
+ func waitUntilAllOperationsAreFinished()
+ ```
+ 
+ > 연산(Operation) 실행 관리
+ 
+ ```swift
+ //maxConcurrentOperationCount : 동시에 실행할 수 있는 연산(Operation)의 최대 수입니다.
+ var maxConcurrentOperationCount: Int { get set }
+ 
+//qualityOfService : 대기열 작업을 효율적으로 수행할 수 있도록 여러 우선순위 옵션을 제공합니다.
+ var qualityOfService: QualityOfService { get set }
+ ```
+ 
+ > 연산(Operation) 중단
+ 
+ ```swift
+ 
+//isSuspended : 대기열(Queue)의 연산(Operation) 여부를 나타내기 위한 부울 값입니다. false인 경우 대기열(Queue)에 있는 //연산(Operation)을 실행하고, true인 경우 대기열(Queue)에 대기 중인 연산(Operation)을 실행하진 않지만 이미 실행 중인 연산(Operation)은 계속 실행됩니다.
+var isSuspended: Bool { get set }
+
+대기열(Queue)의 구성
+//name : Operation Queue의 이름
+ var name: String? { get set }
+```
 
 
 
-    
-    
+
 
 
 
