@@ -334,6 +334,63 @@ serialQueue.async(execute: firstItem)
 ```
 
 
+## Grouping vs Chaining
+
+<img width="894" alt="image" src="https://user-images.githubusercontent.com/33486820/53417020-00e2cb00-3a18-11e9-9377-71ff4005f0b1.png">
+
+- **Grouping** : DispatchQueue 들이 각자의 동작을 수행후 종합해서 최종적으로 수행되는 형태
+
+```swift
+//그룹 생성
+let queueGroup = DispatchGroup()
+
+let queue1 = DispatchQueue(label: "task1", attributes: .concurrent)
+let queue2 = DispatchQueue(label: "task2", attributes: .concurrent)
+let queue3 = DispatchQueue(label: "task3", attributes: .concurrent)
+
+queue1.async(group: queueGroup) {
+    print("task1")
+}
+
+queue2.async(group: queueGroup) {
+    print("task2")
+}
+
+queue3.async(group: queueGroup) {
+    print("task3")
+}
+
+queueGroup.notify(queue: DispatchQueue.main) {
+    print("group notify")
+}
+//출력 결과
+
+task1
+task2
+task3
+group notify
+```
+
+- **Chaining** 
+
+```swift 
+
+let queue = DispatchQueue(label: "com.example.imageTransform")
+
+queue.async {
+	let transformImage = image.resize(to: rect)
+    //UI 변화에 관련된 작업은 모두 Main Thread에서 진행 하면 된다.
+    DispatchQueue.main.async {
+    	imageView.image = transformImage
+    }
+}
+```
+
+
+<hr>
+
+# Operation Queue
+
 
 
 
