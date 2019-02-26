@@ -102,13 +102,98 @@ concurrentQueue.async {
 - **Main Queue** : 메인 스레드(UI Thread) 에서 사용 되는 **Serial Queue** 이다. 높은 우선순위를 가지고 있다.
 
 - **Global Queue** : 편의상 사용할수 있게만들어 놓은 Concurrent Queue 이다. 전체 시스템에서 공유가 이루어 지고 처리 우선순위를 위해**qos(Quallity of Service)** 매개변수를 제공한다. 병렬적으로 동시에 처리하기 떄문에 작업 완료의 순서는 정할 수 없지만 우선적으로 일을 처리하게 할 수 있다.
-	- qos 의 우선순위
-    	1. userInteractive
-        2. userInitiated
-        3. default
-        4. utility
-        5. background
-        6. unspecified
+
+
+```swift
+let globalQueue = DispatchQueue.global(qos: DispatchQoS.QoSClass." ")
+```
+
+> qos 의 우선순위
+
+1. `userInteractive` : UI 업데이트, 이벤트 처리 및 대기 시작이 적은 작업, Main Thread에서 실행 되어야 한다.
+
+2. `userInitiated` : 사용자가 즉각적인 결과를 기다리고 있고 UI 상호 작용을 계속하는데 필요한 작업에 사용.
+
+3. `default`
+
+4. `utility` : 계산,I/O,네트워킹, 연속적인 데이터 피드 등 지속적인 작업이 필요한 경우에 사용.
+
+5. `background` : 정해진 시간이 없는 작업들
+
+6. `unspecified`
+
+- qos 우선순위에 따른 수행 결과
+
+```swift
+let serialQueue1 = DispatchQueue(label: "com.example.serial1", qos: .userInteractive)
+let serialQueue2 = DispatchQueue(label: "com.example.serial2", qos: .userInteractive)
+serialQueue1.async {
+    for i in 0..<10 {
+        print("🍏", i)
+    }
+}
+serialQueue2.async {
+    for i in 100..<110 {
+        print("🍎", i)
+    }
+}
+🍎 100
+🍏 0
+🍎 101
+🍏 1
+🍎 102
+🍏 2
+🍎 103
+🍏 3
+🍎 104
+🍏 4
+🍎 105
+🍏 5
+🍎 106
+🍏 6
+🍎 107
+🍏 7
+🍎 108
+🍏 8
+🍎 109
+🍏 9
+```
+
+```swift
+//qos의 우선순위에 따라 출려되는 순서가 다르다.
+let serialQueue1 = DispatchQueue(label: "com.example.serial1", qos: .background)
+let serialQueue2 = DispatchQueue(label: "com.example.serial2", qos: .userInteractive)
+serialQueue1.async {
+    for i in 0..<10 {
+        print("🍏", i)
+    }
+}
+serialQueue2.async {
+    for i in 100..<110 {
+        print("🍎", i)
+    }
+}
+🍏 0
+🍎 100
+🍎 101
+🍎 102
+🍎 103
+🍎 104
+🍎 105
+🍎 106
+🍏 1
+🍎 107
+🍏 2
+🍎 108
+🍎 109
+🍏 3
+🍏 4
+🍏 5
+🍏 6
+🍏 7
+🍏 8
+🍏 9
+```
    
 - **Custom Queue** : Serial or Concurrent 중 하나의 Queue, Global Queue 중 하나에 의해 처리된다.
    
@@ -186,7 +271,7 @@ print("value: 2")
 */
 ```
 
-
+> 주의! Serial/ Concurrent 와 Sync/ Async는 별개 이다. Serial 이면서 비동기 일수도 있고 Concurrent 이면서 Sync 일수도 있다. Serial 과 Concurrent 는 한번에 하나만 처리하느냐 동시에 여러개 처리하느냐고 Sync/ Async는 처리가 끝날때까지 기다리느냐 지시후 다른 처리를 하느냐에 초점이 맞추면 된다.
 
 
 
