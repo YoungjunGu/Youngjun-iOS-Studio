@@ -97,14 +97,18 @@ concurrentQueue.async {
 
 앱 실행시에 시스템에서 기본적으로 2개의 Queue 를 제공한다.
 
-- **Main Queue** 
-	메인 스레드(UI Thread) 에서 사용 되는 **Serial Queue** 이다. 높은 우선순위를 가지고 있다.
+- **Main Queue** : 메인 스레드(UI Thread) 에서 사용 되는 **Serial Queue** 이다. 높은 우선순위를 가지고 있다.
 
-- **Global Queue** 
-	편의상 사용할수 있게만들어 놓은 Concurrent Queue 이다. 전체 시스템에서 공유가 이루어 지고 처리 우선순위를 위해**qos(Quallity of Service)** 매개변수를 제공한다. 병렬적으로 동시에 처리하기 떄문에 작업 완료의 순서는 정할 수 없지만 우선적으로 일을 처리하게 할 수 있다.
+- **Global Queue** : 편의상 사용할수 있게만들어 놓은 Concurrent Queue 이다. 전체 시스템에서 공유가 이루어 지고 처리 우선순위를 위해**qos(Quallity of Service)** 매개변수를 제공한다. 병렬적으로 동시에 처리하기 떄문에 작업 완료의 순서는 정할 수 없지만 우선적으로 일을 처리하게 할 수 있다.
+	- qos 의 우선순위
+    	1. userInteractive
+        2. userInitiated
+        3. default
+        4. utility
+        5. background
+        6. unspecified
    
-- **Custom Queue**
-	Serial or Concurrent 중 하나의 Queue, Global Queue 중 하나에 의해 처리된다.
+- **Custom Queue** : Serial or Concurrent 중 하나의 Queue, Global Queue 중 하나에 의해 처리된다.
    
 ```swift
 let mainQueue = DispatchQueue.main
@@ -113,6 +117,55 @@ print(mainQueue)	// Main Queue
 let globalQueue = DispatchQueue.global(qos: .background)
 print(globalQueue)	// Global Queue
 ```
+
+## Snync / async
+
+Dispatch Queue는 **sync(동기)** 와 **asnyc(비동기)** 메서드를 가지고 있다. 
+
+- Snycronous: 동기처리 메서드
+해당 작업을 처리하는 동안 다음으로 진행 되지 않고 계속 머물러 있다. Serial Dispatch Queue와 같은 결과가 나타난다.(하지만 다르다는 점 유의 아래에서 설명)
+
+```swift
+DispatchQueue.main.sync {
+  print("value: 1")
+}
+print("value: 2")
+
+// 결과
+/*
+  value: 1
+  value: 2
+*/
+```
+
+	- SubSystem 들을 직렬로 처리한다
+    
+    - 안전하게 프로퍼티에 접근이 가능하다 . Mutual exclusion 이 지원된다 (mutex나 semaphore) 그렇지만 **DeadLock** 이 발생 할 수 있다.
+    
+
+- Asyncronous: 비동기처리 메서드
+sync와 다리게 처리를 하라고 지시한 뒤 다음으로 넘어가 버리기 때문에 아래와 같은 결과가 나타납니다.
+
+```swift
+let globalQueue = DispatchQueue.global(qos: .background)
+globalQueue.async {
+  print("value: 1")
+}
+print("value: 2")
+
+// 결과
+/*
+  value: 2
+  value: 1
+*/
+```
+
+
+
+
+
+
+
 
     
     
