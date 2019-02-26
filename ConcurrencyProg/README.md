@@ -10,12 +10,14 @@
 
 - 위의 구조를 보면 Main Thread 에서 User Inferface 에 관련 된 모든 코드를 실행한다. 만약 Data transform 이나 image Processing , Networking 등과 같은 작업을 Main Thread에서 모두 진행을 하게 되면 User Interface의 대응이 느려지거나 중지가 되는 일이 벌어진다.
 
-> 해결: GCD 라는 Concurrency Library 를 사용하자 !
+> 해결: GCD 라는 Concurrency Library 를 사용하여 Main Thread의 일을 줄이자!
 
-![image](https://user-images.githubusercontent.com/33486820/53392301-58fbdc00-39dc-11e9-8925-ab66e3c82124.png)
+![image](https://user-images.githubusercontent.com/33486820/53394355-5dc38e80-39e2-11e9-9918-b00d436b5e8e.png)
 
 - GCD를 이해하기 위해서는 우선 [`DispatchQueue`](https://developer.apple.com/documentation/dispatch) 의 개념을 알아야 한다. 말그대로 Queue 의 기능을 수행하는것인데 프로그래머가 실행할 task(작업)들을 운영체제의 관리 하에 비동기적으로 수행한다.
 DispatchQueue에 수행할 작업 들을 추가하면 GCD는 task에 맞는 스레드를 자동으로 생성해서 실행하고 작업이 종료되면 해당 스레드를 제거하는 형식으로 수행이 된다.<br> Queue 의 특성상 FIFO(first in first out) 구조로 제일먼저 들어온 task 부터 실행한다.
+
+![image](https://user-images.githubusercontent.com/33486820/53392301-58fbdc00-39dc-11e9-8925-ab66e3c82124.png)
 
 > Dispatch Queue 2가지 종류
 
@@ -122,7 +124,8 @@ print(globalQueue)	// Global Queue
 
 Dispatch Queue는 **sync(동기)** 와 **asnyc(비동기)** 메서드를 가지고 있다. 
 
-- Snycronous: 동기처리 메서드
+> **Snycronous** : 동기처리 메서드
+
 해당 작업을 처리하는 동안 다음으로 진행 되지 않고 계속 머물러 있다. Serial Dispatch Queue와 같은 결과가 나타난다.(하지만 다르다는 점 유의 아래에서 설명)
 
 ```swift
@@ -138,13 +141,36 @@ print("value: 2")
 */
 ```
 
-	- SubSystem 들을 직렬로 처리한다
+- SubSystem 들을 직렬로 처리한다
     
-    - 안전하게 프로퍼티에 접근이 가능하다 . Mutual exclusion 이 지원된다 (mutex나 semaphore) 그렇지만 **DeadLock** 이 발생 할 수 있다.
-    
+- 안전하게 프로퍼티에 접근이 가능하다 . Mutual exclusion 이 지원된다 (mutex나 semaphore) 그렇지만 **DeadLock** 이 발생 할 수 있다.
 
-- Asyncronous: 비동기처리 메서드
-sync와 다리게 처리를 하라고 지시한 뒤 다음으로 넘어가 버리기 때문에 아래와 같은 결과가 나타납니다.
+**중요: 앱의 모든 UI 작업이 Main queue에서 수행하기 때문에 동기적으로 main 큐에 접근하여 작업을 실행하려고 하면 교착상태(dead-lock)가 발생한다**
+    
+<img width="1061" alt="image" src="https://user-images.githubusercontent.com/33486820/53394465-bc890800-39e2-11e9-8aab-c7d7419163ed.png">
+
+```swift 
+//deadlock 발생 예제
+ override func viewDidLoad() {
+    super.viewDidLoad()
+
+
+    print("Start")
+    DispatchQueue.main.async {
+        print("async")
+
+    }
+    //Main 에서 sync를 사용했기 때문에 DeadLock 발생!
+    DispatchQueue.main.sync {
+        print("sync")
+    }
+    print("Finish")
+}
+```
+
+> **Asyncronous** : 비동기처리 메서드
+
+sync와 다리게 처리를 하라고 지시한 뒤 다음으로 넘어가 버리기 때문에 아래와 같은 결과가 나타난다
 
 ```swift
 let globalQueue = DispatchQueue.global(qos: .background)
@@ -159,6 +185,8 @@ print("value: 2")
   value: 1
 */
 ```
+
+
 
 
 
