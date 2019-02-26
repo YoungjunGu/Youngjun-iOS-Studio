@@ -478,6 +478,19 @@ var isSuspended: Bool { get set }
 
 
 
+참고 자료
+
+Operation Queue
+- https://medium.com/flawless-app-stories/parallel-programming-with-swift-operations-54cbefaf3cb0
+- https://zeddios.tistory.com/510
+
+GCD
+- https://www.appcoda.com/grand-central-dispatch/
+- https://developer.apple.com/documentation/dispatch/dispatchqueue
+- https://developer.apple.com/videos/play/wwdc2016/720/
+
+- https://www.edwith.org/boostcourse-ios/
+
 
 
 
