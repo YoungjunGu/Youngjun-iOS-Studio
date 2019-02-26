@@ -19,7 +19,7 @@ DispatchQueue에 수행할 작업 들을 추가하면 GCD는 task에 맞는 스�
 
 > Dispatch Queue 2가지 종류
 
-- Serial Dispatch Queue : 한번에 하나의 작업만을 실행, 해당 작업이 대기열에서 완료후 제외되고 새로운 작업이 시작되기 전까지 기다린다. 
+- **Serial Dispatch Queue** : 한번에 하나의 작업만을 실행, 해당 작업이 대기열에서 완료후 제외되고 새로운 작업이 시작되기 전까지 기다린다. 
 
 ```swift
 let serialQueue = DispatchQueue(label: "com.example.serial")
@@ -55,7 +55,7 @@ serialQueue.async {
 🍎 109
 ```
 
-- Concurrent Dispatch Queue : Serial 과 다르게 기다리지 않는다. 가능한 많은 작업을 말그대로 "Conccrently(동시에)"한다.
+- **Concurrent Dispatch Queue** : Serial 과 다르게 기다리지 않는다. 가능한 많은 작업을 말그대로 "Conccrently(동시에)"한다.
 
 ```swift
 let concurrentQueue = DispatchQueue(label: "com.example.concurrent", attributes: .concurrent)
@@ -91,6 +91,31 @@ concurrentQueue.async {
 🍏 9
 ```
 
+위의 코드를 실행하면 Serial 과 Concurrent의 차이점을 알 수 있다. Conccurent의 경우에는 순서에 상관 이 없이 동시에  두 task 가 수행되는 것을 확인 할 수 있다.
+
+## 기본적으로 제공하는 Queue 와 custom tpye
+
+앱 실행시에 시스템에서 기본적으로 2개의 Queue 를 제공한다.
+
+- **Main Queue** 
+	메인 스레드(UI Thread) 에서 사용 되는 **Serial Queue** 이다. 높은 우선순위를 가지고 있다.
+
+- **Global Queue** 
+	편의상 사용할수 있게만들어 놓은 Concurrent Queue 이다. 전체 시스템에서 공유가 이루어 지고 처리 우선순위를 위해**qos(Quallity of Service)** 매개변수를 제공한다. 병렬적으로 동시에 처리하기 떄문에 작업 완료의 순서는 정할 수 없지만 우선적으로 일을 처리하게 할 수 있다.
+   
+- **Custom Queue**
+	Serial or Concurrent 중 하나의 Queue, Global Queue 중 하나에 의해 처리된다.
+   
+```swift
+let mainQueue = DispatchQueue.main
+print(mainQueue)	// Main Queue
+
+let globalQueue = DispatchQueue.global(qos: .background)
+print(globalQueue)	// Global Queue
+```
+
+    
+    
 
 
 
