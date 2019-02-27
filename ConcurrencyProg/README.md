@@ -205,11 +205,11 @@ let globalQueue = DispatchQueue.global(qos: .background)
 print(globalQueue)	// Global Queue
 ```
 
-## Snync / async
+## Sync / Async
 
 Dispatch Queue는 **sync(동기)** 와 **asnyc(비동기)** 메서드를 가지고 있다. 
 
-> **Snycronous** : 동기처리 메서드
+> **Syncronous** : 동기처리 메서드
 
 해당 작업을 처리하는 동안 다음으로 진행 되지 않고 계속 머물러 있다. Serial Dispatch Queue와 같은 결과가 나타난다.(하지만 다르다는 점 유의 아래에서 설명)
 
