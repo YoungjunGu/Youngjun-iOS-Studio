@@ -183,8 +183,219 @@ public func ><T: Comparable>(lhs: T, rhs: T) -> Bool
 let reversed: [String] = names.sorted(by: >)
 ```
 
+### 값 캡쳐(Capturing Values)
+
+클로저는 특정 문맥의 상수나 변수의 값을 캡쳐할 수 있다. 즉 원본 값이 사라져도 클로져의  body 안에서 그 값을 활용할 수 있다. Swift에서 값을 캡쳐 하는 가장 단순한 형태는 **중첩함수 (nested function)** 이다. 중첩함수는 함수의 body 에서 다른 함수를 다시 호출하는 형태로 된 함수이다.
+
+```swift
+func makeIncrementer(forIncrement amount: Int) -> () -> Int {
+	var runningTotal = 0
+    func incrementer() -> Int {
+    	runningTotal += amount
+        return runningTotal
+        }
+	return incrementer
+}
+```
+
+위 함수는 `makeIncrementer` 함수 안에서 `incrementer`함수를 호출하는 형태의 중첩함수 이다.
+처음 `(forINcrement amount: Int)` 는 중첩함수의 인자가 들어오는 매개변수 부분이다. 그리고 반환값으로
+`() -> Int` 이다 . 즉 클로저의 형태의 반환 값을 그 형태는 Int 형이라는 말이다.
 
 
+```swift
+let incrementByTen = makeIncrementer(forIncrement: 10)
+```
+
+위의 중첩 함수를 실행 시켜 보면 반환 값이 클로저의 형태이기 때문에 아래와 같이 프로퍼티를 함수 형태로 실행이 가능하다
+
+```swift
+incrementByTen()
+// 값으로 10을 반환
+incrementByTen()
+// 값으로 20을 반환
+incrementByTen()
+// 값으로 30을 반환
+```
+
+주목해야 할 점은 위의 코드에서  runningTotal의 값과 amount 값이 **캡처**가 되었기에 값이 증가하는 것을 확인 할 수 있다.
+
+해당 `incrementByTen`은 앞으로 프로젝트 내에서 실행이 멈출때 까지 값은 계속 캡쳐가 되고 다른 프로퍼티로 생성우 중첩함수를 사용하면 해당 프로퍼티는 새로운 클로저반환타입을 받기 떄문에 이전의 클로저와 전혀 별개로 수행을 한다
+
+### 클로저는 참조 타입(Closures Are Reference Type)
+
+하나의 클로저를 두 상수나 변수에 할당하면 해당 상수,변수는 같은 클로저를 **참조** 하고있다.
+C/C++의 함수 포인터와 같은 개념이다.
+
+```swift
+let alsoIncrementByTen = incrementByTen
+alsoIncrementByTen()
+// 50을 반환
+```
+
+# Escaping Closures
+
+> 함수가 반환된 후 실행 되는 Escaping Closure
+
+
+클로저를 함수의 파라미터로 넣을 수 있는데, 함수 밖(함수 종료)에서 실행되는 클로저들
+비동기로 실행되거나 completionHandler 로 사용되는 클로저는 파라미터 타입 앞에 **@escaping** 이라는 키워드를 명시해야한다.
+
+
+```swift
+var completionHandlers: [() -> Void] = []
+
+func someFunctionWithEscapingClosure(completionHandler: @escaping() -> Void)
+	completionHandlers.append(completionHandler)
+    
+}
+```
+
+인자로 전달된 completionHandler는 someFinctionWithEscapingClosure 함수가 끝나고 나중에 처리 된다. 만약 함수가 실행되는 클로저에 @escaping 키워드를 붙이지 않으면 컴파일 시 오류가 발생한다.
+
+
+> Escaping Closuer를 활용하면 함수 사이에 실행 순서를 정할 수 있다.
+
+함수의 실행순서를 보장 받는 것은 상당히 중요한 기능이다. 이 순서 보장은 **비동기 함수** 의 경우도 포함하기 때문이다. 서버에서 Json 형식의 데이터를 가져와 화면에 이를 보여주는 앱을 예로들어보자. HTTP 통신을 위해 `Alamofire` 라이브러리를 사용한다. 
+
+```swift
+Alamofire.request(urlRequest).reponseJSON { response in
+	// handle response
+}
+```
+
+`Alamofire.reuqest()` 메서드는 서버로 Request 를 전송한다. 여기서는 GET 방식으로 Json 형식의 데이터를 받아온다. 그리고 결과는 Response 객체를 통해 받을 수 있다. 일반적으로 Request , Response 작업은 비동기로 작동하고 Request 후 반환되어 버린다. 그렇기 때문에 Escaping Closure 를 통해 제어가 가능하다.
+
+```swift
+@discardableResult
+    public func responseJSON(
+        queue: DispatchQueue? = nil,
+        options: JSONSerialization.ReadingOptions = .allowFragments,
+        completionHandler: @escaping (DataResponse<Any>) -> Void)
+        -> Self
+    {
+		
+    }
+```    
+
+reponseJSON 메서드의 매개변수인 queue와 options은 기본값이 지정되어있다.
+이 함수에서 핵심은	`completionHandler: @escaping (DataResponse<Any>) -> Void` 이다
+
+우선 `reponseJSON(queue:options:completionHandler:)` 함수가 반환되어 **완전히 서버로부터 값을 가져온 상태에서**  `{ response in }`  에서 실행된다.
+
+
+> 클로저를 함수 외부에 저장
+
+```swift
+// 클로저를 저장하는 배열
+var completionHandlers: [() -> Void] = []
+
+func withEscaping(completion: @escaping () -> Void) {
+    // 함수 밖에 있는 completionHandlers 배열에 해당 클로저를 저장
+    completionHandlers.append(completion)
+}
+
+func withoutEscaping(completion: () -> Void) {
+    completion()
+}
+
+class ClosuerTest {
+    var x = 10
+    func callFunc() {
+        withEscaping { self.x = 100 }
+        withoutEscaping { x = 200 }
+    }
+}
+let myClosure = ClosuerTest()
+myClosure.callFunc()
+//callFunc()를 호출 한 후 완전히 끝난 뒤 클로저를 저장하는 배열에 클로저를 저장
+print(myClosure.x)
+completionHandlers.first?()
+print(myClosure.x)
+```
+
+`completionHandlers.appens(completion)` 코드를 통해 `withEscaping(completion:)` 외부에 클로저를 저장한다. 즉, 클로저가 함수에서 탈출했다.
+이로서 클로저를 외부로 탈출하는 것이 가능한 것이다.
+
+> Async Inside Async
+
+Escaping Closure는 HTTP 통신에서 completionHandler로 많이 사용된다.
+Architecture Pattern 에 따라 다르겠지만 기본적으로 Restful API 기반의 Request들은 프로젝트 내에 여러곳에서 사용되기 때문에 Model을 만들어 통신을 구현하는 것이 일반적이다.
+
+```swift
+class Server {
+	static getUser() {
+    //
+    }
+}
+```
+
+예를 들어 친구의 목록을 서버에서 Json 형태로 가져와 TableView에 나열 해야하는 작업을 해야한다.
+이때 주의를 해야할 것은 **데이터를 가져오는것** 과 즉각적인 **UI 화면 Update** 가 보장 되어야한다는 것 이다.
+앱이 화면의 UI를 업데이터 하는 도중 데이터가 없어서 크래시가 나는 상황이 발생하기 때문에 두개의 Escaping Closure를 함께 사용해야한다.
+
+```swift
+class Server {
+    static var users: [UserModel] = []
+    
+    static getUser(completion: @escaping (Bool, [UserModel]) -> Void) {
+        //2
+        Alamofire.request(urlRequest).responseJSON { reponse in
+            users.append(유저)
+            DispatchQueue.main.async {
+                //3
+                completion(true, users)
+            }
+        }
+    }
+}
+
+//1
+Server.getUser{ (isSuccess, users) in
+    //4
+    if isSuccess {
+    //성공했기 때문에 UI Update 작업 수행
+    }
+}
+```
+
+코드의 작동 순서는 다음과 같습니다.
+
+1. 해당 ViewController에서 필요한 데이터를 Server 클래스의 함수 getUser(completion:)을 통해 호출한다.
+<br>
+2. Alamofire를 통해 서버로 Request를 전송하고, responseJson은 Escaping Closure이므로 { response in } 부분은 결과가 모두 들어 온 이후에 실행됩니다.(즉 클로저를 탈출 한 다음에 수행)
+<br>
+3. responseJson의 completionHandler 이 실행되고, 화면 업데이트를 위해 서버로부터 받아온 데이터(users)를 처음 호출했던 ViewController 쪽으로 보내기 위해, getUser(completion:)의 completion을 호출합니다. 그런데 이 때, **화면 업데이트는 Main 쓰레드에서 이뤄져야하므로, completion은 Escaping Closure 형태를 취합니다.**
+<br>
+4. 호출된 completion으로 getPerson(completion:) 메소드의 completion 블럭이 실행됩니다. 이 때, 통신이 잘 되었는지, 확인하는 Boolean을 isSuccess로 넘기고, 데이터를 persons로 넘겼습니다. 그 이후 화면을 업데이트하면 앱에서 서버의 데이터를 문제 없이 받아오게 됩니다.
+
+
+
+
+## 고차함수 ( High Order Function )
+
+하나 이상의 함수를 인자로 취하거나 함수를 결과로 반환하는 함수
+
+- **map**
+- **filter***
+- **reduce**
+
+### map
+
+
+
+
+
+
+
+
+
+
+
+
+참고자료
+
+[Escaping Closuer](https://hcn1519.github.io/articles/2017-09/swift_escaping_closure)
 
 
 
