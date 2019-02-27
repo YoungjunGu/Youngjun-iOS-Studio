@@ -359,15 +359,15 @@ Server.getUser{ (isSuccess, users) in
 }
 ```
 
-코드의 작동 순서는 다음과 같습니다.
+> 코드 작동 순서
 
-- 해당 ViewController에서 필요한 데이터를 Server 클래스의 함수 getUser(completion:)을 통해 호출한다.
-<br>
-- Alamofire를 통해 서버로 Request를 전송하고, responseJson은 Escaping Closure이므로 { response in } 부분은 결과가 모두 들어 온 이후에 실행됩니다.(즉 클로저를 탈출 한 다음에 수행)
-<br>
-- responseJson의 completionHandler 이 실행되고, 화면 업데이트를 위해 서버로부터 받아온 데이터(users)를 처음 호출했던 ViewController 쪽으로 보내기 위해, getUser(completion:)의 completion을 호출합니다. 그런데 이 때, **화면 업데이트는 Main 쓰레드에서 이뤄져야하므로, completion은 Escaping Closure 형태를 취합니다.**
-<br>
-- 호출된 completion으로 getPerson(completion:) 메소드의 completion 블럭이 실행됩니다. 이 때, 통신이 잘 되었는지, 확인하는 Boolean을 isSuccess로 넘기고, 데이터를 persons로 넘겼습니다. 그 이후 화면을 업데이트하면 앱에서 서버의 데이터를 문제 없이 받아오게 됩니다.
+- 해당 ViewController에서 필요한 데이터를 Server 클래스의 함수 `getUser(completion:)` 을 통해 호출한다.
+
+- Alamofire를 통해 서버로 Request를 전송하고, responseJson은 Escaping Closure이므로 `{ response in }` 부분은 결과가 모두 들어 온 이후에 실행됩니다.(즉 클로저를 탈출 한 다음에 수행)
+
+- responseJson의 completionHandler 이 실행되고, 화면 업데이트를 위해 서버로부터 받아온 데이터(users)를 처음 호출했던 ViewController 쪽으로 보내기 위해, `getUser(completion:)` 의 completion을 호출합니다. 그런데 이 때, **화면 업데이트는 Main 쓰레드에서 이뤄져야하므로, completion은 Escaping Closure 형태를 취합니다.**
+
+- 호출된 completion으로 `getUser(completion:)` 메소드의 completion 블럭이 실행됩니다. 이 때, 통신이 잘 되었는지, 확인하는 Boolean을 isSuccess로 넘기고, 데이터를 persons로 넘겼습니다. 그 이후 화면을 업데이트하면 앱에서 서버의 데이터를 문제 없이 받아오게 됩니다.
 
 
 
