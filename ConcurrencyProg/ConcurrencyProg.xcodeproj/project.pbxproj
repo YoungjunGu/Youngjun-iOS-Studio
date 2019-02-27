@@ -14,6 +14,7 @@
 		EFCCA9D5222511AD0058FB38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFCCA9D3222511AD0058FB38 /* LaunchScreen.storyboard */; };
 		EFCCA9E0222511AD0058FB38 /* ConcurrencyProgTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCA9DF222511AD0058FB38 /* ConcurrencyProgTests.swift */; };
 		EFCCA9EB222511AD0058FB38 /* ConcurrencyProgUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCA9EA222511AD0058FB38 /* ConcurrencyProgUITests.swift */; };
+		EFCCA9F9222519270058FB38 /* DispatchQueueExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCA9F8222519270058FB38 /* DispatchQueueExam.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		EFCCA9E6222511AD0058FB38 /* ConcurrencyProgUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcurrencyProgUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCCA9EA222511AD0058FB38 /* ConcurrencyProgUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyProgUITests.swift; sourceTree = "<group>"; };
 		EFCCA9EC222511AD0058FB38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFCCA9F8222519270058FB38 /* DispatchQueueExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExam.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				EFCCA9CA222511AC0058FB38 /* AppDelegate.swift */,
 				EFCCA9CC222511AC0058FB38 /* ViewController.swift */,
+				EFCCA9F8222519270058FB38 /* DispatchQueueExam.swift */,
 				EFCCA9CE222511AC0058FB38 /* Main.storyboard */,
 				EFCCA9D1222511AD0058FB38 /* Assets.xcassets */,
 				EFCCA9D3222511AD0058FB38 /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFCCA9F9222519270058FB38 /* DispatchQueueExam.swift in Sources */,
 				EFCCA9CD222511AC0058FB38 /* ViewController.swift in Sources */,
 				EFCCA9CB222511AC0058FB38 /* AppDelegate.swift in Sources */,
 			);
