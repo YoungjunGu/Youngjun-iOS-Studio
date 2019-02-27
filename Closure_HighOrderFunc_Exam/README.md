@@ -377,13 +377,114 @@ Server.getUser{ (isSuccess, users) in
 하나 이상의 함수를 인자로 취하거나 함수를 결과로 반환하는 함수
 
 - **map**
-- **filter***
+- **filter**
 - **reduce**
 
 ### map
 
+컬렉션 내부의 기존 데이터를 변형해서 새로운 컬렉션을 생성하는 함수 
+
+> 기존 for문 사용
+
+```Swift
+let numbers: [Int] = [0, 1, 2, 3, 4]
+var doubledNumbers: [Int] = [Int]()
+var stringsNumbers: [String] = [String]()
+
+for number in numbers {
+    doubledNumbers.append(number * 2)
+    stringsNumbers.append("\(number)")
+}
+
+print(doubledNumbers) // [0, 2, 4, 6, 8]
+print(stringsNumbers) // ["0", "1", "2", "3", "4"]
+```
+
+> **map** 사용
+
+```swift
+doubledNumbers = numbers.map({ (number: Int) -> Int in
+    return number * 2
+})
+```
+
+> 위에서 배웠던 축약을 사용해보자
+
+```swift
+doubledNumbers = numbers.map { $0 * 2 } // [0, 2, 4, 6, 8]
+```
 
 
+
+### filter
+
+컨테이너 내부의 값을 걸러서 추출하는 함수
+
+> 기존 for문 사용
+
+```swift
+let numbers: [Int] = [0, 1, 2, 3, 4, 5]
+var evenNumbers: [Int] = [Int]()
+
+// for 구문 사용, 짝수 골라냄
+for number in numbers {
+    if number % 2 != 0 { continue }
+    evenNumbers.append(number)
+}
+
+print(evenNumbers) // [0, 2, 4]
+```
+
+> **filter** 사용
+
+```swift
+let evenNumbers: [Int] = numbers.filter { (number: Int) -> Bool in
+    return number % 2 == 0
+}
+```
+
+> 위에서 배웠던 축약을 사용해보자
+
+```swift
+let evenNumbers: [Int] = numbers.filter { $0 % 2 == 0 }
+```
+
+
+
+### Reduce
+
+컨테이너 내부의 콘텐츠를 하나로 통합하는 함수
+
+> 기존 for문 사용
+
+```swift
+let numbers: [Int] = [1, 3, 5]
+var sum: Int = 0
+for number in numbers {
+    sum += number
+}
+
+print(sum) // 9
+```
+
+> **reduce** 사용
+
+```swift
+// 초깃값이 0이고 정수 배열의 모든 값을 더함
+let sum: Int = numbers.reduce(0, { (first: Int, second: Int) -> Int in
+    // log를 확인해보자
+    print("\(first + second)")
+    return first + second
+})
+
+print(sum) // 9
+```
+
+> 위에서 배웠던 축약을 사용해보자
+
+```swift
+let sum: Int = numbers.reduce(0) { $0 + $1 } // 9
+```
 
 
 
@@ -395,7 +496,13 @@ Server.getUser{ (isSuccess, users) in
 
 참고자료
 
-[Escaping Closuer](https://hcn1519.github.io/articles/2017-09/swift_escaping_closure)
+[Escaping Closure](https://hcn1519.github.io/articles/2017-09/swift_escaping_closure)
+
+https://blog.naver.com/guyeongjun
+
+http://seorenn.blogspot.com/2014/06/swift-function.html
+
+https://jusung.gitbook.io/the-swift-language-guide/untitled-4
 
 
 
