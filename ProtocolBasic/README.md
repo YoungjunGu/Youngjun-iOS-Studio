@@ -7,7 +7,7 @@
 - 작업에 필요한 메서드,프로퍼티 및 요구사항을 정의하는 일종의 **약속, 계약** 의 역할을 한다. 그후 프로토콜 클래스, 구조체, 열거형에서 채택(adoption)하여 이러한 요구 사항을 자세하게 실제 구현할 수 있다.
 
 
-## 1. Property Requirements( 프로퍼티 요구사항)
+##  Property Requirements( 프로퍼티 요구사항)
 
 ### 프로토콜 내의 프로퍼티 선언 
 
@@ -95,7 +95,7 @@ gaki.myMajor = "Electric Engineering"  //가능
 
 - `{ set }` 으로 선언 되어있는데 `let`으로 선언이 되어있으면 변수가 settable 하지 않기 때문에 `var` 로 선언
 
-## 2. Method Requirements(메소드 요구사항)
+## Method Requirements(메소드 요구사항)
 
 - 프로토콜은 특정 인스턴스 메소드 및 타입 메소드가 타입을 준수하여 구현하도록 요구가 가능하다.
 
