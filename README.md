@@ -13,6 +13,7 @@
 ## iOS Design Pattern
 
 - [Singleton](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/Singleton)
+- Delegation
 
 ## GCD 응용, Operation Queue
 
