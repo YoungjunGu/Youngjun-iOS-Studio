@@ -60,15 +60,44 @@ struct Student: MajorInformed {
     }
 }
 
-var gaki = Student(university: "CES")
+var gaki = Student(university: "KNU")
 
 gaki.myMajor = "Electric Engineering" // error 발생 
 ```
 
+- myMajor의 프로퍼티값은 읽기 전용이기 때문에 달느 값을 넣어 줄 수 없다.
+- 연산프로퍼티는 값을 저장하는 것이 아니라 연산을 통해서 값을 설정하거나 반환 해준다.( gaki 인스턴스 초기화 시 매개변수로 myMajor가 아닌 university를 사용해서 myMajor의 값을 초기화 시켜주어야한다)
 
-   
 
+### 연산프로퍼티 settable
 
+```swift
+protocol MajorInformed {
+	var myMajor: String { get }
+}
 
+struct Student: MajorInformed {
+	var university: String
+	var myMajor: String {
+    	
+        get {
+        
+     		return university
+        
+        }
+        set {
+        
+        	university = newValue
+            
+        }
+    }
+}
+
+var gaki = Student(university: "KNU")
+
+gaki.myMajor = "Electric Engineering"  //가능
+```
+
+- 프로토콜이 gettable 및 settable 프로퍼티를 요구하면, 해당 프로퍼티 요구사항은 상수(constant) 저장 프로퍼티 또는 읽기 전용 연산 프로퍼티로 충족되서는 안된다.
 
 
