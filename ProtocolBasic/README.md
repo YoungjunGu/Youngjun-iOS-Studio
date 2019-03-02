@@ -358,9 +358,83 @@ extension String: AddString {
 }
 ```
 
+```swift
+protocol MyProtocol {
+	var returnDouble: Double { get }
+   	mutating func add(n: Int)
+}
+
+extension Int: MyProtocol {
+	
+    var returnDouble: Double {
+    	return Double(self)     
+	}
+    
+    mytating func add(n: Int) {
+    	self += n
+    }
+}
+//예제 출력
+var number = 10
+
+number.returnDouble //10.0
+
+number.add(n: 20)
+
+number.returnDouble //30.0
+```
 
 
+## Collections of Protocol Types
 
+- 컬렉션 (배열 , 딕셔너리 등) 에 저장될 프로토타입 
+
+```swift
+var protocolArray = [MyProtocol]()
+
+// 위에서 extension 으로 Int 가 해당 프로토콜을 채택하고 있기 때문에 Int 형 자료를 append 할 수 있다.
+protocolArray.append(0)
+protocolArray.append(1)
+protocolArray.append(2)
+
+//프로토콜 타입 인스턴스 생성
+var protocolValue = MyProtocol()
+
+protocolArray.append(protocolValue)
+```
+- 컬렉션 프로토콜 타입 인자 접근
+
+```swift
+
+for index in protocolArray {
+
+	print(index.returnDouble)		// 0.0 1.0 2.0
+
+}
+```
+
+## Protocol Inheritance
+
+프로토콜은 하나 이상의 다른 프로토콜을 상속 할 수 있고, 상속 된 요구사항에 추가로 요구사항을 추가할 수 있다.
+
+
+## Class-Only Protocols
+
+**AnyObject 프로토콜**을 프로토콜의 상속 목록에 추가하여 프로토콜 채택을 클래스 타입을  제한할 수 있다.
+
+- **AnyObject를 상속한 프로토콜은 클래스만 채택이 가능하다**
+
+```swift
+protocol SomeClassOnlyProtocol: AnyObject, SomeInheritedProtocol {
+	// class-only protocol definition goes here
+}
+```
+
+- AnyObject를 상속 받으면 , SomeClassOnlyProtocol 은 클래스에서만 채택할 수 있게 된다.
+
+- Class-Only Protocol은 정의된 동작이 값타입(Value Type)이 아닌 참조타입(Reference Type)이라고 가정하거나 요구할 경우에 클래스 전용 프로토콜을 사용해야한다.
+
+## Protocol Composition
 
 
 
