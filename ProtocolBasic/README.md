@@ -436,5 +436,55 @@ protocol SomeClassOnlyProtocol: AnyObject, SomeInheritedProtocol {
 
 ## Protocol Composition
 
+- 하나의 타입이 동시에 여러 프로토콜을 준수하도록 요구하는것이 유용할 수 있다.
+
+- Protocol Composition은 새로운 프로토콜 타입을 정의하지 않는다.
+
+```swift
+protocol Named {
+
+    var name: String { get }
+
+}
+
+protocol Aged {
+
+    var age: Int { get }
+
+}
+```
+
+- 프로토콜을 동시에 두개를 채택하고 있는 Person 구조체
+
+```swift
+struct Person: Named, Aged {
+
+    var name: String
+
+    var age: Int
+
+}
+```
+
+- Person 구조체 밖에 위치한 함수
+
+```swift
+func wishHappyBirthday(to celebrator: Named & Aged) {
+
+    print("Happy birthday, \(celebrator.name), you're \(celebrator.age)!")
+
+}
+```
+
+- 의미: 해당 함수의 파라미터로는 **Named Protocol** 과 **Aged Protocol** 둘 모두를 **준수** 하는 타입어야 한다.
+
+
+```swift
+let birthdayPerson = Person(name: "Malcolm", age: 21)
+
+wishHappyBirthday(to: birthdayPerson)
+
+// Prints "Happy birthday, Malcolm, you're 21!"
+```
 
 
