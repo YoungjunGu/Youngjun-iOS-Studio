@@ -478,6 +478,8 @@ func wishHappyBirthday(to celebrator: Named & Aged) {
 
 - 의미: 해당 함수의 파라미터로는 **Named Protocol** 과 **Aged Protocol** 둘 모두를 **준수** 하는 타입어야 한다.
 
+- Person 구조체 타입의 파라미터로 명시하는 것이 아니라 해당 구조체가 체택하고 있는 프로토콜의 타입을 들 명시 해주어서 보다 명확하게 프로토콜 준수 사항을 확인할 수 있다.
+
 
 ```swift
 let birthdayPerson = Person(name: "Malcolm", age: 21)
@@ -486,5 +488,52 @@ wishHappyBirthday(to: birthdayPerson)
 
 // Prints "Happy birthday, Malcolm, you're 21!"
 ```
+
+### 해당 프로토콜을 준수하는 객체를 선별 하는 방법
+
+```swift
+protocol Named{
+    var name : String {get}
+}
+
+class A : Named {
+    var name : String
+    init(name:String) {
+        self.name = name
+    }
+}
+class B {
+    var name : String
+    init(name:String) {
+        self.name = name
+    }
+}
+
+let objectA = A(named: "gaki")
+let objectB = B(named: "tsukai")
+
+var arr = [AnyObject]()
+
+arr.append(objectA)
+arr.append(objectB)
+
+//해당 프로토콜을 채택하고 있는 클래스 객체인지 배열에서 판별하는 법
+
+for index in arr {
+
+	if let object = index as? Named {
+    	print(object.name)
+    
+    } else {
+    
+    	print("Not following Protocol by "Named")
+	}
+}
+```
+
+<br>
+
+## Optional Protocol Requirements
+
 
 
