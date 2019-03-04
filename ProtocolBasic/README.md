@@ -536,4 +536,23 @@ for index in arr {
 ## Optional Protocol Requirements
 
 
+- 프로토콜에 대한 Optional한 요구사항을 정의 할 수 있다.
+
+- 선택적요구사항에 **optional** 수정자를 접두어로 붙는다.
+
+- 선택적 요구사항을 사용할 수 있으므로 Objective-C와 상호 운용되는 코드를 작성할 수 있다.
+
+- @objc 프로토콜은 Objective-C 클래스 나 다른 @objc 클래스를 상속받은 클래스에서만 사용할 수 있다
+
+- 그들은 구조체나 열거형에 의해 채택 될 수 없다.
+
+- 메소드나 프로퍼티에 사용시 해당 타입이 자동으로 옵셔널이 된다.
+(ex (Int)->String타입의 메소드는 ((Int)->String)? )
+
+- 요구사항이 프로토콜을 준수하는 타입으로 구현되지 않았을 가능성을 나타내기위해 **optional chainning** 을 사용하여 호출 할 수 있다.
+
+
+
+
+
 
