@@ -8,17 +8,28 @@
 
 import UIKit
 
-class ViewController: UIViewController, CustomLayout {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
 
     func layoutSetting() {
-        //dosometing
+        //실제 구현이 이루어 지는 곳
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+    
     }
+    
+    
 
 
 }
