@@ -30,13 +30,14 @@
 - [Protocol Basic](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/ProtocolBasic)
 - Protocol Oriented Approach for Network Layer
 
+## Networking
+
+- [Alamofire](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/NetworkExam)
+- Codable
+
 ## CoreData
 
 ## UnitTest
 
 ## Key Value Observing(KVO) / Key Value Coding(KVC)
 
-## Networking
-
-- [Alamofire](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/NetworkExam)
-- Codable
