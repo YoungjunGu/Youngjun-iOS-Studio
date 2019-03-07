@@ -99,6 +99,173 @@ AF.request("http://url.com/post",
 - `.httpBody` : POST 전송에서 사용되는 HTTP Body 방식으로 인코딩
 
 
+> JSON 방식으로 값을 전송할때 `JSONEncoding`
+
+```swift
+AF.request("http://url.com/post",
+           method: .post,
+           parameters: parameters,
+           encoding: URLEncoding.default)
+```
+
+### HTTP Header
+
+> headers
+
+- Alamofire에서 인코딩 타입을 변경하면 그에 대한 헤더는 자동으로 설정 되기 떄문에 직접 설정하지 않아도 된다. 
+
+- Header를 변경하고 싶은 경우 `headers` 매개변수를 사용하면된다.
+
+
+```swift 
+let headers: HTTPHeaders = [
+    "Authorization": "QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
+    "Accept": "application/json"
+]
+
+AF.request("https://myurl.com/headers", headers: headers).responseJSON { response in
+    print(response)
+}
+```
+
+## Response
+
+`AF.request` 에 연결하여 response handling이 가능하다.
+
+> response method
+
+- `response()` : 응답메시지에 특별한 처리를 하지 않는다. default형태 지만 URLSession 객체를 직접 사용하는것과 차이가 없기 때문에 사용을 잘 하지 않는다.
+
+- `responseString()` : 응답 메시지의 본문을 문자열로 처리한 후 전달한다.
+
+- `responseJSON()` : 응답 메시지의 본문을 JSON 객체로 변환하여 전달한다.
+
+- `responseData()` : 응답 메시지의 본문을 binary data 로 변환하여 전달한다.
+
+- `responseProperyList()` : 응답 메시지의 본문을 프로퍼티 리스트로 변환하여 전달한다.
+
+> Alamofire의 다섯가지 response handler
+
+```swift
+// Response Handler - Unserialized Response
+func response(
+  queue: DispatchQueue?,
+  completionHandler: @escaping (DefaultDataResponse) -> Void)
+  -> Self
+
+// Response Data Handler - Serialized into Data
+func responseData(
+  queue: DispatchQueue?,
+  completionHandler: @escaping (DataResponse<Data>) -> Void)
+  -> Self
+
+// Response String Handler - Serialized into String
+func responseString(
+  queue: DispatchQueue?,
+  encoding: String.Encoding?,
+  completionHandler: @escaping (DataResponse<String>) -> Void)
+  -> Self
+
+// Response JSON Handler - Serialized into Any
+func responseJSON(
+  queue: DispatchQueue?,
+  completionHandler: @escaping (DataResponse<Any>) -> Void)
+  -> Self
+
+// Response PropertyList (plist) Handler - Serialized into Any
+func responsePropertyList(
+  queue: DispatchQueue?,
+  completionHandler: @escaping (DataResponse<Any>) -> Void))
+  -> Self
+```  
+
+
+> [ATS 설정](https://developers.google.com/admob/ios/app-transport-security?hl=ko)
+
+```swift
+let url = "htt://url.com/get"
+Alamofire.request(url).responseString { response in
+	print("성공여부 : \(response.result.isSuccess)")
+    print("결과값  : \(response).result.value!)")
+}    
+```
+
+> Alamofire는 비동기 기반으로 네트워크 응답을 처리하기 때문에, 응답 메시지를 response 메소드의 결과값을 반환받을수 없다. 그렇기 때문에 콜백함수처럼 클로저의 형태로 미리작성하여 response 메소드의 인자값으로 넣어주어야 한다. request에 대한 response 가 수신된 후 response를 처리하기 위해 clusure 형식의 콜백이 지정, responsed에 정의된 클로저 안에서 수신된 응답에 대한 처리를 수행한다.
+
+
+- responseJSON() 사용
+
+```swift
+let parameters: Parameters = [
+    "name": "gaki",
+    "age": 25
+]
+
+func requestAPI() {
+ 
+    let alamo = AF.request("http://url.com/post",
+                           method: .post,
+                           parameters: parameters,
+                           encoding: URLEncoding.httpBody)
+    alamo.responseJSON() { response in
+        print("JSON = \(response.result.value!)")
+        if let jsonObject = response.value as? Parameters {
+            print("name = \(jsonObject["name"]!)")
+            print("age = \(jsonObject["age"]!)")
+        }
+    }
+}
+```
+
+### Response Validation
+
+Alamofire 에서 정상적으로 수행된 request는 모두 `.success` 로 처리한다.
+`validation`은 허용되지 않는 status code나 [MIME Type](https://developer.mozilla.org/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types)에 대하여 에러를 검출 할 수 있다.
+
+
+#### Maual Validation
+
+```swift
+Alamofire.request("https://url.com/get")
+    .validate(statusCode: 200..<300)
+    .validate(contentType: ["application/json"])
+    .responseData { response in
+        switch response.result {
+        case .success:
+            print("Validation Successful")
+        case .failure(let error):
+            print(error)
+        }
+    }
+```    
+
+#### Automatic Validation
+
+- `validation()` 은 자동적으로 status code `200..<300` 범위와, request의 헤더와 일치하는 `Content-Type` 에 대해 유효성을 부여한다.
+
+```swift
+Alamofire.request("https://url.com/get").validate().responseData { response in
+    switch response.result {
+    case .success:
+        print("Validation Successful")
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
