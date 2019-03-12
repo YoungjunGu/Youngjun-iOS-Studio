@@ -36,7 +36,7 @@
 
 ## CoreLocation & CLLocationManager
 
-- CoreLocation
+- [CoreLocation](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/CoreLocationExam)
 
 ## CoreData
 
