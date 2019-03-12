@@ -33,7 +33,6 @@
 ## Networking
 
 - [Alamofire](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/NetworkExam)
-- Codable
 
 ## CoreData
 
