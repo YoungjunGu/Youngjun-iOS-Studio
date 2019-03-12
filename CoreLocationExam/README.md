@@ -6,7 +6,7 @@ CoreLocation은 주벼 iBeacon과 관련된 장치의 지리적 위치,고도,�
 
 ![image](https://user-images.githubusercontent.com/33486820/54212468-53e37480-4526-11e9-9de0-afed0813078f.png)
 
-## 사용자로부터 위치 권환 요청
+## 사용자로부터 위치 권한 요청
 
 사용자의 위치 데이터를 요청하기 전에 사용자의 위치 서비스 사용권한을 요청해야한다.
 
