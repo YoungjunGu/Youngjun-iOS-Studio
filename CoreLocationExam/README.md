@@ -95,7 +95,9 @@ let status = CLLocationManager.authorizationStatus()
 - `.requestLocation()` 은 `didUpdateLocations locations:`를 한번만 호출 한다.
 
 	- `requestLocation()` 흐름
+    
     ![image](https://user-images.githubusercontent.com/33486820/54215545-76c45780-452b-11e9-8bfe-3d55c61044a3.png)
+    
     - `didUpdateLocation locations: .reuqestLocation` 을 사용할때 한번만 호출
     - .requestLocation ()은 한 위치 만 didUpdateLocations 위치 배열에 전달한다.
 
@@ -103,7 +105,9 @@ let status = CLLocationManager.authorizationStatus()
 - `.startUpdatingLocation locations`는 몇초마다 호출을 계속하거나 `locationManager.stopUpdatingLocation`를 호출하여 위치를 변경할 때까지 위치가 변경될 때마다 계속 호출한다.
 
 	- `startUpdatingLocation()` 흐름
+    
     ![image](https://user-images.githubusercontent.com/33486820/54215695-b4c17b80-452b-11e9-93aa-53a76bb92143.png)
+    
     - `didUpdateLocations locations: locationManager.stopUpdatingLocation`을 호출 할 때까지 / 몇 초마다 위치 정보가 업데이트 될 때마다 호출한다.
     - `.startUpdatingLocation ()` 은 두 개 이상의 위치 didUpdateLocations 위치 배열에 전달할 수 있습니다 .
     
