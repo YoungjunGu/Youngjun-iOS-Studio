@@ -114,8 +114,32 @@ let status = CLLocationManager.authorizationStatus()
 
 
 
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    locationManager.delegate = self
+  
+    locationManager.requestWhenInUseAuthorization()
+    // after showing the permission dialog, the program will continue executing the next line before the user has tap 'Allow' or 'Disallow'
+    
+    // if previously user has allowed the location permission, then request location
+    if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways){
+        locationManager.requestLocation()
+    }
+}
+
+// After user tap on 'Allow' or 'Disallow' on the dialog
+func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+  if(status == .authorizedWhenInUse || status == .authorizedAlways){
+    manager.requestLocation()
+  }
+}
+```
 
 
+> 참고자료
+
+[CoreLocation](https://fluffy.es/current-location/)
 
 
 
