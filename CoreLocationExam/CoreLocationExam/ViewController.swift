@@ -51,6 +51,8 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // .requestLocation will only pass one location to the locations array
         // hence we can access it by taking the first element of the array
+        
+        print(locations)
         if let location = locations.first {
             self.latitudeLabel.text = "\(location.coordinate.latitude)"
             self.longitudeLabel.text = "\(location.coordinate.longitude)"
