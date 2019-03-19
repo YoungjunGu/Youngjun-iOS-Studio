@@ -11,12 +11,6 @@
 		6EAADED414607F164D699726 /* Pods_DAOPatternExamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB5226C84D7F89BF5BBF93C /* Pods_DAOPatternExamTests.framework */; };
 		B1229169E74C2EB5AB5B6F08 /* Pods_DAOPatternExamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAF70695D293AB950C7C356 /* Pods_DAOPatternExamUITests.framework */; };
 		EF3F146422413878004AC261 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3F146322413878004AC261 /* libsqlite3.0.tbd */; };
-		EF3F147222413ACA004AC261 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3F146822413AC9004AC261 /* FMResultSet.m */; };
-		EF3F147322413ACA004AC261 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF3F146922413AC9004AC261 /* Info.plist */; };
-		EF3F147422413ACA004AC261 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3F146A22413AC9004AC261 /* FMDatabasePool.m */; };
-		EF3F147522413ACA004AC261 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3F146B22413AC9004AC261 /* FMDatabaseAdditions.m */; };
-		EF3F147622413ACA004AC261 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3F146F22413AC9004AC261 /* FMDatabaseQueue.m */; };
-		EF3F147722413ACA004AC261 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3F147122413ACA004AC261 /* FMDatabase.m */; };
 		EF92B56E224097A6004262A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92B56D224097A6004262A8 /* AppDelegate.swift */; };
 		EF92B570224097A6004262A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92B56F224097A6004262A8 /* ViewController.swift */; };
 		EF92B573224097A6004262A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF92B571224097A6004262A8 /* Main.storyboard */; };
@@ -54,19 +48,6 @@
 		B0A2B56F51F506553C0CE2D1 /* Pods-DAOPatternExamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DAOPatternExamTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DAOPatternExamTests/Pods-DAOPatternExamTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CEB5226C84D7F89BF5BBF93C /* Pods_DAOPatternExamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DAOPatternExamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3F146322413878004AC261 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		EF3F146522413AC8004AC261 /* DAOPatternExam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DAOPatternExam-Bridging-Header.h"; sourceTree = "<group>"; };
-		EF3F146622413AC8004AC261 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		EF3F146722413AC9004AC261 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		EF3F146822413AC9004AC261 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		EF3F146922413AC9004AC261 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../../Documents/fmdb/src/fmdb/Info.plist; sourceTree = "<group>"; };
-		EF3F146A22413AC9004AC261 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		EF3F146B22413AC9004AC261 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		EF3F146C22413AC9004AC261 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		EF3F146D22413AC9004AC261 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		EF3F146E22413AC9004AC261 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		EF3F146F22413AC9004AC261 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		EF3F147022413ACA004AC261 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
-		EF3F147122413ACA004AC261 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		EF92B56A224097A6004262A8 /* DAOPatternExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DAOPatternExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF92B56D224097A6004262A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF92B56F224097A6004262A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -156,19 +137,6 @@
 				EF92B576224097A6004262A8 /* LaunchScreen.storyboard */,
 				EF92B579224097A6004262A8 /* Info.plist */,
 				EF92B59B2240A09F004262A8 /* DepartmentDAO.swift */,
-				EF3F146E22413AC9004AC261 /* FMDatabase.h */,
-				EF3F147122413ACA004AC261 /* FMDatabase.m */,
-				EF3F146D22413AC9004AC261 /* FMDatabaseAdditions.h */,
-				EF3F146B22413AC9004AC261 /* FMDatabaseAdditions.m */,
-				EF3F146C22413AC9004AC261 /* FMDatabasePool.h */,
-				EF3F146A22413AC9004AC261 /* FMDatabasePool.m */,
-				EF3F146622413AC8004AC261 /* FMDatabaseQueue.h */,
-				EF3F146F22413AC9004AC261 /* FMDatabaseQueue.m */,
-				EF3F147022413ACA004AC261 /* FMDB.h */,
-				EF3F146722413AC9004AC261 /* FMResultSet.h */,
-				EF3F146822413AC9004AC261 /* FMResultSet.m */,
-				EF3F146922413AC9004AC261 /* Info.plist */,
-				EF3F146522413AC8004AC261 /* DAOPatternExam-Bridging-Header.h */,
 			);
 			path = DAOPatternExam;
 			sourceTree = "<group>";
@@ -312,7 +280,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF3F147322413ACA004AC261 /* Info.plist in Resources */,
 				EF92B578224097A6004262A8 /* LaunchScreen.storyboard in Resources */,
 				EF92B575224097A6004262A8 /* Assets.xcassets in Resources */,
 				EF92B573224097A6004262A8 /* Main.storyboard in Resources */,
@@ -399,12 +366,7 @@
 			files = (
 				EF92B59C2240A09F004262A8 /* DepartmentDAO.swift in Sources */,
 				EF92B570224097A6004262A8 /* ViewController.swift in Sources */,
-				EF3F147422413ACA004AC261 /* FMDatabasePool.m in Sources */,
-				EF3F147622413ACA004AC261 /* FMDatabaseQueue.m in Sources */,
-				EF3F147222413ACA004AC261 /* FMResultSet.m in Sources */,
 				EF92B56E224097A6004262A8 /* AppDelegate.swift in Sources */,
-				EF3F147522413ACA004AC261 /* FMDatabaseAdditions.m in Sources */,
-				EF3F147722413ACA004AC261 /* FMDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
