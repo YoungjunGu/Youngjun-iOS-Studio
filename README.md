@@ -40,7 +40,8 @@
 
 ## CoreData
 
-- [DataBase (DAO Pattern)]()
+- [DataBase (DAO Pattern)](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/DAOPatternExam)
+- [CoreData]()
 
 ## UnitTest
 
