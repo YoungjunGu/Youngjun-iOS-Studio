@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20D5213985F3AC45006E717F /* Pods_DAOPatternExam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63B1EF48549DFB02BD8EAB1 /* Pods_DAOPatternExam.framework */; };
+		6EAADED414607F164D699726 /* Pods_DAOPatternExamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB5226C84D7F89BF5BBF93C /* Pods_DAOPatternExamTests.framework */; };
+		B1229169E74C2EB5AB5B6F08 /* Pods_DAOPatternExamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAF70695D293AB950C7C356 /* Pods_DAOPatternExamUITests.framework */; };
+		EF3F146422413878004AC261 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3F146322413878004AC261 /* libsqlite3.0.tbd */; };
 		EF92B56E224097A6004262A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92B56D224097A6004262A8 /* AppDelegate.swift */; };
 		EF92B570224097A6004262A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92B56F224097A6004262A8 /* ViewController.swift */; };
 		EF92B573224097A6004262A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF92B571224097A6004262A8 /* Main.storyboard */; };
@@ -14,6 +18,7 @@
 		EF92B578224097A6004262A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF92B576224097A6004262A8 /* LaunchScreen.storyboard */; };
 		EF92B583224097A6004262A8 /* DAOPatternExamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92B582224097A6004262A8 /* DAOPatternExamTests.swift */; };
 		EF92B58E224097A6004262A8 /* DAOPatternExamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92B58D224097A6004262A8 /* DAOPatternExamUITests.swift */; };
+		EF92B59C2240A09F004262A8 /* DepartmentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92B59B2240A09F004262A8 /* DepartmentDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1323ECA6A6207D435C87A795 /* Pods-DAOPatternExamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DAOPatternExamUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DAOPatternExamUITests/Pods-DAOPatternExamUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2F59CD9BB12C8A28A9DF5408 /* Pods-DAOPatternExamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DAOPatternExamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DAOPatternExamTests/Pods-DAOPatternExamTests.release.xcconfig"; sourceTree = "<group>"; };
+		4BAF70695D293AB950C7C356 /* Pods_DAOPatternExamUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DAOPatternExamUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5432054B1BBF85C4DE6B00CA /* Pods-DAOPatternExam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DAOPatternExam.release.xcconfig"; path = "Pods/Target Support Files/Pods-DAOPatternExam/Pods-DAOPatternExam.release.xcconfig"; sourceTree = "<group>"; };
+		6FCB678FE1FDF2B1FB72E6D0 /* Pods-DAOPatternExam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DAOPatternExam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DAOPatternExam/Pods-DAOPatternExam.debug.xcconfig"; sourceTree = "<group>"; };
+		A5BD320561993A5D1FF327DF /* Pods-DAOPatternExamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DAOPatternExamUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DAOPatternExamUITests/Pods-DAOPatternExamUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B0A2B56F51F506553C0CE2D1 /* Pods-DAOPatternExamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DAOPatternExamTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DAOPatternExamTests/Pods-DAOPatternExamTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CEB5226C84D7F89BF5BBF93C /* Pods_DAOPatternExamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DAOPatternExamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3F146322413878004AC261 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		EF92B56A224097A6004262A8 /* DAOPatternExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DAOPatternExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF92B56D224097A6004262A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF92B56F224097A6004262A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +61,8 @@
 		EF92B589224097A6004262A8 /* DAOPatternExamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DAOPatternExamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF92B58D224097A6004262A8 /* DAOPatternExamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOPatternExamUITests.swift; sourceTree = "<group>"; };
 		EF92B58F224097A6004262A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF92B59B2240A09F004262A8 /* DepartmentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentDAO.swift; sourceTree = "<group>"; };
+		F63B1EF48549DFB02BD8EAB1 /* Pods_DAOPatternExam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DAOPatternExam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3F146422413878004AC261 /* libsqlite3.0.tbd in Frameworks */,
+				20D5213985F3AC45006E717F /* Pods_DAOPatternExam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EAADED414607F164D699726 /* Pods_DAOPatternExamTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +87,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1229169E74C2EB5AB5B6F08 /* Pods_DAOPatternExamUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E0516F76F291C6B907CA3251 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF3F146322413878004AC261 /* libsqlite3.0.tbd */,
+				F63B1EF48549DFB02BD8EAB1 /* Pods_DAOPatternExam.framework */,
+				CEB5226C84D7F89BF5BBF93C /* Pods_DAOPatternExamTests.framework */,
+				4BAF70695D293AB950C7C356 /* Pods_DAOPatternExamUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF92B561224097A6004262A8 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +112,8 @@
 				EF92B581224097A6004262A8 /* DAOPatternExamTests */,
 				EF92B58C224097A6004262A8 /* DAOPatternExamUITests */,
 				EF92B56B224097A6004262A8 /* Products */,
+				EFA4E8CDAFAAA88F4A51F59D /* Pods */,
+				E0516F76F291C6B907CA3251 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +136,7 @@
 				EF92B574224097A6004262A8 /* Assets.xcassets */,
 				EF92B576224097A6004262A8 /* LaunchScreen.storyboard */,
 				EF92B579224097A6004262A8 /* Info.plist */,
+				EF92B59B2240A09F004262A8 /* DepartmentDAO.swift */,
 			);
 			path = DAOPatternExam;
 			sourceTree = "<group>";
@@ -125,6 +159,19 @@
 			path = DAOPatternExamUITests;
 			sourceTree = "<group>";
 		};
+		EFA4E8CDAFAAA88F4A51F59D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6FCB678FE1FDF2B1FB72E6D0 /* Pods-DAOPatternExam.debug.xcconfig */,
+				5432054B1BBF85C4DE6B00CA /* Pods-DAOPatternExam.release.xcconfig */,
+				B0A2B56F51F506553C0CE2D1 /* Pods-DAOPatternExamTests.debug.xcconfig */,
+				2F59CD9BB12C8A28A9DF5408 /* Pods-DAOPatternExamTests.release.xcconfig */,
+				1323ECA6A6207D435C87A795 /* Pods-DAOPatternExamUITests.debug.xcconfig */,
+				A5BD320561993A5D1FF327DF /* Pods-DAOPatternExamUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +179,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF92B592224097A6004262A8 /* Build configuration list for PBXNativeTarget "DAOPatternExam" */;
 			buildPhases = (
+				40D6790E0A21CE8E4A02A7B1 /* [CP] Check Pods Manifest.lock */,
 				EF92B566224097A6004262A8 /* Sources */,
 				EF92B567224097A6004262A8 /* Frameworks */,
 				EF92B568224097A6004262A8 /* Resources */,
@@ -149,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF92B595224097A6004262A8 /* Build configuration list for PBXNativeTarget "DAOPatternExamTests" */;
 			buildPhases = (
+				4BEE0A5BE391CDFBE48B676E /* [CP] Check Pods Manifest.lock */,
 				EF92B57A224097A6004262A8 /* Sources */,
 				EF92B57B224097A6004262A8 /* Frameworks */,
 				EF92B57C224097A6004262A8 /* Resources */,
@@ -167,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF92B598224097A6004262A8 /* Build configuration list for PBXNativeTarget "DAOPatternExamUITests" */;
 			buildPhases = (
+				DE408D89CF77D7E35B50EAFB /* [CP] Check Pods Manifest.lock */,
 				EF92B585224097A6004262A8 /* Sources */,
 				EF92B586224097A6004262A8 /* Frameworks */,
 				EF92B587224097A6004262A8 /* Resources */,
@@ -251,11 +301,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		40D6790E0A21CE8E4A02A7B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DAOPatternExam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BEE0A5BE391CDFBE48B676E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DAOPatternExamTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE408D89CF77D7E35B50EAFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DAOPatternExamUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF92B566224097A6004262A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF92B59C2240A09F004262A8 /* DepartmentDAO.swift in Sources */,
 				EF92B570224097A6004262A8 /* ViewController.swift in Sources */,
 				EF92B56E224097A6004262A8 /* AppDelegate.swift in Sources */,
 			);
@@ -430,6 +538,7 @@
 		};
 		EF92B593224097A6004262A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FCB678FE1FDF2B1FB72E6D0 /* Pods-DAOPatternExam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +557,7 @@
 		};
 		EF92B594224097A6004262A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5432054B1BBF85C4DE6B00CA /* Pods-DAOPatternExam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +576,7 @@
 		};
 		EF92B596224097A6004262A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0A2B56F51F506553C0CE2D1 /* Pods-DAOPatternExamTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +598,7 @@
 		};
 		EF92B597224097A6004262A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F59CD9BB12C8A28A9DF5408 /* Pods-DAOPatternExamTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +620,7 @@
 		};
 		EF92B599224097A6004262A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1323ECA6A6207D435C87A795 /* Pods-DAOPatternExamUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +641,7 @@
 		};
 		EF92B59A224097A6004262A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5BD320561993A5D1FF327DF /* Pods-DAOPatternExamUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
