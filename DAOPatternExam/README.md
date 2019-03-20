@@ -11,7 +11,7 @@ DAO 패턴에 따라 독립적으로 구현된 클래스를 DAO 클래스라고 
 DAO클래스가 되기 위해 만족해야하는 특별한 조건이나 인터페이스는 정해진 것이 없다.
 MVC 패턴에서 역할에 따라 각각의 클래스가 Model-View-Controller로 나뉘어 지듯이 DAO 클래스 역시 역할에 의해 구분되는 클래스이다.
 
-## DAO Class Implements
+## DAO Class 구현
 
 부서DAO 클래스를 우선 생성한다.
 
