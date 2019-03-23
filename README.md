@@ -5,6 +5,8 @@
 
 ## App Design
 
+- [HeroTransition(뷰 전환 애니메이션)](https://github.com/HeroTransitions/Hero)
+- [ScratchCardView(복권뷰)](https://github.com/pgorzelany/ScratchCardView)
 - [커스텀 버튼 디자인](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/RoundedButton)
 - [제스처를 이용한 그림그리기](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/DrawingApp)
 - [Custom Header 디자인](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/CustomerHeader)
