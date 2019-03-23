@@ -33,4 +33,84 @@ class DepartmentDAO {
         return db
         
     }()
+    
+    
+    func find() -> [DepartRecord] {
+        var departList = [DepartRecord]()
+        
+        do {
+            // 1. 부서 정보 목록을 가져올 SQL 작성 및 쿼리 실행
+            let sql = """
+                SELECT depart_cd, depart_title, depart_addr
+                FROM department
+                ORDER BY depart_cd ASC
+                """
+            
+            let rs = try self.fmdb.excuteQuery(sql, values: nil)
+            // 2. 결과 집합 추출
+            
+            while rs.next() {
+                let departCd = rs.int(forColumn: "depart_cd")
+                let departTitle = rs.string(forColumn: "depart_title")
+                let departAddr = rs.string(forColumn: "depart_addr")
+                
+                // append 메소드 호출 시 아래 튜플을 괄호 없이 사용하지 않도록 주의
+                departList.append( (Int(departCd), departTitle!, departAddr!))
+            }
+        } catch let error as NSError {
+            print("failed: \(error.localizedDescription)")
+        }
+        return departList
+    }
+    
+    func get(departCd: Int) -> DepartRecode? {
+        
+        // 1. 쿼리 수행
+        let sql = """
+            SELECT depart_cd, depart_title, depart_addr
+            FROM department
+            WHERE depart_cd = ?
+            """
+        
+        let rs = self.fmdb.executeQuery(sql, withArgumentsIn: [departCd])
+        
+        // 결과 집합 처리
+        if let _rs = rs {   // 결과 집합이 옵셔널 타입으로 반환되므로, 이를 일반 상수에 바인딩 하여 해제한다.
+            _rs.next()
+            
+            let departId = _rs.int(forColumn: "depart_cd")
+            let departTitle = _rs.string(forColumn: "depart_title")
+            let departAddr = _rs.string(forColumn: "depart_addr")
+            
+            return (Int(departId), departTitle!, departAddr!)
+            
+        } else {
+            return nil
+        }
+    }
+    
+    func create(title: String!, addr: String!) -> Bool {
+        do {
+            let sql = """
+                INSERT INTO department (depart_title, depart_addr)
+                VALUES( ? , ? )
+            """
+            try self.fmdb.executeUpdate(sql, values: [title, addr])
+            return true
+        } catch let error as NSError {
+            print("Insert Error: \(error.localizedDescription)")
+            return false
+        }
+    }
+    
+    func remove(departCd: Int) -> Bool {
+        do {
+            let sql = "DELETE FORM department WHERE depart_cd?"
+            try.self.fmdb.executeUpdate(sql, values: [departCd])
+            return true
+        } catch let error as NSError {
+            print("DELETE Error : \(error.localizedDescription)")
+            return false
+        }
+    }
 }
