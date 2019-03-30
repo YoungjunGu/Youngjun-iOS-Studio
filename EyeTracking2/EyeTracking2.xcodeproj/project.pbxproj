@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF05984B224F9DB100D16121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05984A224F9DB100D16121 /* AppDelegate.swift */; };
+		EF05984D224F9DB100D16121 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = EF05984C224F9DB100D16121 /* art.scnassets */; };
+		EF05984F224F9DB100D16121 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05984E224F9DB100D16121 /* ViewController.swift */; };
+		EF059852224F9DB100D16121 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF059850224F9DB100D16121 /* Main.storyboard */; };
+		EF059854224F9DB200D16121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF059853224F9DB200D16121 /* Assets.xcassets */; };
+		EF059857224F9DB200D16121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF059855224F9DB200D16121 /* LaunchScreen.storyboard */; };
+		EF059862224F9DB300D16121 /* EyeTracking2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF059861224F9DB300D16121 /* EyeTracking2Tests.swift */; };
+		EF05986D224F9DB300D16121 /* EyeTracking2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05986C224F9DB300D16121 /* EyeTracking2UITests.swift */; };
+		EF05987B224F9DD800D16121 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05987A224F9DD800D16121 /* Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF05985E224F9DB300D16121 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF05983F224F9DB100D16121 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF059846224F9DB100D16121;
+			remoteInfo = EyeTracking2;
+		};
+		EF059869224F9DB300D16121 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF05983F224F9DB100D16121 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF059846224F9DB100D16121;
+			remoteInfo = EyeTracking2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF059847224F9DB100D16121 /* EyeTracking2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyeTracking2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF05984A224F9DB100D16121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF05984C224F9DB100D16121 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		EF05984E224F9DB100D16121 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF059851224F9DB100D16121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF059853224F9DB200D16121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF059856224F9DB200D16121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF059858224F9DB200D16121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF05985D224F9DB300D16121 /* EyeTracking2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyeTracking2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF059861224F9DB300D16121 /* EyeTracking2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeTracking2Tests.swift; sourceTree = "<group>"; };
+		EF059863224F9DB300D16121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF059868224F9DB300D16121 /* EyeTracking2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyeTracking2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF05986C224F9DB300D16121 /* EyeTracking2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeTracking2UITests.swift; sourceTree = "<group>"; };
+		EF05986E224F9DB300D16121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF05987A224F9DD800D16121 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF059844224F9DB100D16121 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF05985A224F9DB300D16121 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF059865224F9DB300D16121 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF05983E224F9DB100D16121 = {
+			isa = PBXGroup;
+			children = (
+				EF059849224F9DB100D16121 /* EyeTracking2 */,
+				EF059860224F9DB300D16121 /* EyeTracking2Tests */,
+				EF05986B224F9DB300D16121 /* EyeTracking2UITests */,
+				EF059848224F9DB100D16121 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF059848224F9DB100D16121 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF059847224F9DB100D16121 /* EyeTracking2.app */,
+				EF05985D224F9DB300D16121 /* EyeTracking2Tests.xctest */,
+				EF059868224F9DB300D16121 /* EyeTracking2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF059849224F9DB100D16121 /* EyeTracking2 */ = {
+			isa = PBXGroup;
+			children = (
+				EF05984A224F9DB100D16121 /* AppDelegate.swift */,
+				EF05984C224F9DB100D16121 /* art.scnassets */,
+				EF05984E224F9DB100D16121 /* ViewController.swift */,
+				EF05987A224F9DD800D16121 /* Extension.swift */,
+				EF059850224F9DB100D16121 /* Main.storyboard */,
+				EF059853224F9DB200D16121 /* Assets.xcassets */,
+				EF059855224F9DB200D16121 /* LaunchScreen.storyboard */,
+				EF059858224F9DB200D16121 /* Info.plist */,
+			);
+			path = EyeTracking2;
+			sourceTree = "<group>";
+		};
+		EF059860224F9DB300D16121 /* EyeTracking2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EF059861224F9DB300D16121 /* EyeTracking2Tests.swift */,
+				EF059863224F9DB300D16121 /* Info.plist */,
+			);
+			path = EyeTracking2Tests;
+			sourceTree = "<group>";
+		};
+		EF05986B224F9DB300D16121 /* EyeTracking2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF05986C224F9DB300D16121 /* EyeTracking2UITests.swift */,
+				EF05986E224F9DB300D16121 /* Info.plist */,
+			);
+			path = EyeTracking2UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF059846224F9DB100D16121 /* EyeTracking2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF059871224F9DB300D16121 /* Build configuration list for PBXNativeTarget "EyeTracking2" */;
+			buildPhases = (
+				EF059843224F9DB100D16121 /* Sources */,
+				EF059844224F9DB100D16121 /* Frameworks */,
+				EF059845224F9DB100D16121 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EyeTracking2;
+			productName = EyeTracking2;
+			productReference = EF059847224F9DB100D16121 /* EyeTracking2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF05985C224F9DB300D16121 /* EyeTracking2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF059874224F9DB300D16121 /* Build configuration list for PBXNativeTarget "EyeTracking2Tests" */;
+			buildPhases = (
+				EF059859224F9DB300D16121 /* Sources */,
+				EF05985A224F9DB300D16121 /* Frameworks */,
+				EF05985B224F9DB300D16121 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF05985F224F9DB300D16121 /* PBXTargetDependency */,
+			);
+			name = EyeTracking2Tests;
+			productName = EyeTracking2Tests;
+			productReference = EF05985D224F9DB300D16121 /* EyeTracking2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF059867224F9DB300D16121 /* EyeTracking2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF059877224F9DB300D16121 /* Build configuration list for PBXNativeTarget "EyeTracking2UITests" */;
+			buildPhases = (
+				EF059864224F9DB300D16121 /* Sources */,
+				EF059865224F9DB300D16121 /* Frameworks */,
+				EF059866224F9DB300D16121 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF05986A224F9DB300D16121 /* PBXTargetDependency */,
+			);
+			name = EyeTracking2UITests;
+			productName = EyeTracking2UITests;
+			productReference = EF059868224F9DB300D16121 /* EyeTracking2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF05983F224F9DB100D16121 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "youngjun goo";
+				TargetAttributes = {
+					EF059846224F9DB100D16121 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					EF05985C224F9DB300D16121 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = EF059846224F9DB100D16121;
+					};
+					EF059867224F9DB300D16121 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = EF059846224F9DB100D16121;
+					};
+				};
+			};
+			buildConfigurationList = EF059842224F9DB100D16121 /* Build configuration list for PBXProject "EyeTracking2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF05983E224F9DB100D16121;
+			productRefGroup = EF059848224F9DB100D16121 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF059846224F9DB100D16121 /* EyeTracking2 */,
+				EF05985C224F9DB300D16121 /* EyeTracking2Tests */,
+				EF059867224F9DB300D16121 /* EyeTracking2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF059845224F9DB100D16121 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF05984D224F9DB100D16121 /* art.scnassets in Resources */,
+				EF059857224F9DB200D16121 /* LaunchScreen.storyboard in Resources */,
+				EF059854224F9DB200D16121 /* Assets.xcassets in Resources */,
+				EF059852224F9DB100D16121 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF05985B224F9DB300D16121 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF059866224F9DB300D16121 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF059843224F9DB100D16121 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF05987B224F9DD800D16121 /* Extension.swift in Sources */,
+				EF05984F224F9DB100D16121 /* ViewController.swift in Sources */,
+				EF05984B224F9DB100D16121 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF059859224F9DB300D16121 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF059862224F9DB300D16121 /* EyeTracking2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF059864224F9DB300D16121 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF05986D224F9DB300D16121 /* EyeTracking2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF05985F224F9DB300D16121 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF059846224F9DB100D16121 /* EyeTracking2 */;
+			targetProxy = EF05985E224F9DB300D16121 /* PBXContainerItemProxy */;
+		};
+		EF05986A224F9DB300D16121 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF059846224F9DB100D16121 /* EyeTracking2 */;
+			targetProxy = EF059869224F9DB300D16121 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF059850224F9DB100D16121 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF059851224F9DB100D16121 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF059855224F9DB200D16121 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF059856224F9DB200D16121 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF05986F224F9DB300D16121 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF059870224F9DB300D16121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF059872224F9DB300D16121 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = EyeTracking2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.EyeTracking2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF059873224F9DB300D16121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = EyeTracking2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.EyeTracking2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF059875224F9DB300D16121 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = EyeTracking2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.EyeTracking2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EyeTracking2.app/EyeTracking2";
+			};
+			name = Debug;
+		};
+		EF059876224F9DB300D16121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = EyeTracking2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.EyeTracking2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EyeTracking2.app/EyeTracking2";
+			};
+			name = Release;
+		};
+		EF059878224F9DB300D16121 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = EyeTracking2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.EyeTracking2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EyeTracking2;
+			};
+			name = Debug;
+		};
+		EF059879224F9DB300D16121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = EyeTracking2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.EyeTracking2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EyeTracking2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF059842224F9DB100D16121 /* Build configuration list for PBXProject "EyeTracking2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF05986F224F9DB300D16121 /* Debug */,
+				EF059870224F9DB300D16121 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF059871224F9DB300D16121 /* Build configuration list for PBXNativeTarget "EyeTracking2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF059872224F9DB300D16121 /* Debug */,
+				EF059873224F9DB300D16121 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF059874224F9DB300D16121 /* Build configuration list for PBXNativeTarget "EyeTracking2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF059875224F9DB300D16121 /* Debug */,
+				EF059876224F9DB300D16121 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF059877224F9DB300D16121 /* Build configuration list for PBXNativeTarget "EyeTracking2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF059878224F9DB300D16121 /* Debug */,
+				EF059879224F9DB300D16121 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF05983F224F9DB100D16121 /* Project object */;
+}

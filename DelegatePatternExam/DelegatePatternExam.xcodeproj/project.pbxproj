@@ -14,6 +14,7 @@
 		EF1A611522465872002D2A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1A611322465872002D2A05 /* LaunchScreen.storyboard */; };
 		EF1A612022465872002D2A05 /* DelegatePatternExamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A611F22465872002D2A05 /* DelegatePatternExamTests.swift */; };
 		EF1A612B22465872002D2A05 /* DelegatePatternExamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A612A22465872002D2A05 /* DelegatePatternExamUITests.swift */; };
+		EF1A613922465DEA002D2A05 /* CmmentBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1A613822465DEA002D2A05 /* CmmentBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		EF1A612622465872002D2A05 /* DelegatePatternExamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DelegatePatternExamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1A612A22465872002D2A05 /* DelegatePatternExamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatePatternExamUITests.swift; sourceTree = "<group>"; };
 		EF1A612C22465872002D2A05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF1A613822465DEA002D2A05 /* CmmentBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmmentBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				EF1A610A22465870002D2A05 /* AppDelegate.swift */,
 				EF1A610C22465870002D2A05 /* ViewController.swift */,
+				EF1A613822465DEA002D2A05 /* CmmentBox.swift */,
 				EF1A610E22465870002D2A05 /* Main.storyboard */,
 				EF1A611122465872002D2A05 /* Assets.xcassets */,
 				EF1A611322465872002D2A05 /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF1A613922465DEA002D2A05 /* CmmentBox.swift in Sources */,
 				EF1A610D22465870002D2A05 /* ViewController.swift in Sources */,
 				EF1A610B22465870002D2A05 /* AppDelegate.swift in Sources */,
 			);
