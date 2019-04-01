@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF4721342252512000E7A068 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF4721322252512000E7A068 /* Database.xcdatamodeld */; };
+		EF472136225255C600E7A068 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF472135225255C600E7A068 /* ListViewController.swift */; };
 		EF92B4FA223FD78E004262A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92B4F9223FD78E004262A8 /* AppDelegate.swift */; };
-		EF92B4FC223FD78E004262A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92B4FB223FD78E004262A8 /* ViewController.swift */; };
 		EF92B4FF223FD78E004262A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF92B4FD223FD78E004262A8 /* Main.storyboard */; };
 		EF92B501223FD790004262A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF92B500223FD790004262A8 /* Assets.xcassets */; };
 		EF92B504223FD790004262A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF92B502223FD790004262A8 /* LaunchScreen.storyboard */; };
@@ -34,9 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF4721332252512000E7A068 /* Friends.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Friends.xcdatamodel; sourceTree = "<group>"; };
+		EF472135225255C600E7A068 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		EF92B4F6223FD78E004262A8 /* CoreDataExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF92B4F9223FD78E004262A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF92B4FB223FD78E004262A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF92B4FE223FD78E004262A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF92B500223FD790004262A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF92B503223FD790004262A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				EF92B4F9223FD78E004262A8 /* AppDelegate.swift */,
-				EF92B4FB223FD78E004262A8 /* ViewController.swift */,
+				EF472135225255C600E7A068 /* ListViewController.swift */,
 				EF92B4FD223FD78E004262A8 /* Main.storyboard */,
 				EF92B500223FD790004262A8 /* Assets.xcassets */,
 				EF92B502223FD790004262A8 /* LaunchScreen.storyboard */,
 				EF92B505223FD790004262A8 /* Info.plist */,
+				EF4721322252512000E7A068 /* Database.xcdatamodeld */,
 			);
 			path = CoreDataExam;
 			sourceTree = "<group>";
@@ -256,8 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF92B4FC223FD78E004262A8 /* ViewController.swift in Sources */,
+				EF4721342252512000E7A068 /* Database.xcdatamodeld in Sources */,
 				EF92B4FA223FD78E004262A8 /* AppDelegate.swift in Sources */,
+				EF472136225255C600E7A068 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +590,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF4721322252512000E7A068 /* Database.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF4721332252512000E7A068 /* Friends.xcdatamodel */,
+			);
+			currentVersion = EF4721332252512000E7A068 /* Friends.xcdatamodel */;
+			path = Database.xcdatamodeld;
+			sourceTree = "<group>";
+			tabWidth = 4;
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EF92B4EE223FD78E004262A8 /* Project object */;
 }
