@@ -1,5 +1,10 @@
-# 코어 데이터(CoreData)
 
+
+정리에 앞서 본 내용은 [꼼꼼한 재은씨의 SWIFT: 실전편](https://book.naver.com/bookdb/book_detail.nhn?bid=12320111) 교재를 바탕으로 정리하였음을 밝힙니다.
+
+![image](https://user-images.githubusercontent.com/33486820/55335165-9967e180-54d5-11e9-94d6-eae6d7e838ea.png)
+
+# 코어 데이터(CoreData)
 
 코어 데이터는 애플이 코코아 개발 환경을 통해 제공하는 **인메모리(In-Memory)** 방식의 데이터 관리 프레임워크이다.
 코어데이터를 사용하여 예의 데이터베이스 개발 환경과 유사하게 데이터를 읽고 쓰며 수정하고 삭제할 수 있다.
@@ -311,10 +316,68 @@ Delete Rule은 참조 대상 엔터티의 레코드가 삭제되었을 경우 �
 
 
 
+## CoreData 구현
+
+
+### 엔터티 설계하기
+
+엔터티는 데이터베이스에서 테이블에 해당하는 개념이며, 엔터티 설계 또한 역시 테이블을 설계하는 과정과 매우 비슷하다.
+.xcdatamodeld 파일을 추가하여 entity, attribute, relationship을 설계할 수 있다.
+
+![image](https://user-images.githubusercontent.com/33486820/55335898-f31cdb80-54d6-11e9-8470-f0286ca0c0d2.png)
+
+
+<img width="634" alt="image" src="https://user-images.githubusercontent.com/33486820/55335916-fca64380-54d6-11e9-9532-6481efa2db3b.png">
+
+
+### fetch 기능 구현
+
+
+코어 데이터에서 레코드를 읽어 오는 과정을 보통은 **fetch(페치)** 라고 표현한다. "데이터 가져오기" 정도의 의미로 해석하면된다.
+
+> fetch 의 4단계
+
+- 1단계 : AppDelegate 객체 참조
+
+- 2단계 : Context 참조
+
+- 3단계 : 요청 객체(NSFetchRequest) 생성
+
+- 4단계 : `fetch(_:)` 메서드 호출하여 레코드 가져오기
+
+
+> fetch 구현 
+
+<img width="687" alt="image" src="https://user-images.githubusercontent.com/33486820/55338271-527cea80-54db-11e9-960b-4e522280d1bc.png">
 
 
 
 
+위의 4단계 과정을 진행하고나면 `NSManagedObeject` 또는 그 하위 타입의 인스턴스로 이루어진 배열을 반환 할 수있다.
+(fetch() - > [NSManagedObject] 의 반환타입 이기 때문)
+이때 배열을 이루는 각각의 인스터스가 바로 **관리객체(Managed Object)** 이다.
 
+
+코어 데이터에 저장된 데이터를 가져올 때에는 요청 사항을 정의한 `NSFetchRequest` 객체가 사용된다. 이 객체는 다양한 요청들을 복합적으로 정의할 수 있다. 대표적으로 이들 3가지가 있다.
+
+1. 어디에서 데이터를 가져올 것인가?(엔터티 지정) = FROM
+
+2. 어떤 데이터를 가져올 것인가?(검색 조건 지정) = WHERE
+
+3. 어떻게 데이터를 가져올 것인가?(정렬 조건 지정) = ORDER BY
+
+
+`NSFetchRequest`는 데이터베이스의 SELECT 쿼리문과 유사한 역할이다. 쿼리문과 마찬가지로 2, 3 의 조건들을 생략할 수 있다. 그러나 SELECT 쿼리문에서 FROM 이 필수 요소 인것처럼, `NSFetchRequest`에서도 엔터티 정보는 생략할 수 없다.
+
+
+`NSFetchRequest`객체를 생성할 때 특정 엔터티의 이름을 인자값으로 넣어줌으로써 어느 엔터티에서 데이터를 가져올지 선택할 수 있다. 이렇게 생성된 NSFetchRequest객체는 해당 엔터티 구조로 저장된 모든 데이터를 읽어들이도록 요청을 전달하게 된다. 
+
+`NSFetchRequest`객체가 만들어지고 나면 이제 실제로 데이터를 가져올 차례이다. 코어데이터는 컨텍스트 객체를 통해 각각의 CRUD에 해당하는 메소드를 제공한다. 가령 원하는 레코드 여러개를 한꺼번에 가져올 때에넌 `fetch(_:)` 메서드를 사용하고, 레코드를 저장하거나 수정된 내용을 반영 할 때에는 (insert, update) `save()`메서드를 사용하는 식이다. 레코드의 객체 ID를 알고있다면 `object(_:)` 메서드를 이용하여 원하는 레코드만 읽어올 수도 있다.
+
+
+<img width="821" alt="image" src="https://user-images.githubusercontent.com/33486820/55338631-17c78200-54dc-11e9-9cbe-39c7035d4d84.png">
+
+
+지정한 관리객체(`NSManagedObject`) 배열 프로퍼티로부터 이 행(cell)에 해당하는 데이터를 읽어와 준비하는 과정과, 준비된 데이터를 사용하여 cell을 구성하고 반환하는 과정으로 이루어 져있다. list배열 내부의 타입은 `NSManagedObject` 이기 때문에 우리가 원하는 항목의 값을 읽어오기 위해서는 `value(for:Key:)`메서드를 사용해야한다. 이때 코어 데이터는 실제로 저장되는 값의 타입이 어떤 것인지 정확히 알지 못하므로 Any 타입의 값으로 반환한다. 그렇기에 적절한 타입으로 캐스팅을 해주어야한다. as? String으로 타입 캐스팅을 해주는 것이 그러한 이유이다.
 
 
