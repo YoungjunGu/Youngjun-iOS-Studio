@@ -3,6 +3,7 @@
     <entity name="Company" representedClassName="Company" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="regdate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="department" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Department" inverseName="company" inverseEntity="Department" syncable="YES"/>
         <relationship name="employee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Employee" inverseName="company" inverseEntity="Employee" syncable="YES"/>
     </entity>
@@ -18,8 +19,8 @@
         <relationship name="company" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Company" inverseName="employee" inverseEntity="Company" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Employee" positionX="-63" positionY="-18" width="128" height="105"/>
-        <element name="Department" positionX="-54" positionY="0" width="128" height="90"/>
-        <element name="Company" positionX="-36" positionY="27" width="128" height="105"/>
+        <element name="Company" positionX="-36" positionY="27" width="128" height="118"/>
+        <element name="Department" positionX="-231.078125" positionY="170.76171875" width="128" height="90"/>
+        <element name="Employee" positionX="129.23046875" positionY="204.4765625" width="128" height="105"/>
     </elements>
 </model>
