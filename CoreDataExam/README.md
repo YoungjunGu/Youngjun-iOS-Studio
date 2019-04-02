@@ -427,7 +427,7 @@ let object = NSEntityDescription.insertNewObject(forEntityName: "Company", into:
 
 
 
-### 데이터 삭제 기능 구현
+### 데이터 삭제 기능 구현(Delete)
 
 
 코어 데이터에서 삭제 과정은 두단계로 이루어진다.  
@@ -442,13 +442,69 @@ let object = NSEntityDescription.insertNewObject(forEntityName: "Company", into:
 
 <img width="982" alt="image" src="https://user-images.githubusercontent.com/33486820/55370560-d19f0c80-5535-11e9-9b1a-bc5de1e4b9b1.png">
 
+- tableView 행을 지움과 동시에 코어 데이터에서도 해당 목록 삭제
+
+![image](https://user-images.githubusercontent.com/33486820/55397686-b4902b00-5581-11e9-8708-d10c2d36d11f.png)
 
 
 
+![image](https://user-images.githubusercontent.com/33486820/55397748-dbe6f800-5581-11e9-80fa-eb9abf9d1b4c.png)  
+
+
+### 수정 기능 구현하기(Update)
+
+
+코어 데이터의 수정 로직은 등록 조직과 삭제 로직을 각각 반반 합쳐 놓은 것으로 이해하면된다.  
+`setValue(_:forKey:)`메서드를 사용하는 것이나 유저 인터페이스 구조 등은 등록 기능과 비슷하지, 새로운 관리 객체를 생성하는 것이 아니라 컨텍스트에 로딩된 기존 관리 객체를 이용하여 값을 변경하는 과정이 삭제 로직과 비슷하기 때문이다. 
+
+> 수정 기능 구현  
+
+
+<img width="788" alt="image" src="https://user-images.githubusercontent.com/33486820/55398109-b0b0d880-5582-11e9-9a9e-8240d9c01d4e.png">
+
+
+수정 작업은 이미 컨텍스트에 로딩 되어있는 관리 객체에서 이루어 져야 한다. 이를 위해 `edit(object:name:address)`메서드에서는 첫번째 매개 변수로 수정할 관리 객체를 전달하고 있다.  
+항목별로 값을 수정하면 컨텍스에 저장된 내용도 그대로 변경되지만, 영구 저장소에는 반영되지 않기 때문에 수정 작업이 끝난 후 적절한 시점에서 `save()`메서드를 호출하여 동기화를 시켜주어야한다.
+
+
+<img width="801" alt="image" src="https://user-images.githubusercontent.com/33486820/55398988-d4751e00-5584-11e9-8780-fbd61bde41cc.png">  
 
 
 
+### 정렬 기능 구현하기(Sorting)
 
+
+최신 데이터가 위쪽이나 아랫쪽에 가게 하게끔 데이터를 정렬해서 가져오는 처리가 필요하다.  
+코어데이터에서 원하는 순서대로 레코드를 가져오기 위해서는 정렬을 담당하는 `NSSortDescriptor` 객체를 알아야 할 필요가 있다.  
+
+```swift
+let sort = NSSortDescriptor(key: <정렬기준칼럼>, ascendingL <오름차순여부>)
+fetchRequest.sortDescriptors = [sort]
+```  
+
+
+`NSSortDescriptor`객체 생성 과정에는 두 개의 매개 변수가 사용된다. 첫 번째는 정렬할 칼럼, 즉 어느 어트리뷰트를 기준으로 정렬할 것인가에 대한 값이고, 두번째는 어떤 순서로 정렬할 것인가에 대한 Bool타입의 값이다. 의미적으로는 오름차순 여부에 대한 값이므로, true를 입력하면 오름차순 정렬이 되고 false를 입력하면 내림차순 정렬이 된다.  
+
+
+생성된 `NSSortDescriptor` 객체는 `fetchRequest.sortDescriptors` 속성에 할당됨으로써 요청 객체의 일부로 동작하게 된다.  
+이 속성은 배열이므로 두개이상의 `NSSortDescriptor` 객체를 정의하여 대입할 수 있다.  
+
+
+> 정렬은 fetch 함수에 정렬 속성을 추가해주면 된다.  
+
+
+CoreData 에 값을 추가 할 때마다 `NSManagedObject`배열을 재정렬 한다음에 반영하는 방식으로 하면된다.
+
+<img width="495" alt="image" src="https://user-images.githubusercontent.com/33486820/55403789-916d7780-5591-11e9-85c4-0868716b743f.png">
+
+
+- 주의  
+`NSManagedObject`배열의 값을 변경 시키고 tableView 를 `reload()`하고 끝내면 안된다.  
+직접 tableView의 Cell의 내용을 변경 시켜 주어야한다. 단순하게 테이블 뷰를 reload 해버리면 순서가 제대로 변경 되지 않는 문제가 있고, `reload()` 메서드와 `moveRow(at:to:)`메서드를 함께 사용할 경우에는 두 메서드의 실행 중 충돌로 인해 원하는 결과가 제대로 나오지 않기 때문에 셀의 내용을 수정 해준 다음 셀의 순서를 변경하도록 로직을 처리하는 것이 바람직 하다.
+
+> 직접 Cell 의 내용을 수정 할 거면 list배열을 다시 읽어 올(fetch) 할 필요가 없지 않는가?  
+
+Cell 내용ㅇ을 수정하고 순서를 변경하면서 list 배열의 값을 변경하지 않는다면 cell의 순서와 실제 list 배열에 저장된 데이터의 순서가 서로 맞지 않는 문제가 생긴다. 이때 indexPath.row를 이용하여 해당 행에 맞는 값을 읽어오는 코드가 모두 잘못될 수 있으므로, 직접 셀의 순서를 변경하더라도 list 배열의 내용도 갱신하여 현재의 셀 순서와 일치 시켜 주어야 한다.
 
 
 
