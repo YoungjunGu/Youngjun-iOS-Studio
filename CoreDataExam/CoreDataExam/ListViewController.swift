@@ -25,15 +25,19 @@ class ListViewController: UIViewController {
         let manageContext = appDelegate.persistentContainer.viewContext
         // 요청 객체 생성
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Company")
-        // 데이터 가져오기
         
+        // 정렬 속성 설정 false = 내림 차순 정렬 -> 새로운 데이터가 위로 가게 한다.
+        let sort = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sort]
+        
+        // 데이터 가져오기
         do {
             let result = try manageContext.fetch(fetchRequest)
              return result
-        } catch {
+        } catch let error as NSError {
+            print(error.localizedDescription)
             return [NSManagedObject()]
         }
-       
     }
     
     func save(name: String, address: String) -> Bool {
@@ -55,8 +59,10 @@ class ListViewController: UIViewController {
             // 변경된 사항을 영구 저장소에 반영
             try manageContext.save()
             self.list.append(object)
+            list = self.fetch()
             return true
-        } catch {
+        } catch let error as NSError {
+            print(error.localizedDescription)
             manageContext.rollback()
             return false
         }
@@ -113,8 +119,28 @@ class ListViewController: UIViewController {
         }
     }
     
+    func edit(object: NSManagedObject, name: String, address: String) -> Bool {
+        // 앱 델리게이트 객체 참조
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        // 관리 객체 컨텍스트 참조
+        let manageContext = appDelegate.persistentContainer.viewContext
+        // 관리 객체 값을 수정
+        object.setValue(name, forKey: "name")
+        object.setValue(address, forKey: "address")
+        object.setValue(Date(), forKey: "regdate")
+        
+        // 영구 저장소에 반영(save)
     
-    
+        do {
+            try manageContext.save()
+            // 수정한 값에 대한 NSManagedObject 배열을 fetch() 함수를 통해 재 정렬 하여 저장한다.
+            self.list = self.fetch()
+            return true
+        } catch {
+            manageContext.rollback()
+            return false
+        }
+    }
 
 }
 
@@ -150,4 +176,42 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 선택된 행에 해당하는 데이터 가져오기
+        let object = self.list[indexPath.row]
+        // 기존의 값을 alert 텍스트 뷰에 보여주기 위한 변수
+        let name = object.value(forKey: "name") as? String
+        let address = object.value(forKey: "address") as? String
+        
+        let alert = UIAlertController(title: "회사정보 수정", message: nil, preferredStyle: .alert)
+        
+        // 입력 필드 추가
+        alert.addTextField() { $0.text = name }
+        alert.addTextField() { $0.text = address }
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Save", style: .default) { (_) in
+            guard let newName = alert.textFields?.first?.text, let newAddress = alert.textFields?.last?.text else {
+                return
+            }
+            
+            if self.edit(object: object, name: newName, address: newAddress) == true {
+                
+                let cell = self.tableView.cellForRow(at: indexPath)
+                cell?.textLabel?.text = name
+                cell?.detailTextLabel?.text = address
+                
+                let firstIndexPath = IndexPath(item: 0, section: 0)
+                self.tableView.moveRow(at: indexPath, to: firstIndexPath)
+                
+                self.tableView.reloadData()
+            } else {
+                print("Update 실패")
+            }
+        })
+        self.present(alert, animated: false)
+        
+    }
+
 }
