@@ -136,7 +136,11 @@ func applicationWillTerminate(_ application: UIApplication)
 위의 그림 처럼 초기에 A view는 `viewDidLoad()` 와 `viewWillAppear()`이 모두 호출된다. A에서 B로 view이동이 일어날때도 마찬가지로 B view의 `viewDidLoad()` 와 `viewWillAppear()`이 호출된다. 하지만 B에서 A로 다시 돌아갈 경우 `viewDidLoad()`의 경우 화면이 처음 만들어질 때 한번만 실행하므로 `viewWillAppear()`만 호출이 되는 것을 볼수있다.  
 **다른 뷰에서 갔다가 다시 돌아오는 상황에 해주고 싶은 처리를 viewWillAppear에서한다.**  
 
-> 참고: 네비게이션 컨트롤러의 경우 view가 stack 처럼 쌓이기 때문에 A에서 B로 갔다가 B 에서 다시 A로 올경우 A의 viewDidLoad()함수는 호출이 되지 않는다. 왜냐하면 아직 메모리에 남아있었기 때문(view가 stack에 
+![image](https://user-images.githubusercontent.com/33486820/58109039-d6c03400-7c27-11e9-87ff-083283dc60f7.png)  
+
+
+> 참고: 네비게이션 컨트롤러의 경우 view가 stack 처럼 쌓이기 때문에 A에서 B로 갔다가 B 에서 다시 A로 올경우 A의 viewDidLoad()함수는 호출이 되지 않는다. A의 경우 메모리 스택에 남아 있고 B의 경우 A로 back 을 하게 될경우 pop이 수행이 되어 메모리 스택에서 사라지게 되고 결국 다시 B를 이동하게 될때 처음 로드 되는 것처럼 메모리스택에 push 되고 viewDidLoad()가 호출되게 된다.  
+
 
 </br>
 
