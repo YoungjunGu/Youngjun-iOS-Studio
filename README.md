@@ -15,7 +15,12 @@
 ## iOS Design Pattern
 
 - [Singleton](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/Singleton)
-- [Delegate](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/DelegatePatternExam)
+- [Delegate](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/DelegatePatternExam)  
+
+## Life Cycle(생명주기)  
+
+- [App Life Cycle](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/iOS-AppLifeCycle)
+- [ViewController Life Cycle](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/iOS-AppLifeCycle)  
 
 ## GCD 응용, Operation Queue
 
