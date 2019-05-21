@@ -22,6 +22,12 @@
 - [App Life Cycle](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/iOS-AppLifeCycle)
 - [ViewController Life Cycle](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/iOS-AppLifeCycle)  
 
+## iOS 메모리 관리  
+
+- ARC,RC,MRC
+- Reference Count(순환참조)  
+
+
 ## GCD 응용, Operation Queue
 
 - [GCD vs Operation Queue](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/ConcurrencyProg)
