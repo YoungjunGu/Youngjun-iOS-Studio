@@ -146,6 +146,28 @@ func applicationWillTerminate(_ application: UIApplication)
 
 ## viewDidAppear  
 
+뷰가 나타났다는 것을 Controller에게 알리는 역할을 한다. 또한 화면에 적용될 애니메이션을 그려준다.  
+뷰가 화면에 나타난 직후에 실행되기 때문에 이것을 제외하고는 `viewWillAppear()`와 거의 흡사하다.  
+
+</br>
+
+## viewWillDisappear  
+
+뷰가 사라지기 직전에 호출되는 함수로써, 뷰가 삭제되려고 하는 것을 ViewController에게 통지한다.  
+
+## viewDidDisappear 
+
+ViewController가 뷰가 제거되었음을 알려준다.  
+ 
+</br>
+<hr>
+ 
+## Reference  
+
+- https://zeddios.tistory.com/43
+- https://medium.com/ios-development-with-swift/앱-생명주기-app-lifecycle-vs-뷰-생명주기-view-lifecycle-in-ios-336ae00d1855 
+- https://www.edwith.org
+
 
 
 
