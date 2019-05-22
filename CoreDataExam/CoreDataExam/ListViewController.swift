@@ -13,6 +13,7 @@ class ListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    
     // Data source 역할을 할 배열 변수
     lazy var list: [NSManagedObject] = {
         return self.fetch()
