@@ -205,9 +205,14 @@ terran = nil
 ```  
 
 이 경우 1. 에서 unit의 Unit 인스턴스를 **weak** 하게 참조 하고 있기 때문에 RC의 경우를 올리지 않는다. 단지 marine 변수가 참조하고 있어 RC의 값은 1을 가지게 된다.  
-3. 에서 marine의 Unit 클래스 인스턴스 참조를 해제시키면 Unit 의경우 RC 값이 0 이기 때문에 ARC는 Unit 클래스 인스턴스를 메모리에서 완전히 해제시키고 Tribe 클래스를 강하게 참조하고 있던 Unit 클래스 인스턴스가 사라지게 되므로 4. 를 수행할 시 Tribe 클래스도 `deinit` 이 수행 될 수 있는 것이다. 
+3. 에서 marine의 Unit 클래스 인스턴스 참조를 해제시키면 Unit 의경우 RC 값이 0 이기 때문에 ARC는 Unit 클래스 인스턴스를 메모리에서 완전히 해제시키고 Tribe 클래스를 강하게 참조하고 있던 Unit 클래스 인스턴스가 사라지게 되고  
 
 <img width="950" alt="image" src="https://user-images.githubusercontent.com/33486820/58232259-1431d800-7d74-11e9-879b-7308c76821cd.png">  
+
+비로서 Tribe 의 RC 값은 1 이되고 4. 를 수행할 시 Tribe 클래스도 ARC에 의해`deinit` 이 수행 될 수 있는 것이다.  
+
+<img width="853" alt="image" src="https://user-images.githubusercontent.com/33486820/58232712-37a95280-7d75-11e9-8743-7230f4a4a8b1.png">  
+
 
 > 참고  
 	Java 처럼 가비지 콜렉션을 사용하는 시스템에서 weak pointer를 단순한 시스템 캐싱 목적으로 사용하기도 한다. 메모리 소모가 많아지면 가비지 콜렉터를 실행해서 Strong 참조가 없는 객체를 메모리에서 해제하는 식으로 동작하기 때문이다. 하지만 ARC의 경우 가비지 콜렉터와 다르게 참조 횟수가 0이 되는 즉시 해당 인스턴스를 제거하기 때문에 약한 참조를 이런 목적으로 사용할 수 없다.  
