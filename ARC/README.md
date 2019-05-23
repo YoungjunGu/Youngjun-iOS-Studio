@@ -120,7 +120,7 @@ marine?.tribe = terran
 기존의 RC 값이 각각 1이었다가 인스턴스 내부의 다른 클래스의 인스턴스를 참조하는 변수를 갖기 때문에 RC값은 2 가된다.  
 그리고 `marine`과 `terran`변수의 참조를 nil을 대입하여 끊게되면  
 
-```s
+```swift
 terran = nil
 marine = nil
 ```  
@@ -132,6 +132,13 @@ marine = nil
 </br>
 
 ### Strong Referecne Cycle Solution  
+
+- weak reference: 약한 참조
+- unowned reference: 미소유 참조  
+
+
+
+
 
 
 
