@@ -27,7 +27,7 @@
 
 - [Reference Counting & Cycle](https://github.com/gaki2745/Youngjun-iOS-Studio/blob/master/ReferenceCount/README.md)
 - [ARC(Automatic Reference Counting)](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/ARC)
-- IBOutlet's Reference Cycle
+- [IBOutlet's Reference Cycle](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/IBOutletMemory)
 
 ## GCD 응용, Operation Queue
 
