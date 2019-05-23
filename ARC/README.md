@@ -104,7 +104,8 @@ var marine: Unit?
 terran = Tribe(name: "Terran")
 marine = Unit(name: "Marine")
 ```  
-<img width="806" alt="image" src="https://user-images.githubusercontent.com/33486820/58227225-eee99d80-7d64-11e9-8ca0-368889719dff.png">  
+<img width="812" alt="image" src="https://user-images.githubusercontent.com/33486820/58230464-599fd680-7d6f-11e9-8630-d243dc521353.png">  
+
 
 각각의 변수는 Class Instance를 참조하고 있고 이때 각 클래스의 RC값이 하나씩 증가한다.  
 그럼 이때 nil 값이 었던 내부의 클래스 인스턴스를 서로 참조를 한다.  
@@ -115,7 +116,8 @@ terran?.unit = marine
 marine?.tribe = terran
 ```  
 
-<img width="782" alt="image" src="https://user-images.githubusercontent.com/33486820/58227330-5a336f80-7d65-11e9-9cac-01f60efa2d9f.png">  
+<img width="841" alt="image" src="https://user-images.githubusercontent.com/33486820/58231885-0c256880-7d73-11e9-999a-bb631ed3258f.png">  
+
 
 기존의 RC 값이 각각 1이었다가 인스턴스 내부의 다른 클래스의 인스턴스를 참조하는 변수를 갖기 때문에 RC값은 2 가된다.  
 그리고 `marine`과 `terran`변수의 참조를 nil을 대입하여 끊게되면  
@@ -125,7 +127,8 @@ terran = nil
 marine = nil
 ```  
 
-<img width="798" alt="image" src="https://user-images.githubusercontent.com/33486820/58227442-d0d06d00-7d65-11e9-9bed-04236c74c277.png">  
+<img width="821" alt="image" src="https://user-images.githubusercontent.com/33486820/58231946-337c3580-7d73-11e9-840e-4bb0fb441706.png">  
+
 
 위의 그림에서 볼수 있듯이 기존의 strong 하게 참조하던 `marine` 과 `terran` 변수의 참조는 해제가되어 RC의 값이 1씩 감소가 되었다. 하지만 개발자가 생각하기에 메모리에 두 클래스의 인스턴스는 해제되었다고 생각하겠지만 클래스내부에에서 서로의 클래스 인스턴스를 마찬가지로 강하게 참조하고 있기 때문에 RC값이 1 로 유지가 되고 ARC는 클래스인스턴스가 아직 유효하다고판단, **해제를 하지 않아 메모리에 누수가 발생한다.**  
 
@@ -136,6 +139,88 @@ marine = nil
 - weak reference: 약한 참조
 - unowned reference: 미소유 참조  
 
+##### Weak Reference(약한 참조)  
+
+약한 참조로 weak를 붙여 선언하게 되면 참조하고 있는 것이 먼저 메모리에서 해제되기 때문에 ARC는 약한 참조로 선언된 참조 대상이 해지 되면 런타임에 자동으로 참조하고 있는 변수에 nil을 할당한다.  
+
+
+> 참고  
+	ARC에서 약한 참조에 nil을 할당하면 프로퍼티 옵저버는 실행되지 않는다.  
+    
+    
+```swift
+class Unit {
+    let name: String
+    
+    init(name: String) {
+        self.name = name
+        print("\(name) 이 initializing 되었습니다.")
+    }
+    var tribe: Tribe?
+    deinit {
+        print("\(name) 이 deinitializeing 되었습니다.  ")
+    }
+}
+
+class Tribe {
+    // 종족
+    let name: String
+    
+    init(name: String) {
+        self.name = name
+        print("\(name) 이 initializing 되었습니다.")
+    }
+    // weak를 붙여 unit 변수는 약하게 Unit class Instance를 참조하고 있다. 
+    weak var unit: Unit?
+    deinit {
+        print("\(name) 이 deinitializeing 되었습니다.  ")
+    }
+}
+```  
+
+Tribe 클래스에서 unit 변수를 weak으로 선언했다.  
+
+<img width="836" alt="image" src="https://user-images.githubusercontent.com/33486820/58232012-66bec480-7d73-11e9-9151-35a6472f6a87.png">  
+
+
+```swift
+var terran: Tribe?
+var marine: Unit?
+        
+terran = Tribe(name: "Terran")
+marine = Unit(name: "Marine")
+        
+// 1.
+terran?.unit = marine
+// 2.
+marine?.tribe = terran
+        
+// 3.
+marine = nil
+// 출력 : Marine 이 deinitializeing 되었습니다.  
+
+// 4.
+terran = nil 
+// 출력 : Terran 이 deinitializeing 되었습니다.  
+```  
+
+이 경우 1. 에서 unit의 Unit 인스턴스를 **weak** 하게 참조 하고 있기 때문에 RC의 경우를 올리지 않는다. 단지 marine 변수가 참조하고 있어 RC의 값은 1을 가지게 된다.  
+3. 에서 marine의 Unit 클래스 인스턴스 참조를 해제시키면 Unit 의경우 RC 값이 0 이기 때문에 ARC는 Unit 클래스 인스턴스를 메모리에서 완전히 해제시키고 Tribe 클래스를 강하게 참조하고 있던 Unit 클래스 인스턴스가 사라지게 되므로 4. 를 수행할 시 Tribe 클래스도 `deinit` 이 수행 될 수 있는 것이다. 
+
+<img width="950" alt="image" src="https://user-images.githubusercontent.com/33486820/58232259-1431d800-7d74-11e9-879b-7308c76821cd.png">  
+
+> 참고  
+	Java 처럼 가비지 콜렉션을 사용하는 시스템에서 weak pointer를 단순한 시스템 캐싱 목적으로 사용하기도 한다. 메모리 소모가 많아지면 가비지 콜렉터를 실행해서 Strong 참조가 없는 객체를 메모리에서 해제하는 식으로 동작하기 때문이다. 하지만 ARC의 경우 가비지 콜렉터와 다르게 참조 횟수가 0이 되는 즉시 해당 인스턴스를 제거하기 때문에 약한 참조를 이런 목적으로 사용할 수 없다.  
+    
+> 결론 : weak 선언 시 RC 값 증가 시키지 않고 ARC는 RC가 0 인 클래스 인스턴스를 메모리 해지한다.  
+
+
+
+
+
+
+
+        
 
 
 
