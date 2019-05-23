@@ -219,6 +219,85 @@ terran = nil
     
 > 결론 : weak 선언 시 RC 값 증가 시키지 않고 ARC는 RC가 0 인 클래스 인스턴스를 메모리 해지한다.  
 
+</br>
+
+#### Unowned References(미소유 참조)  
+
+Weak Reference와 다르게 참조 대상이 되는 인스턴스가 현재 참조하고 있는 것과 같은 생애주기(lifetime)를 갖거나 더 긴 생애 주기(longer lifetime)을 갖기 때문에 항상 참조에 그 값이 있다고 생각한다. 그래서 **ARC는 미소유 참조에는 절대 nil을 할당하지 않는다 즉, 옵셔널 타입을 사용하지 않는다.**  
+
+> 중요  
+	미소유 참조는 참조 대상 인스턴스가 항상 존재한다고 생각하기 때문에 만약 미소유 참조로 선언된 인스턴스가 해제됐는데 접근하게 되면 런타임 에러가 발생한다.  
+    
+
+```swift
+class Customer {
+    let name: String
+    var card: CreditCard?
+    init(name: String) {
+        self.name = name
+    }
+    deinit { print("\(name) is being deinitialized") }
+}
+
+class CreditCard {
+    let number: UInt64
+    unowned let customer: Customer
+    init(number: UInt64, customer: Customer) {
+        self.number = number
+        self.customer = customer
+    }
+    deinit { print("Card #\(number) is being deinitialized") }
+}
+```  
+
+두 클래스 Customer 와 CreditCard 는 서로의 클래스 인스턴스를 참조하고 있다.  
+이때 customer는 미소유 참조 `unowned`으로 선언한다.  
+이유는 **고객과 신용카드를 비교해 봤을때 신용카드는 없더라도 사용자는 남아있을 것이기 때문**이다.  다시 말하면 신용카드가 없더라도 사용자는 존재하기 때문이다.  
+그렇기 때문에 CreditCard의 customer를 unowned로 선언한다.  
+  
+그리고 Customer 변수를 생성하고 프로퍼티 값을 설정한다.  
+
+```swift
+var john: Customer?
+
+john = Customer(name: "John Appleseed")
+john!.card = CreditCard(number:1234_5678_9012_3456,customer:john!)
+```  
+
+<img width="936" alt="image" src="https://user-images.githubusercontent.com/33486820/58236160-3bd96e00-7d7d-11e9-88c9-6dc83fb6606b.png">
+
+jonh 변수가 Customer 인스턴스를 참조하고 있고 CreditCard 인스턴스도 Customer 인스턴스를 참조하고 있지만 **Unowned 참조**를 하고 있기 때문에 Customer 클래스의 RC의 값은 1이된다.  
+  
+이 상황에서 john 변수의 Customer 인스턴스 참조를 끊으면 다음과 같이 된다.  
+
+<img width="971" alt="image" src="https://user-images.githubusercontent.com/33486820/58236306-983c8d80-7d7d-11e9-96e9-2f59fe9a72d1.png">
+
+```swift
+john = nil
+// Prints "John Appleseed is being deinitialized"
+// Prints "Card #1234567890123456 is being deinitialized"
+```  
+
+그렇게 되면 Customer클래스의 RC의 값은 john변수에 의해 강하게 참조 되고 있던것이 끊어져 1이되고 ARC에 의해 Customer 인스턴스가 메모리 해제되고 마찬가지로 CreditCard 인스턴스 또한 메모리에서 해제된다.  
+
+> 참고  
+	위 예제는 안전하게 미소유 참조를 사용하는 방법의 예이다. 반면 Swift에서는 성능문제를 위해 런타임에 안전성 확인을 하지 않고 사용하는 unsafe 미소유 참조도 제공한다.   
+    
+ 
+</br>
+<hr>
+
+## Reference  
+
+- https://jusung.gitbook.io/the-swift-language-guide/untitled-19
+- https://medium.com/@jang.wangsu/ios-swift-rc-arc-와-mrc-란-그리고-strong-weak-unowned-는-간단하게-적어봤습니다-988a293c04ac
+- http://monibu1548.github.io/2018/05/03/iboutlet-strong-weak/
+    
+    
+
+
+
+
 
 
 
