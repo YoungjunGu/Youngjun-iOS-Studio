@@ -5,6 +5,7 @@
 
 ## App Design
 
+- [KingFisher: 이미지관련 라이브러리](https://github.com/onevcat/Kingfisher)
 - [HeroTransition(뷰 전환 애니메이션)](https://github.com/HeroTransitions/Hero)
 - [ScratchCardView(복권뷰)](https://github.com/pgorzelany/ScratchCardView)
 - [커스텀 버튼 디자인](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/RoundedButton)
