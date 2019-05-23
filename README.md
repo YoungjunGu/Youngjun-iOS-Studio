@@ -26,7 +26,8 @@
 ## iOS 메모리 관리  
 
 - [Reference Counting & Cycle](https://github.com/gaki2745/Youngjun-iOS-Studio/blob/master/ReferenceCount/README.md)
-- ARC(Automatic Reference Counting) 
+- [ARC(Automatic Reference Counting)](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/ARC)
+- IBOutlet's Reference Cycle
 
 ## GCD 응용, Operation Queue
 
