@@ -66,6 +66,7 @@ class TimeManager {
 ### 실제 변화를 감지  
 
 ```swift
+// Observer 객체를 저장할 배열 저장 (필수요소)
 var observations:[NSKeyValueObservation] = []
 let timeManager = TimeManager(Time(stopWatch: Date()))
 ```
