@@ -1,7 +1,5 @@
 
-## iOS의 다양한 프레임워크 및 개발 시 필요한 기술들을 익히는 공간 입니다.
-
-
+# iOS의 다양한 프레임워크 및 개발 시 필요한 기술들을 익히는 공간 입니다.
 
 ## App Design
 
@@ -61,4 +59,8 @@
 
 ## Key Value Observing(KVO) / Key Value Coding(KVC)  
 
-- [Key Value Observing](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/KeyValueObserving)
+- [Key Value Observing](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/KeyValueObserving)  
+
+## iOS 기술면접 자료 모음
+
+- https://medium.com/lookpin-engineering/ios-개발자-면접-질문리스트-b92350a91c1b
