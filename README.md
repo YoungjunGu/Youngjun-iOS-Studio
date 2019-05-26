@@ -63,4 +63,8 @@
 
 ## iOS 기술면접 자료 모음
 
-- https://medium.com/lookpin-engineering/ios-개발자-면접-질문리스트-b92350a91c1b
+- [iOS 개발자 면접 질문리스트](https://medium.com/lookpin-engineering/ios-개발자-면접-질문리스트-b92350a91c1b)
+- [iOS 개발자, 엔지니어 면접 질문 100](https://m.blog.naver.com/PostView.nhn?blogId=thmj9600&logNo=221200801228&proxyReferer=https%3A%2F%2Fwww.google.com%2F)
+- [awesome iOS 면접질문 모음](https://github.com/MaximAbramchuck/awesome-interview-questions#objective-c)
+- [awesome swift korea lecture](https://github.com/ClintJang/awesome-swift-korean-lecture)
+- [JaeYeopHan iOS Interview](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
