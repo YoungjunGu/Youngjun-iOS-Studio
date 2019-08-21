@@ -19,7 +19,7 @@
 
 ## iOS ArchitecturePattern  
 
-- [MVC, MVP, MVVM](https://github.com/gaki2745/iOS-Architecture-patter)  
+- [MVC, MVP, MVVM](https://github.com/gaki2745/iOS-Architecture-pattern)  
 
 ## iOS Design Pattern
 
