@@ -9,17 +9,22 @@
 - [커스텀 버튼 디자인](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/RoundedButton)
 - [제스처를 이용한 그림그리기](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/DrawingApp)
 - [Custom Header 디자인](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/CustomerHeader)
-- [화면 회전 제어](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/ViewRotation)
-
-## iOS Design Pattern
-
-- [Singleton](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/Singleton)
-- [Delegate](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/DelegatePatternExam)  
+- [화면 회전 제어](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/ViewRotation)  
 
 ## Life Cycle(생명주기)  
 
 - [App Life Cycle](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/iOS-AppLifeCycle)
 - [ViewController Life Cycle](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/iOS-AppLifeCycle)  
+
+
+## iOS ArchitecturePattern  
+
+- [MVC, MVP, MVVM](https://github.com/gaki2745/iOS-Architecture-patter)  
+
+## iOS Design Pattern
+
+- [Singleton](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/Singleton)
+- [Delegate](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/DelegatePatternExam)  
 
 ## iOS 메모리 관리  
 
