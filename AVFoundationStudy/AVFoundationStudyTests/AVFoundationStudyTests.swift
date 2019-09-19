@@ -1,14 +1,15 @@
 //
-//  AVFoundationTests.swift
-//  AVFoundationTests
+//  AVFoundationStudyTests.swift
+//  AVFoundationStudyTests
 //
 //  Created by youngjun goo on 19/09/2019.
+//  Copyright © 2019 youngjun goo. All rights reserved.
 //
 
 import XCTest
-@testable import AVFoundation
+@testable import AVFoundationStudy
 
-class AVFoundationTests: XCTestCase {
+class AVFoundationStudyTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
