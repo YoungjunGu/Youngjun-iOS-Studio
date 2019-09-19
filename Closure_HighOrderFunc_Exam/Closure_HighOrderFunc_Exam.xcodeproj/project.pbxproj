@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EF0FF158222688A0002316AB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FF157222688A0002316AB /* main.swift */; };
+		EF602D6E22990E12008A679A /* closureBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF602D6D22990E12008A679A /* closureBasic.swift */; };
+		EF602D7122990F8E008A679A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF602D7022990F8E008A679A /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		EF0FF154222688A0002316AB /* Closure_HighOrderFunc_Exam */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Closure_HighOrderFunc_Exam; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0FF157222688A0002316AB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		EF602D6D22990E12008A679A /* closureBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = closureBasic.swift; sourceTree = "<group>"; };
+		EF602D7022990F8E008A679A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF602D7122990F8E008A679A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +48,7 @@
 			children = (
 				EF0FF156222688A0002316AB /* Closure_HighOrderFunc_Exam */,
 				EF0FF155222688A0002316AB /* Products */,
+				EF602D6F22990F8E008A679A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +64,17 @@
 			isa = PBXGroup;
 			children = (
 				EF0FF157222688A0002316AB /* main.swift */,
+				EF602D6D22990E12008A679A /* closureBasic.swift */,
 			);
 			path = Closure_HighOrderFunc_Exam;
+			sourceTree = "<group>";
+		};
+		EF602D6F22990F8E008A679A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF602D7022990F8E008A679A /* Foundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF602D6E22990E12008A679A /* closureBasic.swift in Sources */,
 				EF0FF158222688A0002316AB /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +260,7 @@
 		EF0FF15C222688A0002316AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CLQV3W6FV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -254,6 +271,7 @@
 		EF0FF15D222688A0002316AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CLQV3W6FV;
 				PRODUCT_NAME = "$(TARGET_NAME)";

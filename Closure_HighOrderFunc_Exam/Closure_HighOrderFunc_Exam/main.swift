@@ -56,25 +56,13 @@ completionHandlers.first?()
 print(mc.x)
 
 
-class Server {
-    static var users: [UserModel] = []
-    
-    static getUser(completion: @escaping (Bool, [UserModel]) -> Void) {
-        //2
-        Alamofire.request(urlRequest).responseJSON { reponse in
-            users.append(유저)
-            DispatchQueue.main.async {
-                //3
-                completion(true, users)
-            }
-        }
-    }
+let names = ["Z","C","A","G","B"]
+
+let reversed: [String] = names.sorted { (first, second) -> Bool in
+    return first > second
 }
 
-//1
-Server.getUser{ (isSuccess, users) in
-    //4
-    if isSuccess {
-    //성공했기 때문에 UI Update 작업 수행
-    }
-}
+print(reversed)
+
+
+
