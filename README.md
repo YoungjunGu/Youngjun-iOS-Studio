@@ -13,7 +13,8 @@
 
 ## iOS Basic  
 
-- [UIRefreshControl](https://github.com/gaki2745/Swift-30days/tree/master/Project%2007%20-%20PullToRefresh)  
+- [UIRefreshControl](https://github.com/gaki2745/Swift-30days/tree/master/Project%2007%20-%20PullToRefresh)
+- [AVFoundation](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/AVFoundationStudy)
 
 ## Life Cycle(생명주기)  
 
