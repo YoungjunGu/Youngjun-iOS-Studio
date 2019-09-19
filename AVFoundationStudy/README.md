@@ -47,6 +47,35 @@ let url = // Remote 나 Local Asset의 URL
 let asset = AVURLAsset(url: url)  
 ```  
 
+### Creaing an Asset with options  
+
+위 처럼 단순하게 URL을 사용해서만 객체를 생성할 수도 있지만 options라는 매개변수를 통해 해당 객체를 보다 정교하게 생성할 수 있다. 이 매개변수는 `Key-Value`의 딕셔너리 타입으로 다음과 같이 사용할 수 있다.  
+
+```swift
+
+let url: URL = // Remote 나 Local Asset의 URL 
+let options = [AVURLAssetAllowsCellularAccessKey: false]
+let aseet = AVURLAsset(url: url, options: options)
+
+```  
+
+- `AVURLAssetAllowCellualAccessKey` 속성은 와이파이가 아닌 셀룰러 데이터 환경에서 리모트 저장소에 있는 미디어 데이터를 사용할 것인지에 대한 옵션이다.  
+
+
+### Preparing Assets for Use  
+
+AVAsset의 객체의 프로퍼티를 통해 현재 미디어 데이터의 재생 가능 여부, 총 재생시간, 생성 날짜 그리고 메타 데이터등의 데이터들에 접근이 가능하다. 
+
+> 주의할점
+
+AVAsset 객체를 생성했다고 위에서 언급한 정보들에 대해 즉시 접근할 수 있다는 걸 의미하는 것은 아니다. 이렇게 생성된 직후 아직 채워지지 않은 값을 받아오기 위한 상황에서 현재 스레드를 멈추어 동기적으로 해당 값이 채워질 때까지 기다려 값을 가져오는 것보단 **Block에 정의한 Copletion handler를 통해 응답을 비동기 적으로 기다리는 방법이 더욱 적합하다.**  
+
+`ladValuesAsynchronouslyForKeys: completionHandler:`를 통해 원하는 속성을 비동기적으로 받아올 수 있다.  
+
+- 현재 재생이 가능한지 여부에 대한 데이터를 담고있는 `playable` 속성을 가져오는 코드이다.  
+
+
+
 
 
 
