@@ -71,6 +71,10 @@
 
 - [Key Value Observing](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/KeyValueObserving)  
 
+## issue 해결 모음  
+
+- 키보드에 의해 TextField가 가려지는 현상 : https://zeddios.tistory.com/127  
+
 ## iOS 기술면접 자료 모음
 
 - [iOS 개발자 면접 질문리스트](https://medium.com/lookpin-engineering/ios-개발자-면접-질문리스트-b92350a91c1b)
