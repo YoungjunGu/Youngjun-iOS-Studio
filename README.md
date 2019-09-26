@@ -73,7 +73,8 @@
 
 ## issue 해결 모음  
 
-- 키보드에 의해 TextField가 가려지는 현상 : https://zeddios.tistory.com/127  
+- 키보드에 의해 TextField가 가려지는 현상 : https://zeddios.tistory.com/127 
+- Swift 비트다루기 : https://outofbedlam.github.io/swift/2016/02/08/BitSets/
 
 ## iOS 기술면접 자료 모음
 
