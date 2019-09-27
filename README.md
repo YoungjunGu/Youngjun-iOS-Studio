@@ -75,6 +75,12 @@
 
 - 키보드에 의해 TextField가 가려지는 현상 : https://zeddios.tistory.com/127 
 - Swift 비트다루기 : https://outofbedlam.github.io/swift/2016/02/08/BitSets/
+- Swift 네임스페이스 & typealias : https://academy.realm.io/kr/posts/swift-namespace-typealias/
+- Swift String 관련 tip : https://baked-corn.tistory.com/63
+- if-let 과 guard-let의 적재적소 사용  
+  - https://blog.canapio.com/108
+  - https://rhino-developer.tistory.com/entry/swift-guard-if-기준정하기
+
 
 ## iOS 기술면접 자료 모음
 
