@@ -80,6 +80,9 @@
 - if-let 과 guard-let의 적재적소 사용  
   - https://blog.canapio.com/108
   - https://rhino-developer.tistory.com/entry/swift-guard-if-기준정하기
+- `fatal error: init(coder:) has not been implemented error despite being implemented` 에러 시 대처  
+  - https://stackoverflow.com/questions/38966565/fatal-error-initcoder-has-not-been-implemented-error-despite-being-implement
+  
 
 
 ## iOS 기술면접 자료 모음
