@@ -44,6 +44,8 @@
 
 ## 클로저 및 고차함수 
 
+- [flatMap & comapctMap 사용법](https://gaki2745.github.io/flatMap&comapctMap)
+- [map, filter, reduce](https://gaki2745.github.io/Higher-order-function)
 - [Closure & High order fuction](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/Closure_HighOrderFunc_Exam)
 - [Escaping Closure](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/Closure_HighOrderFunc_Exam)
 
