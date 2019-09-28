@@ -44,6 +44,8 @@
 
 ## 클로저 및 고차함수 
 
+- [flatMap & comapctMap 사용법](https://gaki2745.github.io/flatMap&comapctMap)
+- [map, filter, reduce](https://gaki2745.github.io/Higher-order-function)
 - [Closure & High order fuction](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/Closure_HighOrderFunc_Exam)
 - [Escaping Closure](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/Closure_HighOrderFunc_Exam)
 
@@ -70,6 +72,20 @@
 ## Key Value Observing(KVO) / Key Value Coding(KVC)  
 
 - [Key Value Observing](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/KeyValueObserving)  
+
+## issue 해결 모음  
+
+- 키보드에 의해 TextField가 가려지는 현상 : https://zeddios.tistory.com/127 
+- Swift 비트다루기 : https://outofbedlam.github.io/swift/2016/02/08/BitSets/
+- Swift 네임스페이스 & typealias : https://academy.realm.io/kr/posts/swift-namespace-typealias/
+- Swift String 관련 tip : https://baked-corn.tistory.com/63
+- if-let 과 guard-let의 적재적소 사용  
+  - https://blog.canapio.com/108
+  - https://rhino-developer.tistory.com/entry/swift-guard-if-기준정하기
+- `fatal error: init(coder:) has not been implemented error despite being implemented` 에러 시 대처  
+  - https://stackoverflow.com/questions/38966565/fatal-error-initcoder-has-not-been-implemented-error-despite-being-implement
+  
+
 
 ## iOS 기술면접 자료 모음
 
