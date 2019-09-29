@@ -50,22 +50,26 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerData1.count
     }
+
     
     // picker가 선택이 되었으면 호출되는 callback method
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("row: \(row)")
-        print("value: \(pickerData1[row])")
-        print("row: \(row)")
-        print("value: \(pickerData2[row])")
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0 {
-            return pickerData1[row]
+            print("row: \(row)")
+            print("value: \(pickerData1[row])")
         } else {
-            return pickerData2[row]
+            print("row: \(row)")
+            print("value: \(pickerData2[row])")
         }
     }
+    
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        if component == 0 {
+//            return pickerData1[row]
+//        } else {
+//            return pickerData2[row]
+//        }
+//    }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let pickerLabel = UILabel()
