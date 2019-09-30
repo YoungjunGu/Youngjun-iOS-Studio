@@ -85,6 +85,7 @@
 - [`fatal error: init(coder:) has not been implemented error despite being implemented` 에러 시 대처](https://stackoverflow.com/questions/38966565/fatal-error-initcoder-has-not-been-implemented-error-despite-being-implement)
 - [`setNeedsDisplay()setNeedsLayout()displayIfNeeded()layoutIfNeeded()`](https://zeddios.tistory.com/359) 
 - [`displayIfNeeded()`](https://zeddios.tistory.com/366)
+- [View Controller Presentation Changes in iOS 13](https://medium.com/@hacknicity/view-controller-presentation-changes-in-ios-13-ac8c901ebc4e)
 
 
 ## iOS 기술면접 자료 모음
