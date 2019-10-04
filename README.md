@@ -57,6 +57,7 @@
 ## Networking
 
 - [Alamofire](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/NetworkExam)
+- [PromiseKit](https://github.com/mxcl/PromiseKit)
 
 ## CoreLocation & CLLocationManager
 
