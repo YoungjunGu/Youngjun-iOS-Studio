@@ -87,6 +87,8 @@
 - [`setNeedsDisplay()setNeedsLayout()displayIfNeeded()layoutIfNeeded()`](https://zeddios.tistory.com/359) 
 - [`displayIfNeeded()`](https://zeddios.tistory.com/366)
 - [View Controller Presentation Changes in iOS 13](https://medium.com/@hacknicity/view-controller-presentation-changes-in-ios-13-ac8c901ebc4e)
+- [iOS13: Complete Guide and Feature List](https://www.macrumors.com/roundup/ios-13/)
+
 
 
 ## iOS 기술면접 자료 모음
