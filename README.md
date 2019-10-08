@@ -37,9 +37,10 @@
 - [ARC(Automatic Reference Counting)](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/ARC)
 - [IBOutlet's Reference Cycle](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/IBOutletMemory)
 
-## GCD 응용, Operation Queue
+## iOS 비동기 프로그래밍
 
 - [GCD vs Operation Queue](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/ConcurrencyProg)
+- [PromiseKit Usage](https://learnappmaking.com/promises-swift-how-to/)
 
 
 ## 클로저 및 고차함수 
