@@ -101,3 +101,4 @@
 - [awesome iOS 면접질문 모음](https://github.com/MaximAbramchuck/awesome-interview-questions#objective-c)
 - [awesome swift korea lecture](https://github.com/ClintJang/awesome-swift-korean-lecture)
 - [JaeYeopHan iOS Interview](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
+- [iOS 고참 개발자를 위한 인터뷰 대첵](https://github.com/bankart/gocham-iOS)
