@@ -37,9 +37,10 @@
 - [ARC(Automatic Reference Counting)](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/ARC)
 - [IBOutlet's Reference Cycle](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/IBOutletMemory)
 
-## GCD 응용, Operation Queue
+## iOS 비동기 프로그래밍
 
 - [GCD vs Operation Queue](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/ConcurrencyProg)
+- [PromiseKit Usage](https://learnappmaking.com/promises-swift-how-to/)
 
 
 ## 클로저 및 고차함수 
@@ -57,6 +58,7 @@
 ## Networking
 
 - [Alamofire](https://github.com/gaki2745/Youngjun-iOS-Studio/tree/master/NetworkExam)
+- [PromiseKit](https://github.com/mxcl/PromiseKit)
 
 ## CoreLocation & CLLocationManager
 
@@ -85,6 +87,12 @@
 - [`fatal error: init(coder:) has not been implemented error despite being implemented` 에러 시 대처](https://stackoverflow.com/questions/38966565/fatal-error-initcoder-has-not-been-implemented-error-despite-being-implement)
 - [`setNeedsDisplay()setNeedsLayout()displayIfNeeded()layoutIfNeeded()`](https://zeddios.tistory.com/359) 
 - [`displayIfNeeded()`](https://zeddios.tistory.com/366)
+- [View Controller Presentation Changes in iOS 13](https://medium.com/@hacknicity/view-controller-presentation-changes-in-ios-13-ac8c901ebc4e)
+- [iOS13: Complete Guide and Feature List](https://www.macrumors.com/roundup/ios-13/)
+- [iOS Background Mode](https://kka7.tistory.com/133)
+- [unowned self vs weak self 차이](https://medium.com/@kiran.jasvanee/difference-between-unowned-self-and-weak-self-in-swift-310c14961953)
+- [iOS 13 TableView Swipe Action](https://zeddios.tistory.com/335)
+
 
 
 ## iOS 기술면접 자료 모음
@@ -94,3 +102,5 @@
 - [awesome iOS 면접질문 모음](https://github.com/MaximAbramchuck/awesome-interview-questions#objective-c)
 - [awesome swift korea lecture](https://github.com/ClintJang/awesome-swift-korean-lecture)
 - [JaeYeopHan iOS Interview](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/iOS)
+- [iOS 고참 개발자를 위한 인터뷰 대첵](https://github.com/bankart/gocham-iOS)
+- [iOS Interview Questions](https://github.com/JeaSungLEE/iOSInterviewquestions)
