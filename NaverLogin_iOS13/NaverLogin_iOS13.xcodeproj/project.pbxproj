@@ -1,0 +1,747 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72D97E81285BCDFAEAF6DD66 /* Pods_NaverLogin_iOS13_NaverLogin_iOS13UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07236C9DE0D5879C764435AC /* Pods_NaverLogin_iOS13_NaverLogin_iOS13UITests.framework */; };
+		9D0E24BD97E3FE9040ABAF85 /* Pods_NaverLogin_iOS13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B2D1C4CF406E67E8DA3AC5 /* Pods_NaverLogin_iOS13.framework */; };
+		D07E936BF5CC17FA8C8DA4E6 /* Pods_NaverLogin_iOS13Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB965FD81677DBCCD3A8D2CB /* Pods_NaverLogin_iOS13Tests.framework */; };
+		EF3A87F423C5BA97004319EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3A87F323C5BA97004319EA /* AppDelegate.swift */; };
+		EF3A87F823C5BA97004319EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3A87F723C5BA97004319EA /* ViewController.swift */; };
+		EF3A87FB23C5BA97004319EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3A87F923C5BA97004319EA /* Main.storyboard */; };
+		EF3A87FD23C5BA9A004319EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3A87FC23C5BA9A004319EA /* Assets.xcassets */; };
+		EF3A880023C5BA9A004319EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3A87FE23C5BA9A004319EA /* LaunchScreen.storyboard */; };
+		EF3A880B23C5BA9A004319EA /* NaverLogin_iOS13Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3A880A23C5BA9A004319EA /* NaverLogin_iOS13Tests.swift */; };
+		EF3A881623C5BA9A004319EA /* NaverLogin_iOS13UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3A881523C5BA9A004319EA /* NaverLogin_iOS13UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF3A880723C5BA9A004319EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF3A87E823C5BA97004319EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF3A87EF23C5BA97004319EA;
+			remoteInfo = NaverLogin_iOS13;
+		};
+		EF3A881223C5BA9A004319EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF3A87E823C5BA97004319EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF3A87EF23C5BA97004319EA;
+			remoteInfo = NaverLogin_iOS13;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07236C9DE0D5879C764435AC /* Pods_NaverLogin_iOS13_NaverLogin_iOS13UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaverLogin_iOS13_NaverLogin_iOS13UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33B2D1C4CF406E67E8DA3AC5 /* Pods_NaverLogin_iOS13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaverLogin_iOS13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5576167608E91262F4B2D2EE /* Pods-NaverLogin_iOS13Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaverLogin_iOS13Tests.release.xcconfig"; path = "Target Support Files/Pods-NaverLogin_iOS13Tests/Pods-NaverLogin_iOS13Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6B2700D51B2C7474F0524EEC /* Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests.release.xcconfig"; path = "Target Support Files/Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests/Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests.release.xcconfig"; sourceTree = "<group>"; };
+		83A2BBFB856291113AC87E62 /* Pods-NaverLogin_iOS13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaverLogin_iOS13.release.xcconfig"; path = "Target Support Files/Pods-NaverLogin_iOS13/Pods-NaverLogin_iOS13.release.xcconfig"; sourceTree = "<group>"; };
+		8B174327725B044B48ACFB8C /* Pods-NaverLogin_iOS13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaverLogin_iOS13.debug.xcconfig"; path = "Target Support Files/Pods-NaverLogin_iOS13/Pods-NaverLogin_iOS13.debug.xcconfig"; sourceTree = "<group>"; };
+		9454FAD36D61CDCB31832D8A /* Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests.debug.xcconfig"; path = "Target Support Files/Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests/Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5B73BAB7A835C8EF77B25EE /* Pods-NaverLogin_iOS13Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaverLogin_iOS13Tests.debug.xcconfig"; path = "Target Support Files/Pods-NaverLogin_iOS13Tests/Pods-NaverLogin_iOS13Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		EB965FD81677DBCCD3A8D2CB /* Pods_NaverLogin_iOS13Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaverLogin_iOS13Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3A87F023C5BA97004319EA /* NaverLogin_iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaverLogin_iOS13.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3A87F323C5BA97004319EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF3A87F723C5BA97004319EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF3A87FA23C5BA97004319EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF3A87FC23C5BA9A004319EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF3A87FF23C5BA9A004319EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF3A880123C5BA9A004319EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF3A880623C5BA9A004319EA /* NaverLogin_iOS13Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaverLogin_iOS13Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3A880A23C5BA9A004319EA /* NaverLogin_iOS13Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLogin_iOS13Tests.swift; sourceTree = "<group>"; };
+		EF3A880C23C5BA9A004319EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF3A881123C5BA9A004319EA /* NaverLogin_iOS13UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaverLogin_iOS13UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3A881523C5BA9A004319EA /* NaverLogin_iOS13UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLogin_iOS13UITests.swift; sourceTree = "<group>"; };
+		EF3A881723C5BA9A004319EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF3A87ED23C5BA97004319EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D0E24BD97E3FE9040ABAF85 /* Pods_NaverLogin_iOS13.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3A880323C5BA9A004319EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D07E936BF5CC17FA8C8DA4E6 /* Pods_NaverLogin_iOS13Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3A880E23C5BA9A004319EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72D97E81285BCDFAEAF6DD66 /* Pods_NaverLogin_iOS13_NaverLogin_iOS13UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE7336B0EC9A602E4C6491F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B174327725B044B48ACFB8C /* Pods-NaverLogin_iOS13.debug.xcconfig */,
+				83A2BBFB856291113AC87E62 /* Pods-NaverLogin_iOS13.release.xcconfig */,
+				9454FAD36D61CDCB31832D8A /* Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests.debug.xcconfig */,
+				6B2700D51B2C7474F0524EEC /* Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests.release.xcconfig */,
+				B5B73BAB7A835C8EF77B25EE /* Pods-NaverLogin_iOS13Tests.debug.xcconfig */,
+				5576167608E91262F4B2D2EE /* Pods-NaverLogin_iOS13Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D563AFB82F0A2273391AD8BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33B2D1C4CF406E67E8DA3AC5 /* Pods_NaverLogin_iOS13.framework */,
+				07236C9DE0D5879C764435AC /* Pods_NaverLogin_iOS13_NaverLogin_iOS13UITests.framework */,
+				EB965FD81677DBCCD3A8D2CB /* Pods_NaverLogin_iOS13Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF3A87E723C5BA97004319EA = {
+			isa = PBXGroup;
+			children = (
+				EF3A87F223C5BA97004319EA /* NaverLogin_iOS13 */,
+				EF3A880923C5BA9A004319EA /* NaverLogin_iOS13Tests */,
+				EF3A881423C5BA9A004319EA /* NaverLogin_iOS13UITests */,
+				EF3A87F123C5BA97004319EA /* Products */,
+				BE7336B0EC9A602E4C6491F2 /* Pods */,
+				D563AFB82F0A2273391AD8BE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF3A87F123C5BA97004319EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF3A87F023C5BA97004319EA /* NaverLogin_iOS13.app */,
+				EF3A880623C5BA9A004319EA /* NaverLogin_iOS13Tests.xctest */,
+				EF3A881123C5BA9A004319EA /* NaverLogin_iOS13UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF3A87F223C5BA97004319EA /* NaverLogin_iOS13 */ = {
+			isa = PBXGroup;
+			children = (
+				EF3A87F323C5BA97004319EA /* AppDelegate.swift */,
+				EF3A87F723C5BA97004319EA /* ViewController.swift */,
+				EF3A87F923C5BA97004319EA /* Main.storyboard */,
+				EF3A87FC23C5BA9A004319EA /* Assets.xcassets */,
+				EF3A87FE23C5BA9A004319EA /* LaunchScreen.storyboard */,
+				EF3A880123C5BA9A004319EA /* Info.plist */,
+			);
+			path = NaverLogin_iOS13;
+			sourceTree = "<group>";
+		};
+		EF3A880923C5BA9A004319EA /* NaverLogin_iOS13Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EF3A880A23C5BA9A004319EA /* NaverLogin_iOS13Tests.swift */,
+				EF3A880C23C5BA9A004319EA /* Info.plist */,
+			);
+			path = NaverLogin_iOS13Tests;
+			sourceTree = "<group>";
+		};
+		EF3A881423C5BA9A004319EA /* NaverLogin_iOS13UITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF3A881523C5BA9A004319EA /* NaverLogin_iOS13UITests.swift */,
+				EF3A881723C5BA9A004319EA /* Info.plist */,
+			);
+			path = NaverLogin_iOS13UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF3A87EF23C5BA97004319EA /* NaverLogin_iOS13 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF3A881A23C5BA9A004319EA /* Build configuration list for PBXNativeTarget "NaverLogin_iOS13" */;
+			buildPhases = (
+				046151052A17F6A4C310A617 /* [CP] Check Pods Manifest.lock */,
+				EF3A87EC23C5BA97004319EA /* Sources */,
+				EF3A87ED23C5BA97004319EA /* Frameworks */,
+				EF3A87EE23C5BA97004319EA /* Resources */,
+				D292AD8E62A2533F1AC8F47D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NaverLogin_iOS13;
+			productName = NaverLogin_iOS13;
+			productReference = EF3A87F023C5BA97004319EA /* NaverLogin_iOS13.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF3A880523C5BA9A004319EA /* NaverLogin_iOS13Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF3A881D23C5BA9A004319EA /* Build configuration list for PBXNativeTarget "NaverLogin_iOS13Tests" */;
+			buildPhases = (
+				A11B45F9078FEC7A6C8FA7A2 /* [CP] Check Pods Manifest.lock */,
+				EF3A880223C5BA9A004319EA /* Sources */,
+				EF3A880323C5BA9A004319EA /* Frameworks */,
+				EF3A880423C5BA9A004319EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF3A880823C5BA9A004319EA /* PBXTargetDependency */,
+			);
+			name = NaverLogin_iOS13Tests;
+			productName = NaverLogin_iOS13Tests;
+			productReference = EF3A880623C5BA9A004319EA /* NaverLogin_iOS13Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF3A881023C5BA9A004319EA /* NaverLogin_iOS13UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF3A882023C5BA9A004319EA /* Build configuration list for PBXNativeTarget "NaverLogin_iOS13UITests" */;
+			buildPhases = (
+				B8FEE9A01F37F4C670573380 /* [CP] Check Pods Manifest.lock */,
+				EF3A880D23C5BA9A004319EA /* Sources */,
+				EF3A880E23C5BA9A004319EA /* Frameworks */,
+				EF3A880F23C5BA9A004319EA /* Resources */,
+				3B5D25D111BF30FF6B471757 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF3A881323C5BA9A004319EA /* PBXTargetDependency */,
+			);
+			name = NaverLogin_iOS13UITests;
+			productName = NaverLogin_iOS13UITests;
+			productReference = EF3A881123C5BA9A004319EA /* NaverLogin_iOS13UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF3A87E823C5BA97004319EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "youngjun goo";
+				TargetAttributes = {
+					EF3A87EF23C5BA97004319EA = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					EF3A880523C5BA9A004319EA = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = EF3A87EF23C5BA97004319EA;
+					};
+					EF3A881023C5BA9A004319EA = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = EF3A87EF23C5BA97004319EA;
+					};
+				};
+			};
+			buildConfigurationList = EF3A87EB23C5BA97004319EA /* Build configuration list for PBXProject "NaverLogin_iOS13" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF3A87E723C5BA97004319EA;
+			productRefGroup = EF3A87F123C5BA97004319EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF3A87EF23C5BA97004319EA /* NaverLogin_iOS13 */,
+				EF3A880523C5BA9A004319EA /* NaverLogin_iOS13Tests */,
+				EF3A881023C5BA9A004319EA /* NaverLogin_iOS13UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF3A87EE23C5BA97004319EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3A880023C5BA9A004319EA /* LaunchScreen.storyboard in Resources */,
+				EF3A87FD23C5BA9A004319EA /* Assets.xcassets in Resources */,
+				EF3A87FB23C5BA97004319EA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3A880423C5BA9A004319EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3A880F23C5BA9A004319EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		046151052A17F6A4C310A617 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NaverLogin_iOS13-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B5D25D111BF30FF6B471757 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests/Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests/Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests/Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A11B45F9078FEC7A6C8FA7A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NaverLogin_iOS13Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8FEE9A01F37F4C670573380 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D292AD8E62A2533F1AC8F47D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NaverLogin_iOS13/Pods-NaverLogin_iOS13-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NaverLogin_iOS13/Pods-NaverLogin_iOS13-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NaverLogin_iOS13/Pods-NaverLogin_iOS13-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF3A87EC23C5BA97004319EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3A87F823C5BA97004319EA /* ViewController.swift in Sources */,
+				EF3A87F423C5BA97004319EA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3A880223C5BA9A004319EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3A880B23C5BA9A004319EA /* NaverLogin_iOS13Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3A880D23C5BA9A004319EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3A881623C5BA9A004319EA /* NaverLogin_iOS13UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF3A880823C5BA9A004319EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF3A87EF23C5BA97004319EA /* NaverLogin_iOS13 */;
+			targetProxy = EF3A880723C5BA9A004319EA /* PBXContainerItemProxy */;
+		};
+		EF3A881323C5BA9A004319EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF3A87EF23C5BA97004319EA /* NaverLogin_iOS13 */;
+			targetProxy = EF3A881223C5BA9A004319EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF3A87F923C5BA97004319EA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF3A87FA23C5BA97004319EA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF3A87FE23C5BA9A004319EA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF3A87FF23C5BA9A004319EA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF3A881823C5BA9A004319EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF3A881923C5BA9A004319EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF3A881B23C5BA9A004319EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B174327725B044B48ACFB8C /* Pods-NaverLogin_iOS13.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = NaverLogin_iOS13/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.youngjun.NaverLogin-iOS13";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF3A881C23C5BA9A004319EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83A2BBFB856291113AC87E62 /* Pods-NaverLogin_iOS13.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = NaverLogin_iOS13/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.youngjun.NaverLogin-iOS13";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF3A881E23C5BA9A004319EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5B73BAB7A835C8EF77B25EE /* Pods-NaverLogin_iOS13Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = NaverLogin_iOS13Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.youngjun.NaverLogin-iOS13Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NaverLogin_iOS13.app/NaverLogin_iOS13";
+			};
+			name = Debug;
+		};
+		EF3A881F23C5BA9A004319EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5576167608E91262F4B2D2EE /* Pods-NaverLogin_iOS13Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = NaverLogin_iOS13Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.youngjun.NaverLogin-iOS13Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NaverLogin_iOS13.app/NaverLogin_iOS13";
+			};
+			name = Release;
+		};
+		EF3A882123C5BA9A004319EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9454FAD36D61CDCB31832D8A /* Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = NaverLogin_iOS13UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.youngjun.NaverLogin-iOS13UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NaverLogin_iOS13;
+			};
+			name = Debug;
+		};
+		EF3A882223C5BA9A004319EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B2700D51B2C7474F0524EEC /* Pods-NaverLogin_iOS13-NaverLogin_iOS13UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = NaverLogin_iOS13UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.youngjun.NaverLogin-iOS13UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NaverLogin_iOS13;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF3A87EB23C5BA97004319EA /* Build configuration list for PBXProject "NaverLogin_iOS13" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3A881823C5BA9A004319EA /* Debug */,
+				EF3A881923C5BA9A004319EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF3A881A23C5BA9A004319EA /* Build configuration list for PBXNativeTarget "NaverLogin_iOS13" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3A881B23C5BA9A004319EA /* Debug */,
+				EF3A881C23C5BA9A004319EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF3A881D23C5BA9A004319EA /* Build configuration list for PBXNativeTarget "NaverLogin_iOS13Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3A881E23C5BA9A004319EA /* Debug */,
+				EF3A881F23C5BA9A004319EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF3A882023C5BA9A004319EA /* Build configuration list for PBXNativeTarget "NaverLogin_iOS13UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3A882123C5BA9A004319EA /* Debug */,
+				EF3A882223C5BA9A004319EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF3A87E823C5BA97004319EA /* Project object */;
+}

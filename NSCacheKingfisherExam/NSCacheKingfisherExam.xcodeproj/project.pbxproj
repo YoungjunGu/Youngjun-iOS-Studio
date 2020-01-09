@@ -1,0 +1,767 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F828DC38592F4EB84603DCD /* Pods_NSCacheKingfisherExamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C46AAC6BFBF6E271740459 /* Pods_NSCacheKingfisherExamUITests.framework */; };
+		26B7E420417B3A4C2F4D9EE1 /* Pods_NSCacheKingfisherExam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7FCF2CCC3C7B032740C5D1 /* Pods_NSCacheKingfisherExam.framework */; };
+		3F0FE216E686026B87AC41CF /* Pods_NSCacheKingfisherExamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C9513F35CB351248D217CD /* Pods_NSCacheKingfisherExamTests.framework */; };
+		EF49CC78234EBDC0002ED3F4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49CC77234EBDC0002ED3F4 /* Extension.swift */; };
+		EF49CC7A234EBDCE002ED3F4 /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49CC79234EBDCE002ED3F4 /* CachedImageView.swift */; };
+		EF49CC7D234EBFAA002ED3F4 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49CC7C234EBFAA002ED3F4 /* APIService.swift */; };
+		EF49CC7F234EC897002ED3F4 /* ImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49CC7E234EC897002ED3F4 /* ImageURL.swift */; };
+		EFB9E075234E158600D6DD75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB9E074234E158600D6DD75 /* AppDelegate.swift */; };
+		EFB9E077234E158600D6DD75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB9E076234E158600D6DD75 /* SceneDelegate.swift */; };
+		EFB9E079234E158600D6DD75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB9E078234E158600D6DD75 /* ViewController.swift */; };
+		EFB9E07C234E158600D6DD75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB9E07A234E158600D6DD75 /* Main.storyboard */; };
+		EFB9E07E234E158800D6DD75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB9E07D234E158800D6DD75 /* Assets.xcassets */; };
+		EFB9E081234E158800D6DD75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB9E07F234E158800D6DD75 /* LaunchScreen.storyboard */; };
+		EFB9E08C234E158800D6DD75 /* NSCacheKingfisherExamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB9E08B234E158800D6DD75 /* NSCacheKingfisherExamTests.swift */; };
+		EFB9E097234E158800D6DD75 /* NSCacheKingfisherExamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB9E096234E158800D6DD75 /* NSCacheKingfisherExamUITests.swift */; };
+		EFB9E0A7234E192D00D6DD75 /* NSCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB9E0A6234E192D00D6DD75 /* NSCache.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFB9E088234E158800D6DD75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFB9E069234E158600D6DD75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFB9E070234E158600D6DD75;
+			remoteInfo = NSCacheKingfisherExam;
+		};
+		EFB9E093234E158800D6DD75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFB9E069234E158600D6DD75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFB9E070234E158600D6DD75;
+			remoteInfo = NSCacheKingfisherExam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A7FCF2CCC3C7B032740C5D1 /* Pods_NSCacheKingfisherExam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSCacheKingfisherExam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C9513F35CB351248D217CD /* Pods_NSCacheKingfisherExamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSCacheKingfisherExamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CD53278184A43C2FB53A335 /* Pods-NSCacheKingfisherExamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSCacheKingfisherExamUITests.debug.xcconfig"; path = "Target Support Files/Pods-NSCacheKingfisherExamUITests/Pods-NSCacheKingfisherExamUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8D893FB00ABC30D7505D1241 /* Pods-NSCacheKingfisherExamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSCacheKingfisherExamUITests.release.xcconfig"; path = "Target Support Files/Pods-NSCacheKingfisherExamUITests/Pods-NSCacheKingfisherExamUITests.release.xcconfig"; sourceTree = "<group>"; };
+		998F0EB240250983924AB5B1 /* Pods-NSCacheKingfisherExam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSCacheKingfisherExam.release.xcconfig"; path = "Target Support Files/Pods-NSCacheKingfisherExam/Pods-NSCacheKingfisherExam.release.xcconfig"; sourceTree = "<group>"; };
+		A1C46AAC6BFBF6E271740459 /* Pods_NSCacheKingfisherExamUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSCacheKingfisherExamUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0310124A1A656C197A3CF38 /* Pods-NSCacheKingfisherExam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSCacheKingfisherExam.debug.xcconfig"; path = "Target Support Files/Pods-NSCacheKingfisherExam/Pods-NSCacheKingfisherExam.debug.xcconfig"; sourceTree = "<group>"; };
+		D3BFD9F82B7C34FD5E59E9D2 /* Pods-NSCacheKingfisherExamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSCacheKingfisherExamTests.debug.xcconfig"; path = "Target Support Files/Pods-NSCacheKingfisherExamTests/Pods-NSCacheKingfisherExamTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E65697DA13D791E1E4737D86 /* Pods-NSCacheKingfisherExamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSCacheKingfisherExamTests.release.xcconfig"; path = "Target Support Files/Pods-NSCacheKingfisherExamTests/Pods-NSCacheKingfisherExamTests.release.xcconfig"; sourceTree = "<group>"; };
+		EF49CC77234EBDC0002ED3F4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		EF49CC79234EBDCE002ED3F4 /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
+		EF49CC7C234EBFAA002ED3F4 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		EF49CC7E234EC897002ED3F4 /* ImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURL.swift; sourceTree = "<group>"; };
+		EFB9E071234E158600D6DD75 /* NSCacheKingfisherExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSCacheKingfisherExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFB9E074234E158600D6DD75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFB9E076234E158600D6DD75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EFB9E078234E158600D6DD75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EFB9E07B234E158600D6DD75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFB9E07D234E158800D6DD75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFB9E080234E158800D6DD75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFB9E082234E158800D6DD75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFB9E087234E158800D6DD75 /* NSCacheKingfisherExamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSCacheKingfisherExamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFB9E08B234E158800D6DD75 /* NSCacheKingfisherExamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCacheKingfisherExamTests.swift; sourceTree = "<group>"; };
+		EFB9E08D234E158800D6DD75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFB9E092234E158800D6DD75 /* NSCacheKingfisherExamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSCacheKingfisherExamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFB9E096234E158800D6DD75 /* NSCacheKingfisherExamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCacheKingfisherExamUITests.swift; sourceTree = "<group>"; };
+		EFB9E098234E158800D6DD75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFB9E0A6234E192D00D6DD75 /* NSCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCache.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFB9E06E234E158600D6DD75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26B7E420417B3A4C2F4D9EE1 /* Pods_NSCacheKingfisherExam.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFB9E084234E158800D6DD75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F0FE216E686026B87AC41CF /* Pods_NSCacheKingfisherExamTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFB9E08F234E158800D6DD75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F828DC38592F4EB84603DCD /* Pods_NSCacheKingfisherExamUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A0DA05003B60AC31936B56FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0310124A1A656C197A3CF38 /* Pods-NSCacheKingfisherExam.debug.xcconfig */,
+				998F0EB240250983924AB5B1 /* Pods-NSCacheKingfisherExam.release.xcconfig */,
+				D3BFD9F82B7C34FD5E59E9D2 /* Pods-NSCacheKingfisherExamTests.debug.xcconfig */,
+				E65697DA13D791E1E4737D86 /* Pods-NSCacheKingfisherExamTests.release.xcconfig */,
+				6CD53278184A43C2FB53A335 /* Pods-NSCacheKingfisherExamUITests.debug.xcconfig */,
+				8D893FB00ABC30D7505D1241 /* Pods-NSCacheKingfisherExamUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B60F4C0BC8142975C1FD1B9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A7FCF2CCC3C7B032740C5D1 /* Pods_NSCacheKingfisherExam.framework */,
+				22C9513F35CB351248D217CD /* Pods_NSCacheKingfisherExamTests.framework */,
+				A1C46AAC6BFBF6E271740459 /* Pods_NSCacheKingfisherExamUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF49CC7B234EBF99002ED3F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF49CC7C234EBFAA002ED3F4 /* APIService.swift */,
+				EF49CC7E234EC897002ED3F4 /* ImageURL.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EFB9E068234E158600D6DD75 = {
+			isa = PBXGroup;
+			children = (
+				EFB9E073234E158600D6DD75 /* NSCacheKingfisherExam */,
+				EFB9E08A234E158800D6DD75 /* NSCacheKingfisherExamTests */,
+				EFB9E095234E158800D6DD75 /* NSCacheKingfisherExamUITests */,
+				EFB9E072234E158600D6DD75 /* Products */,
+				A0DA05003B60AC31936B56FE /* Pods */,
+				B60F4C0BC8142975C1FD1B9A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EFB9E072234E158600D6DD75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFB9E071234E158600D6DD75 /* NSCacheKingfisherExam.app */,
+				EFB9E087234E158800D6DD75 /* NSCacheKingfisherExamTests.xctest */,
+				EFB9E092234E158800D6DD75 /* NSCacheKingfisherExamUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFB9E073234E158600D6DD75 /* NSCacheKingfisherExam */ = {
+			isa = PBXGroup;
+			children = (
+				EF49CC7B234EBF99002ED3F4 /* Model */,
+				EFB9E0A4234E190B00D6DD75 /* Cache */,
+				EFB9E074234E158600D6DD75 /* AppDelegate.swift */,
+				EFB9E076234E158600D6DD75 /* SceneDelegate.swift */,
+				EFB9E078234E158600D6DD75 /* ViewController.swift */,
+				EFB9E07A234E158600D6DD75 /* Main.storyboard */,
+				EFB9E07D234E158800D6DD75 /* Assets.xcassets */,
+				EFB9E07F234E158800D6DD75 /* LaunchScreen.storyboard */,
+				EFB9E082234E158800D6DD75 /* Info.plist */,
+			);
+			path = NSCacheKingfisherExam;
+			sourceTree = "<group>";
+		};
+		EFB9E08A234E158800D6DD75 /* NSCacheKingfisherExamTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFB9E08B234E158800D6DD75 /* NSCacheKingfisherExamTests.swift */,
+				EFB9E08D234E158800D6DD75 /* Info.plist */,
+			);
+			path = NSCacheKingfisherExamTests;
+			sourceTree = "<group>";
+		};
+		EFB9E095234E158800D6DD75 /* NSCacheKingfisherExamUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EFB9E096234E158800D6DD75 /* NSCacheKingfisherExamUITests.swift */,
+				EFB9E098234E158800D6DD75 /* Info.plist */,
+			);
+			path = NSCacheKingfisherExamUITests;
+			sourceTree = "<group>";
+		};
+		EFB9E0A4234E190B00D6DD75 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				EFB9E0A6234E192D00D6DD75 /* NSCache.swift */,
+				EF49CC77234EBDC0002ED3F4 /* Extension.swift */,
+				EF49CC79234EBDCE002ED3F4 /* CachedImageView.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFB9E070234E158600D6DD75 /* NSCacheKingfisherExam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFB9E09B234E158800D6DD75 /* Build configuration list for PBXNativeTarget "NSCacheKingfisherExam" */;
+			buildPhases = (
+				9A904823F32D4315DAEDD66B /* [CP] Check Pods Manifest.lock */,
+				EFB9E06D234E158600D6DD75 /* Sources */,
+				EFB9E06E234E158600D6DD75 /* Frameworks */,
+				EFB9E06F234E158600D6DD75 /* Resources */,
+				E256D0BA5CEB53E861112958 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSCacheKingfisherExam;
+			productName = NSCacheKingfisherExam;
+			productReference = EFB9E071234E158600D6DD75 /* NSCacheKingfisherExam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFB9E086234E158800D6DD75 /* NSCacheKingfisherExamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFB9E09E234E158800D6DD75 /* Build configuration list for PBXNativeTarget "NSCacheKingfisherExamTests" */;
+			buildPhases = (
+				935F4732E71664C236B6C582 /* [CP] Check Pods Manifest.lock */,
+				EFB9E083234E158800D6DD75 /* Sources */,
+				EFB9E084234E158800D6DD75 /* Frameworks */,
+				EFB9E085234E158800D6DD75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFB9E089234E158800D6DD75 /* PBXTargetDependency */,
+			);
+			name = NSCacheKingfisherExamTests;
+			productName = NSCacheKingfisherExamTests;
+			productReference = EFB9E087234E158800D6DD75 /* NSCacheKingfisherExamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EFB9E091234E158800D6DD75 /* NSCacheKingfisherExamUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFB9E0A1234E158800D6DD75 /* Build configuration list for PBXNativeTarget "NSCacheKingfisherExamUITests" */;
+			buildPhases = (
+				386182C24D718CAB3C5CA69D /* [CP] Check Pods Manifest.lock */,
+				EFB9E08E234E158800D6DD75 /* Sources */,
+				EFB9E08F234E158800D6DD75 /* Frameworks */,
+				EFB9E090234E158800D6DD75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFB9E094234E158800D6DD75 /* PBXTargetDependency */,
+			);
+			name = NSCacheKingfisherExamUITests;
+			productName = NSCacheKingfisherExamUITests;
+			productReference = EFB9E092234E158800D6DD75 /* NSCacheKingfisherExamUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFB9E069234E158600D6DD75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "youngjun goo";
+				TargetAttributes = {
+					EFB9E070234E158600D6DD75 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					EFB9E086234E158800D6DD75 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = EFB9E070234E158600D6DD75;
+					};
+					EFB9E091234E158800D6DD75 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = EFB9E070234E158600D6DD75;
+					};
+				};
+			};
+			buildConfigurationList = EFB9E06C234E158600D6DD75 /* Build configuration list for PBXProject "NSCacheKingfisherExam" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFB9E068234E158600D6DD75;
+			productRefGroup = EFB9E072234E158600D6DD75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFB9E070234E158600D6DD75 /* NSCacheKingfisherExam */,
+				EFB9E086234E158800D6DD75 /* NSCacheKingfisherExamTests */,
+				EFB9E091234E158800D6DD75 /* NSCacheKingfisherExamUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFB9E06F234E158600D6DD75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFB9E081234E158800D6DD75 /* LaunchScreen.storyboard in Resources */,
+				EFB9E07E234E158800D6DD75 /* Assets.xcassets in Resources */,
+				EFB9E07C234E158600D6DD75 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFB9E085234E158800D6DD75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFB9E090234E158800D6DD75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		386182C24D718CAB3C5CA69D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NSCacheKingfisherExamUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		935F4732E71664C236B6C582 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NSCacheKingfisherExamTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A904823F32D4315DAEDD66B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NSCacheKingfisherExam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E256D0BA5CEB53E861112958 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSCacheKingfisherExam/Pods-NSCacheKingfisherExam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NSCacheKingfisherExam/Pods-NSCacheKingfisherExam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NSCacheKingfisherExam/Pods-NSCacheKingfisherExam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFB9E06D234E158600D6DD75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF49CC78234EBDC0002ED3F4 /* Extension.swift in Sources */,
+				EF49CC7D234EBFAA002ED3F4 /* APIService.swift in Sources */,
+				EFB9E079234E158600D6DD75 /* ViewController.swift in Sources */,
+				EFB9E0A7234E192D00D6DD75 /* NSCache.swift in Sources */,
+				EFB9E075234E158600D6DD75 /* AppDelegate.swift in Sources */,
+				EF49CC7A234EBDCE002ED3F4 /* CachedImageView.swift in Sources */,
+				EFB9E077234E158600D6DD75 /* SceneDelegate.swift in Sources */,
+				EF49CC7F234EC897002ED3F4 /* ImageURL.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFB9E083234E158800D6DD75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFB9E08C234E158800D6DD75 /* NSCacheKingfisherExamTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFB9E08E234E158800D6DD75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFB9E097234E158800D6DD75 /* NSCacheKingfisherExamUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFB9E089234E158800D6DD75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFB9E070234E158600D6DD75 /* NSCacheKingfisherExam */;
+			targetProxy = EFB9E088234E158800D6DD75 /* PBXContainerItemProxy */;
+		};
+		EFB9E094234E158800D6DD75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFB9E070234E158600D6DD75 /* NSCacheKingfisherExam */;
+			targetProxy = EFB9E093234E158800D6DD75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFB9E07A234E158600D6DD75 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFB9E07B234E158600D6DD75 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFB9E07F234E158800D6DD75 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFB9E080234E158800D6DD75 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFB9E099234E158800D6DD75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EFB9E09A234E158800D6DD75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFB9E09C234E158800D6DD75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0310124A1A656C197A3CF38 /* Pods-NSCacheKingfisherExam.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = NSCacheKingfisherExam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.NSCacheKingfisherExam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFB9E09D234E158800D6DD75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 998F0EB240250983924AB5B1 /* Pods-NSCacheKingfisherExam.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = NSCacheKingfisherExam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.NSCacheKingfisherExam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EFB9E09F234E158800D6DD75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3BFD9F82B7C34FD5E59E9D2 /* Pods-NSCacheKingfisherExamTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = NSCacheKingfisherExamTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.NSCacheKingfisherExamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSCacheKingfisherExam.app/NSCacheKingfisherExam";
+			};
+			name = Debug;
+		};
+		EFB9E0A0234E158800D6DD75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E65697DA13D791E1E4737D86 /* Pods-NSCacheKingfisherExamTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = NSCacheKingfisherExamTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.NSCacheKingfisherExamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSCacheKingfisherExam.app/NSCacheKingfisherExam";
+			};
+			name = Release;
+		};
+		EFB9E0A2234E158800D6DD75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CD53278184A43C2FB53A335 /* Pods-NSCacheKingfisherExamUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = NSCacheKingfisherExamUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.NSCacheKingfisherExamUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NSCacheKingfisherExam;
+			};
+			name = Debug;
+		};
+		EFB9E0A3234E158800D6DD75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D893FB00ABC30D7505D1241 /* Pods-NSCacheKingfisherExamUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = NSCacheKingfisherExamUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.NSCacheKingfisherExamUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NSCacheKingfisherExam;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFB9E06C234E158600D6DD75 /* Build configuration list for PBXProject "NSCacheKingfisherExam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFB9E099234E158800D6DD75 /* Debug */,
+				EFB9E09A234E158800D6DD75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFB9E09B234E158800D6DD75 /* Build configuration list for PBXNativeTarget "NSCacheKingfisherExam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFB9E09C234E158800D6DD75 /* Debug */,
+				EFB9E09D234E158800D6DD75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFB9E09E234E158800D6DD75 /* Build configuration list for PBXNativeTarget "NSCacheKingfisherExamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFB9E09F234E158800D6DD75 /* Debug */,
+				EFB9E0A0234E158800D6DD75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFB9E0A1234E158800D6DD75 /* Build configuration list for PBXNativeTarget "NSCacheKingfisherExamUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFB9E0A2234E158800D6DD75 /* Debug */,
+				EFB9E0A3234E158800D6DD75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFB9E069234E158600D6DD75 /* Project object */;
+}

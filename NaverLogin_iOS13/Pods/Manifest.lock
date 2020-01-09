@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.9.1)
+  - naveridlogin-sdk-ios (4.1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - naveridlogin-sdk-ios
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - naveridlogin-sdk-ios
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  naveridlogin-sdk-ios: ec62eeccdcdca7b9b1de50a28710ace2ac8f78dc
+
+PODFILE CHECKSUM: 4334f7ec95fa4667c7c48ad59225a89823e81551
+
+COCOAPODS: 1.8.4
