@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'FacebookLogin_iOS13' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for FacebookLogin_iOS13
+
+  target 'FacebookLogin_iOS13Tests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'FacebookLogin_iOS13UITests' do
+    # Pods for testing
+  end
+ pod 'FBSDKLoginKit'
+end

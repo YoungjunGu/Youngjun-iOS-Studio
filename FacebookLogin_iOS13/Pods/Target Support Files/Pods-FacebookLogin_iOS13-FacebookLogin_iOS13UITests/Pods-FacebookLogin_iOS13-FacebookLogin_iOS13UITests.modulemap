@@ -1,0 +1,6 @@
+framework module Pods_FacebookLogin_iOS13_FacebookLogin_iOS13UITests {
+  umbrella header "Pods-FacebookLogin_iOS13-FacebookLogin_iOS13UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

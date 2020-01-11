@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-FacebookLogin_iOS13/Pods-FacebookLogin_iOS13-frameworks.sh
+${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework
+${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework

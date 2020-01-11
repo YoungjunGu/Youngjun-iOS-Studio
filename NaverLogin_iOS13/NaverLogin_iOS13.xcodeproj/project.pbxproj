@@ -17,6 +17,7 @@
 		EF3A880023C5BA9A004319EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3A87FE23C5BA9A004319EA /* LaunchScreen.storyboard */; };
 		EF3A880B23C5BA9A004319EA /* NaverLogin_iOS13Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3A880A23C5BA9A004319EA /* NaverLogin_iOS13Tests.swift */; };
 		EF3A881623C5BA9A004319EA /* NaverLogin_iOS13UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3A881523C5BA9A004319EA /* NaverLogin_iOS13UITests.swift */; };
+		EF3A882823C6EB58004319EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3A882723C6EB58004319EA /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		EF3A881123C5BA9A004319EA /* NaverLogin_iOS13UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaverLogin_iOS13UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3A881523C5BA9A004319EA /* NaverLogin_iOS13UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLogin_iOS13UITests.swift; sourceTree = "<group>"; };
 		EF3A881723C5BA9A004319EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF3A882723C6EB58004319EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				EF3A87F323C5BA97004319EA /* AppDelegate.swift */,
+				EF3A882723C6EB58004319EA /* SceneDelegate.swift */,
 				EF3A87F723C5BA97004319EA /* ViewController.swift */,
 				EF3A87F923C5BA97004319EA /* Main.storyboard */,
 				EF3A87FC23C5BA9A004319EA /* Assets.xcassets */,
@@ -406,6 +409,7 @@
 			files = (
 				EF3A87F823C5BA97004319EA /* ViewController.swift in Sources */,
 				EF3A87F423C5BA97004319EA /* AppDelegate.swift in Sources */,
+				EF3A882823C6EB58004319EA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
