@@ -9,8 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    let canvas = Canvas()
+
+    @IBOutlet weak var drawingView: Canvas!
+    @IBOutlet weak var shareTapBarItem: UIBarButtonItem!
+    @IBOutlet weak var toolbar: UIToolbar!
     
     let undoButton: UIButton = {
         let button = UIButton(type: .system)
@@ -37,15 +39,15 @@ class ViewController: UIViewController {
     }()
     
     @objc fileprivate func handleUndo() {
-        canvas.undo()
+        drawingView.undo()
     }
     
     @objc fileprivate func handleRedo() {
-        canvas.redo()
+        drawingView.redo()
     }
     
     @objc fileprivate func handleClear() {
-        canvas.clear()
+        drawingView.clear()
     }
     
     let yellowButton: UIButton = {
@@ -73,7 +75,7 @@ class ViewController: UIViewController {
     }()
     
     @objc fileprivate func handleColor(button: UIButton) {
-        canvas.setStrokeColor(color: button.backgroundColor ?? .black)
+        drawingView.setStrokeColor(color: button.backgroundColor ?? .black)
     }
     
     let slider: UISlider = {
@@ -85,23 +87,16 @@ class ViewController: UIViewController {
     }()
     
     @objc fileprivate func handleChangeSlider() {
-        canvas.setStrokeLineWidth(width: slider.value)
-    }
-    
-    override func loadView() {
-        self.view = canvas
+        drawingView.setStrokeLineWidth(width: slider.value)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        canvas.backgroundColor = .white
-        
         self.settingLayout()
-        
     }
     
     fileprivate func settingLayout() {
+
         let colorStackView = UIStackView(arrangedSubviews: [yellowButton, redButton, blueButton])
         //stackView 사이의 간격 일정하게
         colorStackView.distribution = .fillEqually
@@ -118,10 +113,33 @@ class ViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         //뷰의 프레임의 리딩 엣지를 나타내는 레이아웃 엥커
         stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100).isActive = true
         stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
+        
+    
     }
     
-    
+
+    @available(iOS 13.0, *)
+    @IBAction func shareItemTapped(_ sender: UIBarButtonItem) {
+        var image: UIImage?
+        var screenImages = [UIImage]()
+        var url = URL(string: "")
+        var string = ""
+        
+        UIGraphicsBeginImageContextWithOptions(view.frame.size, true, 0)
+        guard let currentContext = UIGraphicsGetCurrentContext() else { return }
+        view.layer.render(in: currentContext)
+        image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        guard let screenImage = image else { return }
+        screenImages.append(screenImage)
+        
+        // 공유하기 activity
+        let shareScreen = UIActivityViewController(activityItems: [screenImages, string, url], applicationActivities: nil)
+        let popoverPresentationController = shareScreen.popoverPresentationController
+        popoverPresentationController?.permittedArrowDirections = .any
+        present(shareScreen, animated: true, completion: nil)
+    }
 }
 

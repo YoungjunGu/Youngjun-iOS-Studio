@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_ImageLocalDownload_ImageLocalDownloadUITests : NSObject
+@end
+@implementation PodsDummy_Pods_ImageLocalDownload_ImageLocalDownloadUITests
+@end

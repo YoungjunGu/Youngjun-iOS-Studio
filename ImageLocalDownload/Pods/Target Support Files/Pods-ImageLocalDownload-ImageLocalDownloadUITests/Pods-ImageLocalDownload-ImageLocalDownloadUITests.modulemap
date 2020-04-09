@@ -1,0 +1,6 @@
+framework module Pods_ImageLocalDownload_ImageLocalDownloadUITests {
+  umbrella header "Pods-ImageLocalDownload-ImageLocalDownloadUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

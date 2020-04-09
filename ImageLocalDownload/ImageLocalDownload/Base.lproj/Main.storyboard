@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageLocalDownload" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60y-my-LpW">
+                                <rect key="frame" x="173.5" y="566" width="67" height="30"/>
+                                <state key="normal" title="download"/>
+                                <connections>
+                                    <action selector="tappedDownloadBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UyK-mn-lEe"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e9U-7V-eXA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="TPK-Fn-YuP"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLP-Aa-0uP">
+                                <rect key="frame" x="184" y="526" width="46" height="30"/>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="tappedSaveBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iod-uW-0xR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e9U-7V-eXA" secondAttribute="trailing" id="2Ge-Cs-Vzg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WLP-Aa-0uP" secondAttribute="trailing" constant="184" id="2jd-fl-NoD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="60y-my-LpW" secondAttribute="trailing" constant="173.5" id="4tJ-BK-1uG"/>
+                            <constraint firstItem="e9U-7V-eXA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hlj-Yb-cjg"/>
+                            <constraint firstItem="60y-my-LpW" firstAttribute="top" secondItem="WLP-Aa-0uP" secondAttribute="bottom" constant="10" id="Jld-Qm-49A"/>
+                            <constraint firstItem="WLP-Aa-0uP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fso-8t-hZC"/>
+                            <constraint firstItem="WLP-Aa-0uP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="184" id="gGl-Zp-Nsa"/>
+                            <constraint firstItem="60y-my-LpW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="522" id="kqk-i7-Pmh"/>
+                            <constraint firstItem="e9U-7V-eXA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="p3L-XA-AFh"/>
+                            <constraint firstItem="60y-my-LpW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="po5-We-rZe"/>
+                            <constraint firstItem="60y-my-LpW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="173.5" id="rSB-Xg-NWW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="downloadButton" destination="60y-my-LpW" id="c9p-dw-oyo"/>
+                        <outlet property="imageView" destination="e9U-7V-eXA" id="r3w-OO-tum"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>

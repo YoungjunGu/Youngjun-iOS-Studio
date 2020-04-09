@@ -1,0 +1,754 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27001A137849CD7D74828F3A /* Pods_ImageLocalDownload_ImageLocalDownloadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0DA19E04D0BB55C6CC7477 /* Pods_ImageLocalDownload_ImageLocalDownloadUITests.framework */; };
+		A2E2B102378EA0685133E067 /* Pods_ImageLocalDownloadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E324CC4245A0411BCDF1B7F9 /* Pods_ImageLocalDownloadTests.framework */; };
+		BEB2F03C8F68028069586C78 /* Pods_ImageLocalDownload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1F85B15964D8F9D580A7DB /* Pods_ImageLocalDownload.framework */; };
+		EF96824F23D0006500B69B92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96824E23D0006500B69B92 /* AppDelegate.swift */; };
+		EF96825123D0006500B69B92 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96825023D0006500B69B92 /* SceneDelegate.swift */; };
+		EF96825323D0006500B69B92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96825223D0006500B69B92 /* ViewController.swift */; };
+		EF96825623D0006500B69B92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF96825423D0006500B69B92 /* Main.storyboard */; };
+		EF96825823D0006700B69B92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF96825723D0006700B69B92 /* Assets.xcassets */; };
+		EF96825B23D0006700B69B92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF96825923D0006700B69B92 /* LaunchScreen.storyboard */; };
+		EF96826623D0006700B69B92 /* ImageLocalDownloadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96826523D0006700B69B92 /* ImageLocalDownloadTests.swift */; };
+		EF96827123D0006700B69B92 /* ImageLocalDownloadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96827023D0006700B69B92 /* ImageLocalDownloadUITests.swift */; };
+		EF96827F23D0022700B69B92 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96827E23D0022700B69B92 /* Common.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF96826223D0006700B69B92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF96824323D0006500B69B92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF96824A23D0006500B69B92;
+			remoteInfo = ImageLocalDownload;
+		};
+		EF96826D23D0006700B69B92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF96824323D0006500B69B92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF96824A23D0006500B69B92;
+			remoteInfo = ImageLocalDownload;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		005A05CD343C36BBD8431F17 /* Pods-ImageLocalDownload-ImageLocalDownloadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageLocalDownload-ImageLocalDownloadUITests.debug.xcconfig"; path = "Target Support Files/Pods-ImageLocalDownload-ImageLocalDownloadUITests/Pods-ImageLocalDownload-ImageLocalDownloadUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		11F4920E5BDC0B843304513B /* Pods-ImageLocalDownload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageLocalDownload.debug.xcconfig"; path = "Target Support Files/Pods-ImageLocalDownload/Pods-ImageLocalDownload.debug.xcconfig"; sourceTree = "<group>"; };
+		2C1F85B15964D8F9D580A7DB /* Pods_ImageLocalDownload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageLocalDownload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47FCB71141CC870CC8F71C73 /* Pods-ImageLocalDownloadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageLocalDownloadTests.release.xcconfig"; path = "Target Support Files/Pods-ImageLocalDownloadTests/Pods-ImageLocalDownloadTests.release.xcconfig"; sourceTree = "<group>"; };
+		A6F60376164671A6EAB4BF2B /* Pods-ImageLocalDownload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageLocalDownload.release.xcconfig"; path = "Target Support Files/Pods-ImageLocalDownload/Pods-ImageLocalDownload.release.xcconfig"; sourceTree = "<group>"; };
+		AB7212096E9FFA257238F0C1 /* Pods-ImageLocalDownload-ImageLocalDownloadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageLocalDownload-ImageLocalDownloadUITests.release.xcconfig"; path = "Target Support Files/Pods-ImageLocalDownload-ImageLocalDownloadUITests/Pods-ImageLocalDownload-ImageLocalDownloadUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BA0DA19E04D0BB55C6CC7477 /* Pods_ImageLocalDownload_ImageLocalDownloadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageLocalDownload_ImageLocalDownloadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E324CC4245A0411BCDF1B7F9 /* Pods_ImageLocalDownloadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageLocalDownloadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF96824B23D0006500B69B92 /* ImageLocalDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageLocalDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF96824E23D0006500B69B92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF96825023D0006500B69B92 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EF96825223D0006500B69B92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF96825523D0006500B69B92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF96825723D0006700B69B92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF96825A23D0006700B69B92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF96825C23D0006700B69B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF96826123D0006700B69B92 /* ImageLocalDownloadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageLocalDownloadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF96826523D0006700B69B92 /* ImageLocalDownloadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLocalDownloadTests.swift; sourceTree = "<group>"; };
+		EF96826723D0006700B69B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF96826C23D0006700B69B92 /* ImageLocalDownloadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageLocalDownloadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF96827023D0006700B69B92 /* ImageLocalDownloadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLocalDownloadUITests.swift; sourceTree = "<group>"; };
+		EF96827223D0006700B69B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF96827E23D0022700B69B92 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		FE10816BF1DA6E012D9F3D90 /* Pods-ImageLocalDownloadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageLocalDownloadTests.debug.xcconfig"; path = "Target Support Files/Pods-ImageLocalDownloadTests/Pods-ImageLocalDownloadTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF96824823D0006500B69B92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEB2F03C8F68028069586C78 /* Pods_ImageLocalDownload.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF96825E23D0006700B69B92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2E2B102378EA0685133E067 /* Pods_ImageLocalDownloadTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF96826923D0006700B69B92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27001A137849CD7D74828F3A /* Pods_ImageLocalDownload_ImageLocalDownloadUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA9A9EF1CB735CE9ECF75FDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C1F85B15964D8F9D580A7DB /* Pods_ImageLocalDownload.framework */,
+				BA0DA19E04D0BB55C6CC7477 /* Pods_ImageLocalDownload_ImageLocalDownloadUITests.framework */,
+				E324CC4245A0411BCDF1B7F9 /* Pods_ImageLocalDownloadTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF96824223D0006500B69B92 = {
+			isa = PBXGroup;
+			children = (
+				EF96824D23D0006500B69B92 /* ImageLocalDownload */,
+				EF96826423D0006700B69B92 /* ImageLocalDownloadTests */,
+				EF96826F23D0006700B69B92 /* ImageLocalDownloadUITests */,
+				EF96824C23D0006500B69B92 /* Products */,
+				F74C8EEA97DB699EDE1DED6A /* Pods */,
+				BA9A9EF1CB735CE9ECF75FDE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF96824C23D0006500B69B92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF96824B23D0006500B69B92 /* ImageLocalDownload.app */,
+				EF96826123D0006700B69B92 /* ImageLocalDownloadTests.xctest */,
+				EF96826C23D0006700B69B92 /* ImageLocalDownloadUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF96824D23D0006500B69B92 /* ImageLocalDownload */ = {
+			isa = PBXGroup;
+			children = (
+				EF96824E23D0006500B69B92 /* AppDelegate.swift */,
+				EF96825023D0006500B69B92 /* SceneDelegate.swift */,
+				EF96825223D0006500B69B92 /* ViewController.swift */,
+				EF96825423D0006500B69B92 /* Main.storyboard */,
+				EF96825723D0006700B69B92 /* Assets.xcassets */,
+				EF96825923D0006700B69B92 /* LaunchScreen.storyboard */,
+				EF96825C23D0006700B69B92 /* Info.plist */,
+				EF96827E23D0022700B69B92 /* Common.swift */,
+			);
+			path = ImageLocalDownload;
+			sourceTree = "<group>";
+		};
+		EF96826423D0006700B69B92 /* ImageLocalDownloadTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF96826523D0006700B69B92 /* ImageLocalDownloadTests.swift */,
+				EF96826723D0006700B69B92 /* Info.plist */,
+			);
+			path = ImageLocalDownloadTests;
+			sourceTree = "<group>";
+		};
+		EF96826F23D0006700B69B92 /* ImageLocalDownloadUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF96827023D0006700B69B92 /* ImageLocalDownloadUITests.swift */,
+				EF96827223D0006700B69B92 /* Info.plist */,
+			);
+			path = ImageLocalDownloadUITests;
+			sourceTree = "<group>";
+		};
+		F74C8EEA97DB699EDE1DED6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11F4920E5BDC0B843304513B /* Pods-ImageLocalDownload.debug.xcconfig */,
+				A6F60376164671A6EAB4BF2B /* Pods-ImageLocalDownload.release.xcconfig */,
+				005A05CD343C36BBD8431F17 /* Pods-ImageLocalDownload-ImageLocalDownloadUITests.debug.xcconfig */,
+				AB7212096E9FFA257238F0C1 /* Pods-ImageLocalDownload-ImageLocalDownloadUITests.release.xcconfig */,
+				FE10816BF1DA6E012D9F3D90 /* Pods-ImageLocalDownloadTests.debug.xcconfig */,
+				47FCB71141CC870CC8F71C73 /* Pods-ImageLocalDownloadTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF96824A23D0006500B69B92 /* ImageLocalDownload */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF96827523D0006700B69B92 /* Build configuration list for PBXNativeTarget "ImageLocalDownload" */;
+			buildPhases = (
+				F6EA192CC06C49E8C6ECAB98 /* [CP] Check Pods Manifest.lock */,
+				EF96824723D0006500B69B92 /* Sources */,
+				EF96824823D0006500B69B92 /* Frameworks */,
+				EF96824923D0006500B69B92 /* Resources */,
+				F70B5E2F4AFC77A01DAEBF9C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageLocalDownload;
+			productName = ImageLocalDownload;
+			productReference = EF96824B23D0006500B69B92 /* ImageLocalDownload.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF96826023D0006700B69B92 /* ImageLocalDownloadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF96827823D0006700B69B92 /* Build configuration list for PBXNativeTarget "ImageLocalDownloadTests" */;
+			buildPhases = (
+				2F85A10DBE3BEFA7F6F2518E /* [CP] Check Pods Manifest.lock */,
+				EF96825D23D0006700B69B92 /* Sources */,
+				EF96825E23D0006700B69B92 /* Frameworks */,
+				EF96825F23D0006700B69B92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF96826323D0006700B69B92 /* PBXTargetDependency */,
+			);
+			name = ImageLocalDownloadTests;
+			productName = ImageLocalDownloadTests;
+			productReference = EF96826123D0006700B69B92 /* ImageLocalDownloadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF96826B23D0006700B69B92 /* ImageLocalDownloadUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF96827B23D0006700B69B92 /* Build configuration list for PBXNativeTarget "ImageLocalDownloadUITests" */;
+			buildPhases = (
+				549815F2D274AA35D85E89D2 /* [CP] Check Pods Manifest.lock */,
+				EF96826823D0006700B69B92 /* Sources */,
+				EF96826923D0006700B69B92 /* Frameworks */,
+				EF96826A23D0006700B69B92 /* Resources */,
+				59B64B61CB2023388B3D8AAF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF96826E23D0006700B69B92 /* PBXTargetDependency */,
+			);
+			name = ImageLocalDownloadUITests;
+			productName = ImageLocalDownloadUITests;
+			productReference = EF96826C23D0006700B69B92 /* ImageLocalDownloadUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF96824323D0006500B69B92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "youngjun goo";
+				TargetAttributes = {
+					EF96824A23D0006500B69B92 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					EF96826023D0006700B69B92 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = EF96824A23D0006500B69B92;
+					};
+					EF96826B23D0006700B69B92 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = EF96824A23D0006500B69B92;
+					};
+				};
+			};
+			buildConfigurationList = EF96824623D0006500B69B92 /* Build configuration list for PBXProject "ImageLocalDownload" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF96824223D0006500B69B92;
+			productRefGroup = EF96824C23D0006500B69B92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF96824A23D0006500B69B92 /* ImageLocalDownload */,
+				EF96826023D0006700B69B92 /* ImageLocalDownloadTests */,
+				EF96826B23D0006700B69B92 /* ImageLocalDownloadUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF96824923D0006500B69B92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF96825B23D0006700B69B92 /* LaunchScreen.storyboard in Resources */,
+				EF96825823D0006700B69B92 /* Assets.xcassets in Resources */,
+				EF96825623D0006500B69B92 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF96825F23D0006700B69B92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF96826A23D0006700B69B92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F85A10DBE3BEFA7F6F2518E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageLocalDownloadTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		549815F2D274AA35D85E89D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageLocalDownload-ImageLocalDownloadUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59B64B61CB2023388B3D8AAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageLocalDownload-ImageLocalDownloadUITests/Pods-ImageLocalDownload-ImageLocalDownloadUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageLocalDownload-ImageLocalDownloadUITests/Pods-ImageLocalDownload-ImageLocalDownloadUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageLocalDownload-ImageLocalDownloadUITests/Pods-ImageLocalDownload-ImageLocalDownloadUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6EA192CC06C49E8C6ECAB98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageLocalDownload-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F70B5E2F4AFC77A01DAEBF9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageLocalDownload/Pods-ImageLocalDownload-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageLocalDownload/Pods-ImageLocalDownload-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageLocalDownload/Pods-ImageLocalDownload-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF96824723D0006500B69B92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF96827F23D0022700B69B92 /* Common.swift in Sources */,
+				EF96825323D0006500B69B92 /* ViewController.swift in Sources */,
+				EF96824F23D0006500B69B92 /* AppDelegate.swift in Sources */,
+				EF96825123D0006500B69B92 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF96825D23D0006700B69B92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF96826623D0006700B69B92 /* ImageLocalDownloadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF96826823D0006700B69B92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF96827123D0006700B69B92 /* ImageLocalDownloadUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF96826323D0006700B69B92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF96824A23D0006500B69B92 /* ImageLocalDownload */;
+			targetProxy = EF96826223D0006700B69B92 /* PBXContainerItemProxy */;
+		};
+		EF96826E23D0006700B69B92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF96824A23D0006500B69B92 /* ImageLocalDownload */;
+			targetProxy = EF96826D23D0006700B69B92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF96825423D0006500B69B92 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF96825523D0006500B69B92 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF96825923D0006700B69B92 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF96825A23D0006700B69B92 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF96827323D0006700B69B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF96827423D0006700B69B92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF96827623D0006700B69B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11F4920E5BDC0B843304513B /* Pods-ImageLocalDownload.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = ImageLocalDownload/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.ImageLocalDownload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF96827723D0006700B69B92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6F60376164671A6EAB4BF2B /* Pods-ImageLocalDownload.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = ImageLocalDownload/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.ImageLocalDownload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF96827923D0006700B69B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE10816BF1DA6E012D9F3D90 /* Pods-ImageLocalDownloadTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = ImageLocalDownloadTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.ImageLocalDownloadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageLocalDownload.app/ImageLocalDownload";
+			};
+			name = Debug;
+		};
+		EF96827A23D0006700B69B92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47FCB71141CC870CC8F71C73 /* Pods-ImageLocalDownloadTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = ImageLocalDownloadTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.ImageLocalDownloadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageLocalDownload.app/ImageLocalDownload";
+			};
+			name = Release;
+		};
+		EF96827C23D0006700B69B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 005A05CD343C36BBD8431F17 /* Pods-ImageLocalDownload-ImageLocalDownloadUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = ImageLocalDownloadUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.ImageLocalDownloadUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageLocalDownload;
+			};
+			name = Debug;
+		};
+		EF96827D23D0006700B69B92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB7212096E9FFA257238F0C1 /* Pods-ImageLocalDownload-ImageLocalDownloadUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CLQV3W6FV;
+				INFOPLIST_FILE = ImageLocalDownloadUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngjun.ImageLocalDownloadUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageLocalDownload;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF96824623D0006500B69B92 /* Build configuration list for PBXProject "ImageLocalDownload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF96827323D0006700B69B92 /* Debug */,
+				EF96827423D0006700B69B92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF96827523D0006700B69B92 /* Build configuration list for PBXNativeTarget "ImageLocalDownload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF96827623D0006700B69B92 /* Debug */,
+				EF96827723D0006700B69B92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF96827823D0006700B69B92 /* Build configuration list for PBXNativeTarget "ImageLocalDownloadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF96827923D0006700B69B92 /* Debug */,
+				EF96827A23D0006700B69B92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF96827B23D0006700B69B92 /* Build configuration list for PBXNativeTarget "ImageLocalDownloadUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF96827C23D0006700B69B92 /* Debug */,
+				EF96827D23D0006700B69B92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF96824323D0006500B69B92 /* Project object */;
+}
