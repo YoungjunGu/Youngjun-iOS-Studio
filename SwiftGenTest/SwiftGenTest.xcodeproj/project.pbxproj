@@ -15,6 +15,16 @@
 		EF53CA1D247BBED2000B743F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53CA1B247BBED2000B743F /* LaunchScreen.storyboard */; };
 		EF53CA28247BBED2000B743F /* SwiftGenTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53CA27247BBED2000B743F /* SwiftGenTestTests.swift */; };
 		EF53CA33247BBED2000B743F /* SwiftGenTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53CA32247BBED2000B743F /* SwiftGenTestUITests.swift */; };
+		EF53CA42247D5E67000B743F /* GakiColor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF53CA41247D5E67000B743F /* GakiColor.xcassets */; };
+		EF53CA46247D6505000B743F /* GakiString.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF53CA45247D6505000B743F /* GakiString.strings */; };
+		EF53CA50247D67B1000B743F /* HoonWhayangyunwhaR.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF53CA4B247D67B0000B743F /* HoonWhayangyunwhaR.otf */; };
+		EF53CA51247D67B1000B743F /* HoonlefthanderR.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF53CA4C247D67B0000B743F /* HoonlefthanderR.otf */; };
+		EF53CA53247D67B1000B743F /* HoonPinkpungchaR.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF53CA4F247D67B0000B743F /* HoonPinkpungchaR.otf */; };
+		EF53CA55247D68EF000B743F /* color.rtf in Resources */ = {isa = PBXBuildFile; fileRef = EF53CA54247D68EF000B743F /* color.rtf */; };
+		EF53CA59247D69A7000B743F /* String+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53CA56247D69A6000B743F /* String+Generated.swift */; };
+		EF53CA5B247D69A7000B743F /* Font+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53CA58247D69A6000B743F /* Font+Generated.swift */; };
+		EF53CA5D247EC6DE000B743F /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF53CA5C247EC6DE000B743F /* Color.xcassets */; };
+		EF53CA5F247EC854000B743F /* ColorAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53CA5E247EC854000B743F /* ColorAssets+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +59,16 @@
 		EF53CA2E247BBED2000B743F /* SwiftGenTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGenTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53CA32247BBED2000B743F /* SwiftGenTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGenTestUITests.swift; sourceTree = "<group>"; };
 		EF53CA34247BBED2000B743F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF53CA41247D5E67000B743F /* GakiColor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GakiColor.xcassets; sourceTree = "<group>"; };
+		EF53CA45247D6505000B743F /* GakiString.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = GakiString.strings; sourceTree = "<group>"; };
+		EF53CA4B247D67B0000B743F /* HoonWhayangyunwhaR.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HoonWhayangyunwhaR.otf; path = ../../../../../../../Downloads/HoonWhayangyunwhaR.otf; sourceTree = "<group>"; };
+		EF53CA4C247D67B0000B743F /* HoonlefthanderR.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HoonlefthanderR.otf; path = ../../../../../../../Downloads/HoonlefthanderR.otf; sourceTree = "<group>"; };
+		EF53CA4F247D67B0000B743F /* HoonPinkpungchaR.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HoonPinkpungchaR.otf; path = ../../../../../../../Downloads/HoonPinkpungchaR.otf; sourceTree = "<group>"; };
+		EF53CA54247D68EF000B743F /* color.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = color.rtf; path = ../../../../../color.rtf; sourceTree = "<group>"; };
+		EF53CA56247D69A6000B743F /* String+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Generated.swift"; sourceTree = "<group>"; };
+		EF53CA58247D69A6000B743F /* Font+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Generated.swift"; sourceTree = "<group>"; };
+		EF53CA5C247EC6DE000B743F /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		EF53CA5E247EC854000B743F /* ColorAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ColorAssets+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +119,8 @@
 		EF53CA0F247BBED0000B743F /* SwiftGenTest */ = {
 			isa = PBXGroup;
 			children = (
+				EF53CA49247D66C8000B743F /* Generated */,
+				EF53CA47247D6521000B743F /* Resources */,
 				EF53CA10247BBED0000B743F /* AppDelegate.swift */,
 				EF53CA12247BBED0000B743F /* SceneDelegate.swift */,
 				EF53CA14247BBED0000B743F /* ViewController.swift */,
@@ -106,6 +128,7 @@
 				EF53CA19247BBED2000B743F /* Assets.xcassets */,
 				EF53CA1B247BBED2000B743F /* LaunchScreen.storyboard */,
 				EF53CA1E247BBED2000B743F /* Info.plist */,
+				EF53CA5C247EC6DE000B743F /* Color.xcassets */,
 			);
 			path = SwiftGenTest;
 			sourceTree = "<group>";
@@ -126,6 +149,37 @@
 				EF53CA34247BBED2000B743F /* Info.plist */,
 			);
 			path = SwiftGenTestUITests;
+			sourceTree = "<group>";
+		};
+		EF53CA47247D6521000B743F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EF53CA54247D68EF000B743F /* color.rtf */,
+				EF53CA4A247D679F000B743F /* Font */,
+				EF53CA41247D5E67000B743F /* GakiColor.xcassets */,
+				EF53CA45247D6505000B743F /* GakiString.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF53CA49247D66C8000B743F /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				EF53CA5E247EC854000B743F /* ColorAssets+Generated.swift */,
+				EF53CA58247D69A6000B743F /* Font+Generated.swift */,
+				EF53CA56247D69A6000B743F /* String+Generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		EF53CA4A247D679F000B743F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				EF53CA4C247D67B0000B743F /* HoonlefthanderR.otf */,
+				EF53CA4F247D67B0000B743F /* HoonPinkpungchaR.otf */,
+				EF53CA4B247D67B0000B743F /* HoonWhayangyunwhaR.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,9 +287,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF53CA55247D68EF000B743F /* color.rtf in Resources */,
+				EF53CA50247D67B1000B743F /* HoonWhayangyunwhaR.otf in Resources */,
+				EF53CA53247D67B1000B743F /* HoonPinkpungchaR.otf in Resources */,
 				EF53CA1D247BBED2000B743F /* LaunchScreen.storyboard in Resources */,
+				EF53CA42247D5E67000B743F /* GakiColor.xcassets in Resources */,
 				EF53CA1A247BBED2000B743F /* Assets.xcassets in Resources */,
+				EF53CA51247D67B1000B743F /* HoonlefthanderR.otf in Resources */,
+				EF53CA5D247EC6DE000B743F /* Color.xcassets in Resources */,
 				EF53CA18247BBED0000B743F /* Main.storyboard in Resources */,
+				EF53CA46247D6505000B743F /* GakiString.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +332,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "Script..\n\n# string test 01\nswiftgen strings \"${SRCROOT}/${TARGETNAME}/Resources/GakiString.strings\" --template structured-swift4 --output \"${SRCROOT}/${TARGETNAME}/Generated/String+Generated.swift\"\n\n# storyboard test 02\nswiftgen storyboards -t swift4 \"${SRCROOT}/${TARGETNAME}/Base.lproj/Main.storyboard\" -o \"${SRCROOT}/${TARGETNAME}/Generated/Storyboard+Generated.swift\"\n\n# Xcassets test 03\nswiftgen xcassets \"${SRCROOT}/${TARGETNAME}/Assets.xcassets\" -t swift4 -o \"${SRCROOT}/${TARGETNAME}/Generated/Assets+Generated.swift\"\n\n# Color test 04\nswiftgen colors -t swift4 \"${SRCROOT}/${TARGETNAME}/Resources/color.rtf\"  -o \"${SRCROOT}/${TARGETNAME}/Generated/Color+Generated.swift\"\n\n# Font test 05\nswiftgen fonts -t swift4 \"${SRCROOT}/${TARGETNAME}/Resources/Font\"  -o \"${SRCROOT}/${TARGETNAME}/Generated/Font+Generated.swift\"\n\nswiftgen xcassets \"${SRCROOT}/${TARGETNAME}/Color.xcassets\" -t swift4 -o \"${SRCROOT}/${TARGETNAME}/Generated/ColorAssets+Generated.swift\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -280,8 +341,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF53CA5B247D69A7000B743F /* Font+Generated.swift in Sources */,
 				EF53CA15247BBED0000B743F /* ViewController.swift in Sources */,
+				EF53CA5F247EC854000B743F /* ColorAssets+Generated.swift in Sources */,
 				EF53CA11247BBED0000B743F /* AppDelegate.swift in Sources */,
+				EF53CA59247D69A7000B743F /* String+Generated.swift in Sources */,
 				EF53CA13247BBED0000B743F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
